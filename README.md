@@ -1,4 +1,5 @@
 # Lập trình.Net
+## Nhóm 7
 ## Đề tài: Xây dựng hệ thống quản lý cửa hàng bán sách
 ## Thành viên: 
 ### Lê Sa Chi
