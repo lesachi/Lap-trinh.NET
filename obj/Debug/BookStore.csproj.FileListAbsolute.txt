@@ -1,0 +1,11 @@
+D:\NHóm 14_TKW\Lap-trinh.NET\bin\Debug\BookStore.exe.config
+D:\NHóm 14_TKW\Lap-trinh.NET\bin\Debug\BookStore.exe
+D:\NHóm 14_TKW\Lap-trinh.NET\bin\Debug\BookStore.pdb
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.csproj.AssemblyReference.cache
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.MainFrm.resources
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.Properties.Resources.resources
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.UC_KhoSach.resources
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.csproj.GenerateResource.cache
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.exe
+D:\NHóm 14_TKW\Lap-trinh.NET\obj\Debug\BookStore.pdb
