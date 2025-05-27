@@ -47,5 +47,14 @@ namespace BookStore
         
 
     }
-}
+
+        private void btnBanhang_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_Banhang uc = new UC_Banhang(); // Tạo mới UserControl
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
+
+        }
+    }
 }
