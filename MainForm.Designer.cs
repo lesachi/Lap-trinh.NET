@@ -209,6 +209,7 @@
             this.btnBanhang.Text = "Bán hàng";
             this.btnBanhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBanhang.UseVisualStyleBackColor = false;
+            this.btnBanhang.Click += new System.EventHandler(this.btnBanhang_Click);
             // 
             // panelLogo
             // 

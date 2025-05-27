@@ -64,5 +64,13 @@ namespace BookStore
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc); 
         }
+
+        private void btnBanhang_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear();
+            UC_Banhang uc = new UC_Banhang();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
     }
 }
