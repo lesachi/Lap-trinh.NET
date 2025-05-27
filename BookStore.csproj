@@ -60,11 +60,29 @@
     <Compile Include="UC_Banhang.Designer.cs">
       <DependentUpon>UC_Banhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ChitietNXB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ChitietNXB.Designer.cs">
+      <DependentUpon>UC_ChitietNXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_KhoSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_KhoSach.Designer.cs">
       <DependentUpon>UC_KhoSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhaCungCap.Designer.cs">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhaXuatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhaXuatBan.Designer.cs">
+      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -82,8 +100,17 @@
     <EmbeddedResource Include="UC_Banhang.resx">
       <DependentUpon>UC_Banhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_ChitietNXB.resx">
+      <DependentUpon>UC_ChitietNXB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_KhoSach.resx">
       <DependentUpon>UC_KhoSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhaCungCap.resx">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhaXuatBan.resx">
+      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,6 +128,21 @@
   <ItemGroup>
     <None Include="Resources\logo.png" />
     <None Include="Resources\bookstore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoKimDong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoNXBTre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoGiaoduc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoHoiNhaVan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoVanhoc.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

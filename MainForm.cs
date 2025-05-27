@@ -56,5 +56,21 @@ namespace BookStore
             panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
 
         }
+
+        private void btnNhacungcap_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_NhaCungCap uc = new UC_NhaCungCap(); // Tạo mới UserControl
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
+        }
+
+        private void btnNhaxuatban_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_NhaXuatBan uc = new UC_NhaXuatBan(); // Tạo mới UserControl
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
+        }
     }
 }

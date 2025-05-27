@@ -1,33 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\NET\\",
+  "WorkspaceRootPath": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|d:\\net\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|D:\\NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|d:\\net\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|D:\\NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|d:\\net\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BookStore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|D:\\NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +69,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,6 +93,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
@@ -68,45 +104,125 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UC_ChitietNXB.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs",
+              "RelativeDocumentMoniker": "UC_ChitietNXB.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs*",
+              "RelativeToolTip": "UC_ChitietNXB.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:53:51.241Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_ChitietNXB.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs",
+              "RelativeDocumentMoniker": "UC_ChitietNXB.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs [Design]*",
+              "RelativeToolTip": "UC_ChitietNXB.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:52:28.793Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_NhaXuatBan.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
+              "RelativeDocumentMoniker": "UC_NhaXuatBan.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs*",
+              "RelativeToolTip": "UC_NhaXuatBan.cs*",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowEQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:49:25.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UC_NhaXuatBan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
+              "RelativeDocumentMoniker": "UC_NhaXuatBan.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs [Design]*",
+              "RelativeToolTip": "UC_NhaXuatBan.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:46:02.158Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_NhaCungCap.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "UC_NhaCungCap.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeToolTip": "UC_NhaCungCap.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAjwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:21:10.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_NhaCungCap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "UC_NhaCungCap.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs [Design]",
+              "RelativeToolTip": "UC_NhaCungCap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:20:47.268Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:04:16.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UC_Banhang.cs",
-              "DocumentMoniker": "D:\\NET\\UC_Banhang.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_Banhang.cs",
               "RelativeDocumentMoniker": "UC_Banhang.cs",
-              "ToolTip": "D:\\NET\\UC_Banhang.cs*",
-              "RelativeToolTip": "UC_Banhang.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAIAwwBoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_Banhang.cs",
+              "RelativeToolTip": "UC_Banhang.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIAwwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T09:57:53.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "UC_Banhang.cs [Design]",
-              "DocumentMoniker": "D:\\NET\\UC_Banhang.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_Banhang.cs",
               "RelativeDocumentMoniker": "UC_Banhang.cs",
-              "ToolTip": "D:\\NET\\UC_Banhang.cs [Design]*",
-              "RelativeToolTip": "UC_Banhang.cs [Design]*",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_Banhang.cs [Design]",
+              "RelativeToolTip": "UC_Banhang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T09:50:45.128Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "UC_KhoSach.cs",
-              "DocumentMoniker": "D:\\NET\\UC_KhoSach.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
-              "ToolTip": "D:\\NET\\UC_KhoSach.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeToolTip": "UC_KhoSach.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -115,45 +231,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UC_KhoSach.cs [Design]",
-              "DocumentMoniker": "D:\\NET\\UC_KhoSach.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BookStore\\UC_KhoSach.cs [Design]",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs [Design]",
+              "RelativeToolTip": "UC_KhoSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T03:52:50.036Z"
+              "WhenOpened": "2025-05-25T03:52:50.036Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "BookStore",
-              "DocumentMoniker": "D:\\NET\\BookStore.csproj",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\BookStore.csproj",
               "RelativeDocumentMoniker": "BookStore.csproj",
-              "ToolTip": "D:\\NET\\BookStore.csproj",
-              "RelativeToolTip": "BookStore.csproj",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\BookStore.csproj*",
+              "RelativeToolTip": "BookStore.csproj*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-25T02:54:25.137Z"
+              "WhenOpened": "2025-05-25T02:54:25.137Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "D:\\NET\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\NET\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAIA0wDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAArwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T02:47:22.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\NET\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\NET\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs [Design]",
               "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T02:09:56.69Z",
