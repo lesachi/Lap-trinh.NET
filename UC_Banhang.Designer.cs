@@ -53,13 +53,13 @@
             this.dtPNgayNhapBanHang = new System.Windows.Forms.DateTimePicker();
             this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.cmbTenNV = new System.Windows.Forms.ComboBox();
-            this.cmbMaKH = new System.Windows.Forms.ComboBox();
-            this.cmbTenKH = new System.Windows.Forms.ComboBox();
             this.cmbMaSach = new System.Windows.Forms.ComboBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.cmbDonGia = new System.Windows.Forms.ComboBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHoaDonBan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,7 +175,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(575, 200);
+            this.label13.Location = new System.Drawing.Point(571, 203);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(52, 13);
             this.label13.TabIndex = 12;
@@ -282,22 +282,6 @@
             this.cmbTenNV.Size = new System.Drawing.Size(121, 21);
             this.cmbTenNV.TabIndex = 25;
             // 
-            // cmbMaKH
-            // 
-            this.cmbMaKH.FormattingEnabled = true;
-            this.cmbMaKH.Location = new System.Drawing.Point(663, 49);
-            this.cmbMaKH.Name = "cmbMaKH";
-            this.cmbMaKH.Size = new System.Drawing.Size(121, 21);
-            this.cmbMaKH.TabIndex = 26;
-            // 
-            // cmbTenKH
-            // 
-            this.cmbTenKH.FormattingEnabled = true;
-            this.cmbTenKH.Location = new System.Drawing.Point(663, 87);
-            this.cmbTenKH.Name = "cmbTenKH";
-            this.cmbTenKH.Size = new System.Drawing.Size(121, 21);
-            this.cmbTenKH.TabIndex = 27;
-            // 
             // cmbMaSach
             // 
             this.cmbMaSach.FormattingEnabled = true;
@@ -315,37 +299,50 @@
             // 
             // txtGiamGia
             // 
-            this.txtGiamGia.Location = new System.Drawing.Point(663, 151);
+            this.txtGiamGia.Location = new System.Drawing.Point(663, 159);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(121, 20);
             this.txtGiamGia.TabIndex = 31;
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(663, 193);
+            this.txtTongTien.Location = new System.Drawing.Point(663, 200);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(121, 20);
             this.txtTongTien.TabIndex = 32;
             // 
-            // cmbDonGia
+            // txtDonGia
             // 
-            this.cmbDonGia.FormattingEnabled = true;
-            this.cmbDonGia.Location = new System.Drawing.Point(401, 200);
-            this.cmbDonGia.Name = "cmbDonGia";
-            this.cmbDonGia.Size = new System.Drawing.Size(121, 21);
-            this.cmbDonGia.TabIndex = 33;
+            this.txtDonGia.Location = new System.Drawing.Point(401, 200);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(121, 20);
+            this.txtDonGia.TabIndex = 33;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(663, 52);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(121, 20);
+            this.txtMaKH.TabIndex = 34;
+            // 
+            // txtTenKH
+            // 
+            this.txtTenKH.Location = new System.Drawing.Point(663, 84);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(121, 20);
+            this.txtTenKH.TabIndex = 35;
             // 
             // UC_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cmbDonGia);
+            this.Controls.Add(this.txtTenKH);
+            this.Controls.Add(this.txtMaKH);
+            this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtGiamGia);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.cmbMaSach);
-            this.Controls.Add(this.cmbTenKH);
-            this.Controls.Add(this.cmbMaKH);
             this.Controls.Add(this.cmbTenNV);
             this.Controls.Add(this.cmbMaNV);
             this.Controls.Add(this.dtPNgayNhapBanHang);
@@ -406,12 +403,12 @@
         private System.Windows.Forms.DateTimePicker dtPNgayNhapBanHang;
         private System.Windows.Forms.ComboBox cmbMaNV;
         private System.Windows.Forms.ComboBox cmbTenNV;
-        private System.Windows.Forms.ComboBox cmbMaKH;
-        private System.Windows.Forms.ComboBox cmbTenKH;
         private System.Windows.Forms.ComboBox cmbMaSach;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.TextBox txtTongTien;
-        private System.Windows.Forms.ComboBox cmbDonGia;
+        private System.Windows.Forms.TextBox txtDonGia;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.TextBox txtTenKH;
     }
 }
