@@ -9,7 +9,7 @@ namespace BookStore
 {
     public class Database
     {
-        private static string conn = "Data Source=DESKTOP-GGAFB0R;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
+        private static string conn = "Data source=DESKTOP-K2HPB48\\SQLEXPRESS01;Initial Catalog=Qlycuahangsach;Integrated Security=True";
 
         public static SqlConnection GetConnection() => new SqlConnection(Database.conn);
     }

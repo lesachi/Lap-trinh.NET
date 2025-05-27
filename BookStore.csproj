@@ -63,11 +63,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegisterForm.Designer.cs" />
-    <Compile Include="UC_Banhang.cs">
+    <Compile Include="UC_BanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Banhang.Designer.cs">
-      <DependentUpon>UC_Banhang.cs</DependentUpon>
+    <Compile Include="UC_BanHang.Designer.cs">
+      <DependentUpon>UC_BanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ChitietNXB.cs">
       <SubType>UserControl</SubType>
@@ -130,8 +130,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx" />
-    <EmbeddedResource Include="UC_Banhang.resx">
-      <DependentUpon>UC_Banhang.cs</DependentUpon>
+    <EmbeddedResource Include="UC_BanHang.resx">
+      <DependentUpon>UC_BanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ChitietNXB.resx">
       <DependentUpon>UC_ChitietNXB.cs</DependentUpon>

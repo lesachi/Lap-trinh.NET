@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class UC_Banhang : UserControl
+    public partial class UC_BanHang : UserControl
     {
-        public UC_Banhang()
+        public UC_BanHang()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
