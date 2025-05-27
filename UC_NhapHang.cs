@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class UC_Banhang : UserControl
+    public partial class UC_NhapHang : UserControl
     {
-        public UC_Banhang()
+        public UC_NhapHang()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

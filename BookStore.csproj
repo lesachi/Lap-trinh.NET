@@ -60,11 +60,18 @@
     <Compile Include="UC_Banhang.Designer.cs">
       <DependentUpon>UC_Banhang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_ChitietNXB.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_ChitietNXB.Designer.cs">
-      <DependentUpon>UC_ChitietNXB.cs</DependentUpon>
+<Compile Include="UC_ChitietNXB.cs">
+  <SubType>UserControl</SubType>
+</Compile>
+<Compile Include="UC_ChitietNXB.Designer.cs">
+  <DependentUpon>UC_ChitietNXB.cs</DependentUpon>
+</Compile>
+<Compile Include="UC_KhachHang.cs">
+  <SubType>UserControl</SubType>
+</Compile>
+<Compile Include="UC_KhachHang.Designer.cs">
+  <DependentUpon>UC_KhachHang.cs</DependentUpon>
+</Compile>
     </Compile>
     <Compile Include="UC_KhoSach.cs">
       <SubType>UserControl</SubType>
@@ -83,6 +90,17 @@
     </Compile>
     <Compile Include="UC_NhaXuatBan.Designer.cs">
       <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
+    <Compile Include="UC_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhanVien.Designer.cs">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhapHang.Designer.cs">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -102,6 +120,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ChitietNXB.resx">
       <DependentUpon>UC_ChitietNXB.cs</DependentUpon>
+    <EmbeddedResource Include="UC_KhachHang.resx">
+      <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_KhoSach.resx">
       <DependentUpon>UC_KhoSach.cs</DependentUpon>
@@ -111,6 +131,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhaXuatBan.resx">
       <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
+    <EmbeddedResource Include="UC_NhanVien.resx">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhapHang.resx">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
