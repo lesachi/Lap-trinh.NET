@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGVKhach = new System.Windows.Forms.DataGridView();
             this.txtSDT = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtHoTen_KH = new System.Windows.Forms.TextBox();
@@ -48,9 +48,17 @@
             this.dateTimePickerKH = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnTimKH = new System.Windows.Forms.Button();
+            this.btnThemKH = new System.Windows.Forms.Button();
+            this.btnSuaKH = new System.Windows.Forms.Button();
+            this.btnXoaKH = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVKhach)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,13 +91,13 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Email";
             // 
-            // dataGridView1
+            // dataGVKhach
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 260);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(777, 169);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGVKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVKhach.Location = new System.Drawing.Point(0, 260);
+            this.dataGVKhach.Name = "dataGVKhach";
+            this.dataGVKhach.Size = new System.Drawing.Size(777, 169);
+            this.dataGVKhach.TabIndex = 4;
             // 
             // txtSDT
             // 
@@ -155,7 +163,7 @@
             // 
             this.txtDiaChi_KH.Location = new System.Drawing.Point(433, 60);
             this.txtDiaChi_KH.Name = "txtDiaChi_KH";
-            this.txtDiaChi_KH.Size = new System.Drawing.Size(261, 20);
+            this.txtDiaChi_KH.Size = new System.Drawing.Size(244, 20);
             this.txtDiaChi_KH.TabIndex = 13;
             // 
             // panel1
@@ -193,12 +201,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTimKH);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(363, 101);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(320, 132);
+            this.groupBox1.Size = new System.Drawing.Size(320, 153);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÌM KIẾM";
@@ -244,10 +254,83 @@
             this.textBox1.Size = new System.Drawing.Size(307, 29);
             this.textBox1.TabIndex = 1;
             // 
+            // btnTimKH
+            // 
+            this.btnTimKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKH.Location = new System.Drawing.Point(110, 124);
+            this.btnTimKH.Name = "btnTimKH";
+            this.btnTimKH.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKH.TabIndex = 2;
+            this.btnTimKH.Text = "Tìm";
+            this.btnTimKH.UseVisualStyleBackColor = true;
+            // 
+            // btnThemKH
+            // 
+            this.btnThemKH.Location = new System.Drawing.Point(29, 225);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.Size = new System.Drawing.Size(75, 23);
+            this.btnThemKH.TabIndex = 19;
+            this.btnThemKH.Text = "Thêm";
+            this.btnThemKH.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaKH
+            // 
+            this.btnSuaKH.Location = new System.Drawing.Point(124, 224);
+            this.btnSuaKH.Name = "btnSuaKH";
+            this.btnSuaKH.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaKH.TabIndex = 20;
+            this.btnSuaKH.Text = "Sửa";
+            this.btnSuaKH.UseVisualStyleBackColor = true;
+            // 
+            // btnXoaKH
+            // 
+            this.btnXoaKH.Location = new System.Drawing.Point(230, 224);
+            this.btnXoaKH.Name = "btnXoaKH";
+            this.btnXoaKH.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaKH.TabIndex = 21;
+            this.btnXoaKH.Text = "Xóa";
+            this.btnXoaKH.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Location = new System.Drawing.Point(70, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 58);
+            this.panel2.TabIndex = 16;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(106, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 23);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Nữ";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(15, 23);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(57, 23);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Nam";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // UC_QLKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnXoaKH);
+            this.Controls.Add(this.btnSuaKH);
+            this.Controls.Add(this.btnThemKH);
             this.Controls.Add(this.dateTimePickerKH);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
@@ -259,18 +342,20 @@
             this.Controls.Add(this.txtHoTen_KH);
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGVKhach);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "UC_QLKH";
             this.Size = new System.Drawing.Size(777, 429);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVKhach)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +366,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGVKhach;
         private System.Windows.Forms.Label txtSDT;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtHoTen_KH;
@@ -298,5 +383,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerKH;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnTimKH;
+        private System.Windows.Forms.Button btnThemKH;
+        private System.Windows.Forms.Button btnSuaKH;
+        private System.Windows.Forms.Button btnXoaKH;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
