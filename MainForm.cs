@@ -72,5 +72,10 @@ namespace BookStore
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc);
         }
+
+        private void btnNhaphang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

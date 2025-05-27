@@ -193,6 +193,7 @@
             this.btnNhaphang.Text = "Nhập hàng";
             this.btnNhaphang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaphang.UseVisualStyleBackColor = false;
+            this.btnNhaphang.Click += new System.EventHandler(this.btnNhaphang_Click);
             // 
             // btnBanhang
             // 
