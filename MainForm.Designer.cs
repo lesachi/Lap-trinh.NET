@@ -159,6 +159,7 @@
             this.btnQLKH.Text = "Quản lý khách hàng";
             this.btnQLKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLKH.UseVisualStyleBackColor = false;
+            this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
             // 
             // btnKhosach
             // 
