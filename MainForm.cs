@@ -47,5 +47,22 @@ namespace BookStore
         
 
     }
-}
+
+        private void btnQLNV_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); 
+            UC_NhanVien uc = new UC_NhanVien(); 
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); 
+
+        }
+
+        private void btnQLKH_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); 
+            UC_KhachHang uc = new UC_KhachHang(); 
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); 
+        }
+    }
 }
