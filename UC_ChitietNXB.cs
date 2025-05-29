@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,11 @@ namespace BookStore
         }
 
         private void UC_ChitietNXB_Load(object sender, EventArgs e)
+        {
+            Database.GetConnection();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
         {
 
         }
