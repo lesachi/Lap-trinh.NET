@@ -49,6 +49,7 @@ namespace BookStore
                 Ma = "NXB03",
                 Ten = "Nhà xuất bản Giáo dục",
                 Diachi = "81 Trần Hưng Đạo, Hà Nội",
+                Dienthoai = "0248220220",
                 Logo = Properties.Resources.LogoGiaoduc,
             };
 

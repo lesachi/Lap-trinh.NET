@@ -29,7 +29,7 @@ namespace BookStore
                 SqlCommand sqlCommand = new SqlCommand("SELECT Role FROM TaiKhoan WHERE Username = @user AND PasswordHash = @pass AND TrangThai = 1", connection);
                 sqlCommand.Parameters.AddWithValue("@user", (object)username);
                 sqlCommand.Parameters.AddWithValue("@pass", (object)password);
-                connection.Open();
+                //connection.Open();
                 return sqlCommand.ExecuteScalar()?.ToString();
             }
         }
