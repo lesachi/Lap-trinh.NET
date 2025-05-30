@@ -57,6 +57,11 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.txtDienthoai);
             this.panel1.Controls.Add(this.txtDiachi);
             this.panel1.Controls.Add(this.txtTenNXB);
@@ -67,7 +72,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(338, 74);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 296);
+            this.panel1.Size = new System.Drawing.Size(533, 347);
             this.panel1.TabIndex = 1;
             // 
             // txtDienthoai
@@ -136,58 +141,58 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(348, 376);
+            this.btnSua.Location = new System.Drawing.Point(22, 301);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 2;
+            this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(468, 376);
+            this.btnLuu.Location = new System.Drawing.Point(149, 301);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 3;
+            this.btnLuu.TabIndex = 9;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(596, 376);
+            this.btnXoa.Location = new System.Drawing.Point(278, 301);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 4;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xóa ";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(717, 375);
+            this.btnThoat.Location = new System.Drawing.Point(398, 301);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 5;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // UC_ChitietNXB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pboLogo);
             this.Name = "UC_ChitietNXB";
-            this.Size = new System.Drawing.Size(815, 563);
+            this.Size = new System.Drawing.Size(900, 500);
             this.Load += new System.EventHandler(this.UC_ChitietNXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,9 +208,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnSua;
     }
 }
