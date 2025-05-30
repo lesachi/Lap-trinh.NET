@@ -62,9 +62,9 @@ namespace BookStore
                 txtHoTenKH.Text = row.Cells[1].Value.ToString();
                 SetGioiTinh(row.Cells[2].Value.ToString());
                 
-                txtDiaChiKH.Text = row.Cells[4].Value.ToString();
+                txtDiaChiKH.Text = row.Cells[3].Value.ToString();
                 
-                txtSDTKH.Text = row.Cells[5].Value.ToString();
+                txtSDTKH.Text = row.Cells[4].Value.ToString();
             }
         }
 

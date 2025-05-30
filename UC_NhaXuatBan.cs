@@ -65,10 +65,7 @@ namespace BookStore
                     string selectedMa = clicked.Tag.ToString();
                     ShowDetail(selectedMa); 
                 };
-<<<<<<< HEAD
-=======
 
->>>>>>> 75e89c781cdb568383e14f697f0ae29880552180
                 flowLayoutPanelNXB.Controls.Add(pb);
             }
         }

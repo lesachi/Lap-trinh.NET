@@ -58,7 +58,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTimkiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +70,7 @@
             this.dtGVKhoSach.RowTemplate.Height = 28;
             this.dtGVKhoSach.Size = new System.Drawing.Size(1063, 255);
             this.dtGVKhoSach.TabIndex = 0;
+            this.dtGVKhoSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVKhoSach_CellClick);
             this.dtGVKhoSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lbMaSach
@@ -273,6 +273,7 @@
             this.btnThem.TabIndex = 26;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -292,15 +293,17 @@
             this.btnXoa.TabIndex = 28;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(67, 343);
+            this.btnTimkiem.Location = new System.Drawing.Point(930, 331);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(93, 34);
             this.btnTimkiem.TabIndex = 30;
             this.btnTimkiem.Text = "Tìm kiếm";
             this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // button2
             // 
@@ -310,6 +313,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Bỏ qua";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnLuu
             // 
@@ -319,6 +323,7 @@
             this.btnLuu.TabIndex = 32;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label1
             // 
@@ -330,18 +335,10 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Kho sách";
             // 
-            // txtTimkiem
-            // 
-            this.txtTimkiem.Location = new System.Drawing.Point(192, 343);
-            this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.Size = new System.Drawing.Size(219, 26);
-            this.txtTimkiem.TabIndex = 34;
-            // 
             // UC_KhoSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.button2);
@@ -413,6 +410,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTimkiem;
     }
 }
