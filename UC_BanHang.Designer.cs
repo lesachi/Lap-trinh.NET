@@ -45,31 +45,32 @@
             this.DataGridViewHoaDonBan = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnTaoHoaDon = new System.Windows.Forms.Button();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.dtPNgayNhapBanHang = new System.Windows.Forms.DateTimePicker();
             this.cmbMaNV = new System.Windows.Forms.ComboBox();
-            this.cmbTenNV = new System.Windows.Forms.ComboBox();
             this.cmbMaSach = new System.Windows.Forms.ComboBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.cmbMaKH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHoaDonBan)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(444, 18);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(397, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hóa đơn bán hàng";
             // 
@@ -184,65 +185,71 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(410, 125);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 13);
+            this.label14.Size = new System.Drawing.Size(151, 20);
             this.label14.TabIndex = 13;
             this.label14.Text = "Chi tiết hóa đơn bán";
             // 
             // DataGridViewHoaDonBan
             // 
             this.DataGridViewHoaDonBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewHoaDonBan.Location = new System.Drawing.Point(0, 246);
+            this.DataGridViewHoaDonBan.Location = new System.Drawing.Point(7, 246);
             this.DataGridViewHoaDonBan.Name = "DataGridViewHoaDonBan";
-            this.DataGridViewHoaDonBan.Size = new System.Drawing.Size(970, 166);
+            this.DataGridViewHoaDonBan.Size = new System.Drawing.Size(760, 166);
             this.DataGridViewHoaDonBan.TabIndex = 14;
-            this.DataGridViewHoaDonBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DataGridViewHoaDonBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewHoaDonBan_CellClick);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(25, 419);
+            this.btnSua.Location = new System.Drawing.Point(137, 419);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(156, 419);
+            this.btnXoa.Location = new System.Drawing.Point(253, 419);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 16;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnXacNhan
+            // btnLuu
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(300, 419);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(75, 23);
-            this.btnXacNhan.TabIndex = 18;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(365, 419);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 18;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(447, 418);
+            this.btnHuy.Location = new System.Drawing.Point(476, 419);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 19;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnTaoHoaDon
             // 
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(644, 419);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(578, 419);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(95, 23);
             this.btnTaoHoaDon.TabIndex = 20;
             this.btnTaoHoaDon.Text = "Tạo hóa đơn";
             this.btnTaoHoaDon.UseVisualStyleBackColor = true;
+            this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
             // 
             // txtMaHD
             // 
@@ -250,7 +257,6 @@
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(200, 20);
             this.txtMaHD.TabIndex = 21;
-            this.txtMaHD.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtTenSach
             // 
@@ -273,14 +279,6 @@
             this.cmbMaNV.Name = "cmbMaNV";
             this.cmbMaNV.Size = new System.Drawing.Size(121, 21);
             this.cmbMaNV.TabIndex = 24;
-            // 
-            // cmbTenNV
-            // 
-            this.cmbTenNV.FormattingEnabled = true;
-            this.cmbTenNV.Location = new System.Drawing.Point(401, 84);
-            this.cmbTenNV.Name = "cmbTenNV";
-            this.cmbTenNV.Size = new System.Drawing.Size(121, 21);
-            this.cmbTenNV.TabIndex = 25;
             // 
             // cmbMaSach
             // 
@@ -318,13 +316,6 @@
             this.txtDonGia.Size = new System.Drawing.Size(121, 20);
             this.txtDonGia.TabIndex = 33;
             // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(663, 52);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(121, 20);
-            this.txtMaKH.TabIndex = 34;
-            // 
             // txtTenKH
             // 
             this.txtTenKH.Location = new System.Drawing.Point(663, 84);
@@ -332,25 +323,51 @@
             this.txtTenKH.Size = new System.Drawing.Size(121, 20);
             this.txtTenKH.TabIndex = 35;
             // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Location = new System.Drawing.Point(401, 87);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(121, 20);
+            this.txtTenNV.TabIndex = 36;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(34, 419);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 37;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // cmbMaKH
+            // 
+            this.cmbMaKH.FormattingEnabled = true;
+            this.cmbMaKH.Location = new System.Drawing.Point(663, 52);
+            this.cmbMaKH.Name = "cmbMaKH";
+            this.cmbMaKH.Size = new System.Drawing.Size(121, 21);
+            this.cmbMaKH.TabIndex = 38;
+            // 
             // UC_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbMaKH);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.txtTenKH);
-            this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtGiamGia);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.cmbMaSach);
-            this.Controls.Add(this.cmbTenNV);
             this.Controls.Add(this.cmbMaNV);
             this.Controls.Add(this.dtPNgayNhapBanHang);
             this.Controls.Add(this.txtTenSach);
             this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.btnTaoHoaDon);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnXacNhan);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.DataGridViewHoaDonBan);
@@ -369,7 +386,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UC_BanHang";
-            this.Size = new System.Drawing.Size(973, 475);
+            this.Size = new System.Drawing.Size(973, 473);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHoaDonBan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -395,20 +412,21 @@
         private System.Windows.Forms.DataGridView DataGridViewHoaDonBan;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnXacNhan;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnTaoHoaDon;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.TextBox txtTenSach;
         private System.Windows.Forms.DateTimePicker dtPNgayNhapBanHang;
         private System.Windows.Forms.ComboBox cmbMaNV;
-        private System.Windows.Forms.ComboBox cmbTenNV;
         private System.Windows.Forms.ComboBox cmbMaSach;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.TextBox txtDonGia;
-        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.TextBox txtTenNV;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ComboBox cmbMaKH;
     }
 }
