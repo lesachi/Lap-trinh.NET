@@ -33,13 +33,17 @@
             this.lbusername = new System.Windows.Forms.Label();
             this.lbRole = new System.Windows.Forms.Label();
             this.lbtrangthai = new System.Windows.Forms.Label();
-            this.txtmanv = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
-            this.cbbRole = new System.Windows.Forms.ComboBox();
-            this.cbbTrangthai = new System.Windows.Forms.ComboBox();
             this.dtGVTaikhoan = new System.Windows.Forms.DataGridView();
             this.btnKhoa = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThemtk = new System.Windows.Forms.Button();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.lbpass = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.cbbManv = new System.Windows.Forms.ComboBox();
+            this.txtChucvu = new System.Windows.Forms.TextBox();
+            this.txtTrangthai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVTaikhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,35 +93,12 @@
             this.lbtrangthai.TabIndex = 4;
             this.lbtrangthai.Text = "Trạng thái";
             // 
-            // txtmanv
-            // 
-            this.txtmanv.Location = new System.Drawing.Point(207, 99);
-            this.txtmanv.Name = "txtmanv";
-            this.txtmanv.Size = new System.Drawing.Size(178, 26);
-            this.txtmanv.TabIndex = 5;
-            // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(207, 161);
+            this.txtusername.Location = new System.Drawing.Point(207, 155);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(178, 26);
             this.txtusername.TabIndex = 6;
-            // 
-            // cbbRole
-            // 
-            this.cbbRole.FormattingEnabled = true;
-            this.cbbRole.Location = new System.Drawing.Point(811, 91);
-            this.cbbRole.Name = "cbbRole";
-            this.cbbRole.Size = new System.Drawing.Size(175, 28);
-            this.cbbRole.TabIndex = 7;
-            // 
-            // cbbTrangthai
-            // 
-            this.cbbTrangthai.FormattingEnabled = true;
-            this.cbbTrangthai.Location = new System.Drawing.Point(811, 158);
-            this.cbbTrangthai.Name = "cbbTrangthai";
-            this.cbbTrangthai.Size = new System.Drawing.Size(175, 28);
-            this.cbbTrangthai.TabIndex = 8;
             // 
             // dtGVTaikhoan
             // 
@@ -128,6 +109,7 @@
             this.dtGVTaikhoan.RowTemplate.Height = 28;
             this.dtGVTaikhoan.Size = new System.Drawing.Size(1044, 227);
             this.dtGVTaikhoan.TabIndex = 9;
+            this.dtGVTaikhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVTaikhoan_CellClick);
             // 
             // btnKhoa
             // 
@@ -147,17 +129,78 @@
             this.btnXoa.Text = "Xóa tài khoản";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
+            // btnThemtk
+            // 
+            this.btnThemtk.Location = new System.Drawing.Point(319, 517);
+            this.btnThemtk.Name = "btnThemtk";
+            this.btnThemtk.Size = new System.Drawing.Size(199, 40);
+            this.btnThemtk.TabIndex = 12;
+            this.btnThemtk.Text = "Thêm tài khoản";
+            this.btnThemtk.UseVisualStyleBackColor = true;
+            this.btnThemtk.Click += new System.EventHandler(this.btnThemtk_Click);
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(207, 206);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(178, 26);
+            this.txtpass.TabIndex = 14;
+            // 
+            // lbpass
+            // 
+            this.lbpass.AutoSize = true;
+            this.lbpass.Location = new System.Drawing.Point(88, 212);
+            this.lbpass.Name = "lbpass";
+            this.lbpass.Size = new System.Drawing.Size(78, 20);
+            this.lbpass.TabIndex = 13;
+            this.lbpass.Text = "Password";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(589, 517);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(199, 40);
+            this.btnLuu.TabIndex = 15;
+            this.btnLuu.Text = "Lưu tài khoản";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // cbbManv
+            // 
+            this.cbbManv.FormattingEnabled = true;
+            this.cbbManv.Location = new System.Drawing.Point(207, 96);
+            this.cbbManv.Name = "cbbManv";
+            this.cbbManv.Size = new System.Drawing.Size(178, 28);
+            this.cbbManv.TabIndex = 16;
+            // 
+            // txtChucvu
+            // 
+            this.txtChucvu.Location = new System.Drawing.Point(811, 100);
+            this.txtChucvu.Name = "txtChucvu";
+            this.txtChucvu.Size = new System.Drawing.Size(175, 26);
+            this.txtChucvu.TabIndex = 17;
+            // 
+            // txtTrangthai
+            // 
+            this.txtTrangthai.Location = new System.Drawing.Point(811, 161);
+            this.txtTrangthai.Name = "txtTrangthai";
+            this.txtTrangthai.Size = new System.Drawing.Size(175, 26);
+            this.txtTrangthai.TabIndex = 18;
+            // 
             // UC_TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtTrangthai);
+            this.Controls.Add(this.txtChucvu);
+            this.Controls.Add(this.cbbManv);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.txtpass);
+            this.Controls.Add(this.lbpass);
+            this.Controls.Add(this.btnThemtk);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnKhoa);
             this.Controls.Add(this.dtGVTaikhoan);
-            this.Controls.Add(this.cbbTrangthai);
-            this.Controls.Add(this.cbbRole);
             this.Controls.Add(this.txtusername);
-            this.Controls.Add(this.txtmanv);
             this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.lbRole);
             this.Controls.Add(this.lbusername);
@@ -165,6 +208,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_TaiKhoan";
             this.Size = new System.Drawing.Size(1132, 640);
+            this.Load += new System.EventHandler(this.UC_TaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVTaikhoan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,12 +222,16 @@
         private System.Windows.Forms.Label lbusername;
         private System.Windows.Forms.Label lbRole;
         private System.Windows.Forms.Label lbtrangthai;
-        private System.Windows.Forms.TextBox txtmanv;
         private System.Windows.Forms.TextBox txtusername;
-        private System.Windows.Forms.ComboBox cbbRole;
-        private System.Windows.Forms.ComboBox cbbTrangthai;
         private System.Windows.Forms.DataGridView dtGVTaikhoan;
         private System.Windows.Forms.Button btnKhoa;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThemtk;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.Label lbpass;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.ComboBox cbbManv;
+        private System.Windows.Forms.TextBox txtChucvu;
+        private System.Windows.Forms.TextBox txtTrangthai;
     }
 }

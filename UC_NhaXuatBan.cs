@@ -67,7 +67,7 @@ namespace BookStore
                     string selectedMa = clicked.Tag.ToString();
                     ShowDetail(selectedMa); // gọi hàm hiện chi tiết
                 };
-                PanelNXB.Controls.Add(pb);
+                flowLayoutPanelNXB.Controls.Add(pb);
             }
         }
         private Image GetLogoResource(string maNXB)

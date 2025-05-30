@@ -83,14 +83,15 @@ namespace BookStore
 
         private void btnBanhang_Click(object sender, EventArgs e)
         {
-            panelChildForm.Controls.Clear();
-            UC_Banhang uc = new UC_Banhang();
+           panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_BanHang uc = new UC_BanHang(); // Tạo mới UserControl
             uc.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(uc);
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
         }
 
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
+
          
         }
         
@@ -108,10 +109,16 @@ namespace BookStore
         {
             if (_role == "Staff")
             {
-                btnTaikhoan.Visible = false;
-                btnQLNV.Visible = false;
+                btnTaikhoan.Enabled = false;
+                btnQLNV.Enabled = false;
 
             }
+
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_NhapHang uc = new UC_NhapHang(); // Tạo mới UserControl
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
+
         }
     }
 }

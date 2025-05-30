@@ -36,23 +36,34 @@ namespace BookStore
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string text1 = this.txtusername.Text;
-            string text2 = this.txtpass.Text;
-            if (string.IsNullOrEmpty(text1) || string.IsNullOrEmpty(text2))
+            string username = this.txtusername.Text.Trim();
+            string password = this.txtpass.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                int num1 = (int)MessageBox.Show("Vui lòng nhập thông tin.");
+                MessageBox.Show("Vui lòng nhập đủ thông tin.");
+                return;
             }
-            else if (LoginForm.CheckLogin(text1, text2) != null)
+
+            // Gọi hàm CheckLogin và lưu kết quả vào biến role
+            string role = LoginForm.CheckLogin(username, password); 
+
+            if (role != null)
             {
                 this.Hide();
-                new MainFrm().Show();
+                MainFrm main = new MainFrm(role); 
+                main.FormClosed += (s, args) => this.Close(); // đóng app khi MainFrm đóng
+                main.Show();
             }
             else
             {
-                int num2 = (int)MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
             }
         }
-
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void cbPass_CheckedChanged(object sender, EventArgs e)
         {
             this.txtpass.UseSystemPasswordChar = !this.cbPass.Checked;

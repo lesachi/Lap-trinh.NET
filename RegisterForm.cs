@@ -60,9 +60,10 @@ namespace BookStore
             }
             else
             {
-                TaiKhoanDAO.AddNewAccount(txtusername.Text, txtpass.Text);
-                this.Close();
-                new LoginForm().Show();
+                RegisterForm register = new RegisterForm();
+                register.FormClosed += (s, args) => this.Show(); // Quay lại login khi đóng form đăng ký
+                this.Hide();
+                register.Show();
             }
         }
 
