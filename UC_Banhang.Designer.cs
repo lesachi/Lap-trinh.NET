@@ -1,4 +1,4 @@
-﻿namespace BookStore
+namespace BookStore
 {
     partial class UC_BanHang
     {

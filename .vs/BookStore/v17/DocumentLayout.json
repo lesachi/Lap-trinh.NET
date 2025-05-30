@@ -1,0 +1,405 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_chitietnxb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\hi\\onedrive\\documents\\github\\lap-trinh.net\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_banhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BookStore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 203,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 28,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_ChitietNXB.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs",
+              "RelativeDocumentMoniker": "UC_ChitietNXB.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs*",
+              "RelativeToolTip": "UC_ChitietNXB.cs*",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwEwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T10:58:24.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_ChitietNXB.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs",
+              "RelativeDocumentMoniker": "UC_ChitietNXB.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_ChitietNXB.cs [Design]*",
+              "RelativeToolTip": "UC_ChitietNXB.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T10:40:04.824Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_NhaXuatBan.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
+              "RelativeDocumentMoniker": "UC_NhaXuatBan.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
+              "RelativeToolTip": "UC_NhaXuatBan.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAiwGoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T09:08:32.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UC_BanHang.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_BanHang.Designer.cs",
+              "RelativeDocumentMoniker": "UC_BanHang.Designer.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_BanHang.Designer.cs",
+              "RelativeToolTip": "UC_BanHang.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:42:38.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Database.cs",
+              "RelativeDocumentMoniker": "Database.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Database.cs",
+              "RelativeToolTip": "Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T15:44:37.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UC_NhapHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhapHang.cs",
+              "RelativeDocumentMoniker": "UC_NhapHang.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhapHang.cs [Design]",
+              "RelativeToolTip": "UC_NhapHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:49:27.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UC_KhoSach.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
+              "RelativeDocumentMoniker": "UC_KhoSach.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
+              "RelativeToolTip": "UC_KhoSach.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T03:54:13.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_NhapHang.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhapHang.cs",
+              "RelativeDocumentMoniker": "UC_NhapHang.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhapHang.cs",
+              "RelativeToolTip": "UC_NhapHang.cs",
+              "ViewState": "AgIAAMUCAAAAAAAAAAAYwIQCAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T14:35:29.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UC_BanHang.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_BanHang.cs",
+              "RelativeDocumentMoniker": "UC_BanHang.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_BanHang.cs",
+              "RelativeToolTip": "UC_BanHang.cs",
+              "ViewState": "AgIAAHACAAAAAAAAAAAjwFcCAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T15:15:44.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UC_NhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhanVien.cs",
+              "RelativeDocumentMoniker": "UC_NhanVien.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhanVien.cs",
+              "RelativeToolTip": "UC_NhanVien.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T02:15:19.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_NhaCungCap.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "UC_NhaCungCap.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeToolTip": "UC_NhaCungCap.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAUwOwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T02:15:11.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwCAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T15:44:25.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UC_BanHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_BanHang.cs",
+              "RelativeDocumentMoniker": "UC_BanHang.cs",
+              "ToolTip": "D:\\GithubNET\\UC_BanHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T15:04:17.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:51:13.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UC_NhaCungCap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "UC_NhaCungCap.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaCungCap.cs [Design]",
+              "RelativeToolTip": "UC_NhaCungCap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:49:30.572Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UC_NhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhanVien.cs",
+              "RelativeDocumentMoniker": "UC_NhanVien.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhanVien.cs [Design]",
+              "RelativeToolTip": "UC_NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:49:29.661Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UC_KhoSach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_KhoSach.cs",
+              "RelativeDocumentMoniker": "UC_KhoSach.cs",
+              "ToolTip": "D:\\GithubNET\\UC_KhoSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T03:52:50.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_NhaXuatBan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
+              "RelativeDocumentMoniker": "UC_NhaXuatBan.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\UC_NhaXuatBan.cs [Design]",
+              "RelativeToolTip": "UC_NhaXuatBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:49:26.387Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BookStore",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\BookStore.csproj",
+              "RelativeDocumentMoniker": "BookStore.csproj",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\BookStore.csproj",
+              "RelativeToolTip": "BookStore.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-25T02:54:25.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwF4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T02:47:22.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Hi\\OneDrive\\Documents\\GitHub\\Lap-trinh.NET\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T02:09:56.69Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

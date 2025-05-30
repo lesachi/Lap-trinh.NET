@@ -11,7 +11,7 @@ namespace BookStore
     public class Database
     {
         private static string conn = "Data source=LAPTOP-QR5K8KKV\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
-
+        
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection(conn);

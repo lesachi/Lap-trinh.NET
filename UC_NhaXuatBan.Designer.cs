@@ -71,7 +71,7 @@
             this.pictureBox1.Image = global::BookStore.Properties.Resources.LogoNXBTre;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -79,9 +79,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BookStore.Properties.Resources.LogoKimDong1;
-            this.pictureBox2.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(265, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(206, 181);
+            this.pictureBox2.Size = new System.Drawing.Size(256, 256);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -89,9 +89,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::BookStore.Properties.Resources.LogoGiaoduc;
-            this.pictureBox3.Location = new System.Drawing.Point(427, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 265);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(206, 181);
+            this.pictureBox3.Size = new System.Drawing.Size(256, 256);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -99,9 +99,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::BookStore.Properties.Resources.LogoHoiNhaVan;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 190);
+            this.pictureBox4.Location = new System.Drawing.Point(265, 265);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(206, 181);
+            this.pictureBox4.Size = new System.Drawing.Size(256, 256);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -109,9 +109,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::BookStore.Properties.Resources.LogoVanhoc;
-            this.pictureBox5.Location = new System.Drawing.Point(215, 190);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 527);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(206, 181);
+            this.pictureBox5.Size = new System.Drawing.Size(256, 256);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
