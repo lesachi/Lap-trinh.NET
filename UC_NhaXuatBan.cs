@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,80 +27,91 @@ namespace BookStore
         }
         private void LoadNXB()
         {
-            // Thêm dữ liệu giả định
-            nxbList["Tre"] = new NhaXuatBan
+            flowLayoutPanelNXB.Controls.Clear();
+            string query = "SELECT * FROM NXB";
+            SqlCommand cmd = new SqlCommand(query, Database.GetConnection());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                Ma = "NXB01",
-                Ten = "Nhà xuất bản Trẻ",
-                Diachi = "161B Lý Chính Thắng, Q.3, TP.HCM",
-                Dienthoai = "0283843124",
-                Logo = Properties.Resources.LogoNXBTre,
-            };
+                string ma = reader["MaNXB"].ToString();
+                string ten = reader["TenNXB"].ToString();
+                string diachi = reader["DiaChi"].ToString();
+                string dienthoai = reader["DienThoai"].ToString();
+                Image logo = GetLogoResource(ma);
 
-            nxbList["KimDong"] = new NhaXuatBan
-            {
-                Ma = "NXB02",
-                Ten = "Nhà xuất bản Kim Đồng",
-                Diachi = "55 Quang Trung, Hà Nội",
-                Dienthoai = "0243876328",
-                Logo = Properties.Resources.LogoKimDong1,
-            };
 
-            nxbList["GiaoDuc"] = new NhaXuatBan
-            {
-                Ma = "NXB03",
-                Ten = "Nhà xuất bản Giáo dục",
-                Diachi = "81 Trần Hưng Đạo, Hà Nội",
-                Logo = Properties.Resources.LogoGiaoduc,
-            };
+                nxbList[ma] = new NhaXuatBan
+                {
+                    Ma = ma,
+                    Ten = ten,
+                    Diachi = diachi,
+                    Dienthoai = dienthoai,
+                    Logo = logo
+                };
 
-            nxbList["HoiNhaVan"] = new NhaXuatBan
-            {
-                Ma = "NXB04",
-                Ten = "Nhà xuất bản Hội Nhà Văn",
-                Diachi = "65 Nguyễn Du, Hà Nội",
-                Dienthoai = "0243943134",
-                Logo = Properties.Resources.LogoHoiNhaVan,
-            };
+                PictureBox pb = new PictureBox();
+                pb.Image = logo;
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                pb.Width = 100;
+                pb.Height = 100;
+                pb.Margin = new Padding(10);
+                pb.Cursor = Cursors.Hand;
 
-            nxbList["VanHoc"] = new NhaXuatBan
-            {
-                Ma = "NXB05",
-                Ten = "Nhà xuất bản Văn học",
-                Diachi = "94 Lò Đúc, Hà Nội",
-                Dienthoai = "0243943908",
-                Logo = Properties.Resources.LogoVanhoc,
-            };
+                pb.Tag = ma;
 
-            pboKimDong.Click += (s, e) => ShowDetail("KimDong");
-            pboTre.Click += (s, e) => ShowDetail("Tre");
-            pboGiaoduc.Click += (s, e) => ShowDetail("GiaoDuc");
-            pboHoinhavan.Click += (s, e) => ShowDetail("HoiNhaVan");
-            pboVanhoc.Click += (s, e) => ShowDetail("VanHoc");
-
+                // Gán sự kiện Click động
+                pb.Click += (s, e) =>
+                {
+                    PictureBox clicked = (PictureBox)s;
+                    string selectedMa = clicked.Tag.ToString();
+                    ShowDetail(selectedMa); // gọi hàm hiện chi tiết
+                };
+                PanelNXB.Controls.Add(pb);
+            }
         }
+        private Image GetLogoResource(string maNXB)
+        {
+            //Image logo = null;
+
+            switch (maNXB) // hoặc tenNXB nếu cần
+            {
+                case "NXB01": return Properties.Resources.LogoNXBTre;
+                case "NXB02": return Properties.Resources.LogoKimDong1;
+                case "NXB03": return Properties.Resources.LogoGiaoduc;
+                case "NXB04": return Properties.Resources.LogoHoiNhaVan;
+                case "NXB05": return Properties.Resources.LogoVanhoc;
+                default: return Properties.Resources.logo; // logo mặc định
+            }
+        }
+
 
         private void ShowDetail(string key)
         {
             if (nxbList.ContainsKey(key))
             {
                 var nxb = nxbList[key];
-                var chiTietControl = new UC_ChitietNXB(nxb.Ma, nxb.Ten, nxb.Diachi, nxb.Dienthoai, nxb.Logo);
-                // Tạo form bao quanh để hiển thị UC
+
+                var chiTietControl = new UC_ChitietNXB(
+                    nxb.Ma,
+                    nxb.Ten,
+                    nxb.Diachi,
+                    nxb.Dienthoai,
+                    nxb.Logo    // ← LOGO truyền vào đây
+                );
+
                 var detailForm = new Form();
                 detailForm.Text = "Chi tiết Nhà Xuất Bản";
-                detailForm.Size = new Size(500, 300); 
+                detailForm.Size = new Size(500, 300);
                 detailForm.StartPosition = FormStartPosition.CenterParent;
 
-                // Gắn UC vào form
                 chiTietControl.Dock = DockStyle.Fill;
                 detailForm.Controls.Add(chiTietControl);
 
-                // Hiển thị modal
                 detailForm.ShowDialog();
-
             }
         }
+
         public class NhaXuatBan
         {
             public string Ma { get; set; }

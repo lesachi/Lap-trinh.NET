@@ -30,14 +30,14 @@
         {
             this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaNXB = new System.Windows.Forms.TextBox();
-            this.txtTenNXB = new System.Windows.Forms.TextBox();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtDienthoai = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.txtTenNXB = new System.Windows.Forms.TextBox();
+            this.txtMaNXB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -70,32 +70,33 @@
             this.panel1.Size = new System.Drawing.Size(440, 296);
             this.panel1.TabIndex = 1;
             // 
-            // label1
+            // txtDienthoai
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã nhà xuất bản";
+            this.txtDienthoai.Location = new System.Drawing.Point(130, 226);
+            this.txtDienthoai.Name = "txtDienthoai";
+            this.txtDienthoai.Size = new System.Drawing.Size(100, 22);
+            this.txtDienthoai.TabIndex = 7;
             // 
-            // label2
+            // txtDiachi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên nhà xuất bản";
+            this.txtDiachi.Location = new System.Drawing.Point(130, 167);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(297, 22);
+            this.txtDiachi.TabIndex = 6;
             // 
-            // label3
+            // txtTenNXB
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 167);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Địa chỉ";
+            this.txtTenNXB.Location = new System.Drawing.Point(130, 100);
+            this.txtTenNXB.Name = "txtTenNXB";
+            this.txtTenNXB.Size = new System.Drawing.Size(297, 22);
+            this.txtTenNXB.TabIndex = 5;
+            // 
+            // txtMaNXB
+            // 
+            this.txtMaNXB.Location = new System.Drawing.Point(130, 40);
+            this.txtMaNXB.Name = "txtMaNXB";
+            this.txtMaNXB.Size = new System.Drawing.Size(100, 22);
+            this.txtMaNXB.TabIndex = 4;
             // 
             // label4
             // 
@@ -106,33 +107,32 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Điện thoại";
             // 
-            // txtMaNXB
+            // label3
             // 
-            this.txtMaNXB.Location = new System.Drawing.Point(130, 40);
-            this.txtMaNXB.Name = "txtMaNXB";
-            this.txtMaNXB.Size = new System.Drawing.Size(100, 22);
-            this.txtMaNXB.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Địa chỉ";
             // 
-            // txtTenNXB
+            // label2
             // 
-            this.txtTenNXB.Location = new System.Drawing.Point(130, 100);
-            this.txtTenNXB.Name = "txtTenNXB";
-            this.txtTenNXB.Size = new System.Drawing.Size(297, 22);
-            this.txtTenNXB.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên nhà xuất bản";
             // 
-            // txtDiachi
+            // label1
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(130, 167);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(297, 22);
-            this.txtDiachi.TabIndex = 6;
-            // 
-            // txtDienthoai
-            // 
-            this.txtDienthoai.Location = new System.Drawing.Point(130, 226);
-            this.txtDienthoai.Name = "txtDienthoai";
-            this.txtDienthoai.Size = new System.Drawing.Size(100, 22);
-            this.txtDienthoai.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã nhà xuất bản";
             // 
             // btnSua
             // 
@@ -142,6 +142,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 

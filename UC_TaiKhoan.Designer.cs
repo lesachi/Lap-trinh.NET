@@ -46,17 +46,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(348, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(405, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 36);
+            this.label1.Size = new System.Drawing.Size(331, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách tài khoản";
             // 
             // lbmanv
             // 
             this.lbmanv.AutoSize = true;
-            this.lbmanv.Location = new System.Drawing.Point(17, 90);
+            this.lbmanv.Location = new System.Drawing.Point(88, 99);
             this.lbmanv.Name = "lbmanv";
             this.lbmanv.Size = new System.Drawing.Size(103, 20);
             this.lbmanv.TabIndex = 1;
@@ -65,7 +65,7 @@
             // lbusername
             // 
             this.lbusername.AutoSize = true;
-            this.lbusername.Location = new System.Drawing.Point(17, 152);
+            this.lbusername.Location = new System.Drawing.Point(88, 161);
             this.lbusername.Name = "lbusername";
             this.lbusername.Size = new System.Drawing.Size(83, 20);
             this.lbusername.TabIndex = 2;
@@ -74,7 +74,7 @@
             // lbRole
             // 
             this.lbRole.AutoSize = true;
-            this.lbRole.Location = new System.Drawing.Point(637, 90);
+            this.lbRole.Location = new System.Drawing.Point(708, 99);
             this.lbRole.Name = "lbRole";
             this.lbRole.Size = new System.Drawing.Size(66, 20);
             this.lbRole.TabIndex = 3;
@@ -83,7 +83,7 @@
             // lbtrangthai
             // 
             this.lbtrangthai.AutoSize = true;
-            this.lbtrangthai.Location = new System.Drawing.Point(637, 152);
+            this.lbtrangthai.Location = new System.Drawing.Point(708, 161);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(80, 20);
             this.lbtrangthai.TabIndex = 4;
@@ -91,14 +91,14 @@
             // 
             // txtmanv
             // 
-            this.txtmanv.Location = new System.Drawing.Point(136, 90);
+            this.txtmanv.Location = new System.Drawing.Point(207, 99);
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(178, 26);
             this.txtmanv.TabIndex = 5;
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(136, 152);
+            this.txtusername.Location = new System.Drawing.Point(207, 161);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(178, 26);
             this.txtusername.TabIndex = 6;
@@ -106,7 +106,7 @@
             // cbbRole
             // 
             this.cbbRole.FormattingEnabled = true;
-            this.cbbRole.Location = new System.Drawing.Point(740, 82);
+            this.cbbRole.Location = new System.Drawing.Point(811, 91);
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Size = new System.Drawing.Size(175, 28);
             this.cbbRole.TabIndex = 7;
@@ -114,7 +114,7 @@
             // cbbTrangthai
             // 
             this.cbbTrangthai.FormattingEnabled = true;
-            this.cbbTrangthai.Location = new System.Drawing.Point(740, 149);
+            this.cbbTrangthai.Location = new System.Drawing.Point(811, 158);
             this.cbbTrangthai.Name = "cbbTrangthai";
             this.cbbTrangthai.Size = new System.Drawing.Size(175, 28);
             this.cbbTrangthai.TabIndex = 8;
@@ -122,7 +122,7 @@
             // dtGVTaikhoan
             // 
             this.dtGVTaikhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGVTaikhoan.Location = new System.Drawing.Point(0, 256);
+            this.dtGVTaikhoan.Location = new System.Drawing.Point(55, 248);
             this.dtGVTaikhoan.Name = "dtGVTaikhoan";
             this.dtGVTaikhoan.RowHeadersWidth = 62;
             this.dtGVTaikhoan.RowTemplate.Height = 28;
@@ -131,7 +131,7 @@
             // 
             // btnKhoa
             // 
-            this.btnKhoa.Location = new System.Drawing.Point(21, 505);
+            this.btnKhoa.Location = new System.Drawing.Point(66, 517);
             this.btnKhoa.Name = "btnKhoa";
             this.btnKhoa.Size = new System.Drawing.Size(199, 40);
             this.btnKhoa.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(783, 505);
+            this.btnXoa.Location = new System.Drawing.Point(873, 517);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(217, 40);
             this.btnXoa.TabIndex = 11;
@@ -164,7 +164,7 @@
             this.Controls.Add(this.lbmanv);
             this.Controls.Add(this.label1);
             this.Name = "UC_TaiKhoan";
-            this.Size = new System.Drawing.Size(1044, 590);
+            this.Size = new System.Drawing.Size(1132, 640);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVTaikhoan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelSidetop = new System.Windows.Forms.Panel();
-            this.btnX = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnX = new System.Windows.Forms.Button();
             this.panelsideLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.lbLogin = new System.Windows.Forms.Label();
             this.lbusername = new System.Windows.Forms.Label();
@@ -54,6 +54,18 @@
             this.panelSidetop.Size = new System.Drawing.Size(694, 46);
             this.panelSidetop.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Book Store Management";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // btnX
             // 
             this.btnX.BackColor = System.Drawing.Color.Red;
@@ -66,17 +78,6 @@
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Book Store Management";
             // 
             // panelsideLeft
             // 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using BookStore.DAO;
 
 namespace BookStore
 {
@@ -15,6 +17,8 @@ namespace BookStore
         public UC_TaiKhoan()
         {
             InitializeComponent();
+            dtGVTaikhoan.DataSource = TaiKhoanDAO.LoadData();
+
         }
     }
 }

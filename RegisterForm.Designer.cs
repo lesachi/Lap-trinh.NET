@@ -48,12 +48,13 @@
             // 
             this.btnRegister.BackColor = System.Drawing.Color.BurlyWood;
             this.btnRegister.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(373, 360);
+            this.btnRegister.Location = new System.Drawing.Point(373, 367);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(240, 42);
             this.btnRegister.TabIndex = 19;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // cbPass
             // 
@@ -109,11 +110,12 @@
             this.lbcreate.AutoSize = true;
             this.lbcreate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcreate.ForeColor = System.Drawing.Color.SeaShell;
-            this.lbcreate.Location = new System.Drawing.Point(403, 84);
+            this.lbcreate.Location = new System.Drawing.Point(402, 82);
             this.lbcreate.Name = "lbcreate";
             this.lbcreate.Size = new System.Drawing.Size(189, 28);
             this.lbcreate.TabIndex = 13;
             this.lbcreate.Text = "Create Account";
+            this.lbcreate.Click += new System.EventHandler(this.lbcreate_Click);
             // 
             // panelsideLeft
             // 
@@ -178,6 +180,7 @@
             this.txtconfirm.Size = new System.Drawing.Size(240, 26);
             this.txtconfirm.TabIndex = 22;
             this.txtconfirm.UseSystemPasswordChar = true;
+            this.txtconfirm.TextChanged += new System.EventHandler(this.txtconfirm_TextChanged);
             // 
             // RegisterForm
             // 
@@ -198,6 +201,7 @@
             this.Controls.Add(this.panelSidetop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.panelSidetop.ResumeLayout(false);
             this.panelSidetop.PerformLayout();

@@ -12,9 +12,11 @@ namespace BookStore
 {
     public partial class MainFrm: Form
     {
-        public MainFrm()
+        private string _role;
+        public MainFrm(string role)
         {
             InitializeComponent();
+            _role = role;
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -89,7 +91,27 @@ namespace BookStore
 
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
+         
+        }
+        
 
+        private void btnTaikhoan_Click(object sender, EventArgs e)
+        {
+
+            panelChildForm.Controls.Clear();
+            UC_TaiKhoan uc = new UC_TaiKhoan();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+            if (_role == "Staff")
+            {
+                btnTaikhoan.Visible = false;
+                btnQLNV.Visible = false;
+
+            }
         }
     }
 }
