@@ -64,7 +64,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                  // conn.Open();
                     // Load NhanVien data
                     string sqlNV = "SELECT MaNV, TenNV FROM NhanVien";
                     using (SqlCommand cmd = new SqlCommand(sqlNV, conn))
@@ -151,7 +151,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                   // conn.Open();
                     string sql = @"
                         SELECT p.SoHDN, nv.TenNV, ks.TenSach, ncc.TenNCC, c.DonGiaNhap AS DonGia, c.SoLuongNhap AS SoLuong, 
                                c.KhuyenMai, c.ThanhTien, c.MaSach
@@ -210,7 +210,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                 //   conn.Open();
                     string sql = "SELECT ISNULL(MAX(SoHDN), 'HDN000') FROM HoaDonNhap";
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
@@ -253,7 +253,7 @@ namespace BookStore
                 {
                     try
                     {
-                        conn.Open();
+                     //   conn.Open();
                         string sql = @"
                             SELECT p.SoHDN, p.MaNV, nv.TenNV, p.MaNCC, ncc.TenNCC, p.NgayNhap
                             FROM HoaDonNhap p
@@ -325,7 +325,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                 //   conn.Open();
                     using (SqlTransaction transaction = conn.BeginTransaction())
                     {
                         try
@@ -439,7 +439,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                 //   conn.Open();
                     using (SqlTransaction transaction = conn.BeginTransaction())
                     {
                         try
@@ -542,7 +542,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                 //   conn.Open();
                     using (SqlTransaction transaction = conn.BeginTransaction())
                     {
                         try
@@ -642,7 +642,7 @@ namespace BookStore
             {
                 try
                 {
-                    conn.Open();
+                 //   conn.Open();
                     string sql = @"
                         SELECT p.SoHDN, nv.TenNV, ncc.TenNCC, p.NgayNhap, p.TongTien, 
                                c.MaSach, ks.TenSach, c.SoLuongNhap, c.DonGiaNhap, c.KhuyenMai, c.ThanhTien

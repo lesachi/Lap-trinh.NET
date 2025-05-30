@@ -38,7 +38,7 @@ namespace BookStore
             // Load Nhân Viên
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+                //conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT MaNV, TenNV FROM NhanVien", conn);
                 DataTable dtNV = new DataTable();
                 da.Fill(dtNV);
@@ -50,7 +50,7 @@ namespace BookStore
             // Load Khách Hàng
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+               // conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT MaKhach, TenKhach FROM KhachHang", conn);
                 DataTable dtKH = new DataTable();
                 da.Fill(dtKH);
@@ -62,7 +62,7 @@ namespace BookStore
             // Load Sách
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+              //  conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT MaSach, TenSach, DonGiaBan FROM KhoSach", conn);
                 DataTable dtSach = new DataTable();
                 da.Fill(dtSach);
@@ -103,7 +103,7 @@ namespace BookStore
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+               // conn.Open();
                 string query = @"
                     SELECT hdb.SoHDB, hdb.NgayBan, nv.TenNV, kh.TenKhach, ks.TenSach, cthdb.SoLuongBan, cthdb.ThanhTien
                     FROM HoaDonBan hdb
@@ -128,7 +128,7 @@ namespace BookStore
             {
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    conn.Open();
+                  //  conn.Open();
                     string query = "SELECT TenNV FROM NhanVien WHERE MaNV = @MaNV";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MaNV", cmbMaNV.SelectedValue);
@@ -143,7 +143,7 @@ namespace BookStore
             {
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    conn.Open();
+                  //  conn.Open();
                     string query = "SELECT TenKhach FROM KhachHang WHERE MaKhach = @MaKhach";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MaKhach", cmbMaKH.SelectedValue);
@@ -186,7 +186,7 @@ namespace BookStore
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+              //  conn.Open();
                 SqlTransaction transaction = conn.BeginTransaction();
                 try
                 {
@@ -270,7 +270,7 @@ namespace BookStore
 
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    conn.Open();
+                  //  conn.Open();
                     SqlTransaction transaction = conn.BeginTransaction();
                     try
                     {
@@ -360,7 +360,7 @@ namespace BookStore
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+               // conn.Open();
                 SqlTransaction transaction = conn.BeginTransaction();
                 try
                 {
@@ -444,7 +444,7 @@ namespace BookStore
 
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    conn.Open();
+                   // conn.Open();
                     // Fetch the total amount from HoaDonBan
                     string queryTotal = "SELECT TongTien FROM HoaDonBan WHERE SoHDB = @SoHDB";
                     SqlCommand cmdTotal = new SqlCommand(queryTotal, conn);
@@ -531,7 +531,7 @@ namespace BookStore
                 // Fetch DonGia from KhoSach based on MaSach
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    conn.Open();
+                  //  conn.Open();
                     string query = "SELECT DonGiaBan FROM KhoSach WHERE MaSach = @MaSach";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MaSach", maSach);
@@ -548,7 +548,7 @@ namespace BookStore
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+              //  conn.Open();
                 string query = "SELECT MAX(SoHDB) FROM HoaDonBan";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 object result = cmd.ExecuteScalar();
@@ -573,7 +573,7 @@ namespace BookStore
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+             //   conn.Open();
                 string query = "SELECT MaNV FROM NhanVien WHERE TenNV = @TenNV";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TenNV", tenNV);
@@ -585,7 +585,7 @@ namespace BookStore
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+             //   conn.Open();
                 string query = "SELECT MaKhach FROM KhachHang WHERE TenKhach = @TenKhach";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TenKhach", tenKH);
@@ -597,7 +597,7 @@ namespace BookStore
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
+             //   conn.Open();
                 string query = "SELECT MaSach FROM KhoSach WHERE TenSach = @TenSach";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TenSach", tenSach);

@@ -40,7 +40,6 @@ namespace BookStore
                 string dienthoai = reader["DienThoai"].ToString();
                 Image logo = GetLogoResource(ma);
 
-
                 nxbList[ma] = new NhaXuatBan
                 {
                     Ma = ma,
@@ -60,31 +59,32 @@ namespace BookStore
 
                 pb.Tag = ma;
 
-                // Gán sự kiện Click động
+                // Gán sự kiện Click động  
                 pb.Click += (s, e) =>
                 {
                     PictureBox clicked = (PictureBox)s;
                     string selectedMa = clicked.Tag.ToString();
-                    ShowDetail(selectedMa); // gọi hàm hiện chi tiết
+                    ShowDetail(selectedMa); // gọi hàm hiện chi tiết  
                 };
-                PanelNXB.Controls.Add(pb);
+
+                // Fix: Replace 'PanelNXB' with 'flowLayoutPanelNXB'  
+                flowLayoutPanelNXB.Controls.Add(pb);
             }
         }
         private Image GetLogoResource(string maNXB)
         {
-            //Image logo = null;
+            //Image logo = null;  
 
-            switch (maNXB) // hoặc tenNXB nếu cần
+            switch (maNXB) // hoặc tenNXB nếu cần  
             {
                 case "NXB01": return Properties.Resources.LogoNXBTre;
                 case "NXB02": return Properties.Resources.LogoKimDong1;
                 case "NXB03": return Properties.Resources.LogoGiaoduc;
                 case "NXB04": return Properties.Resources.LogoHoiNhaVan;
                 case "NXB05": return Properties.Resources.LogoVanhoc;
-                default: return Properties.Resources.logo; // logo mặc định
+                default: return Properties.Resources.logo; // logo mặc định  
             }
         }
-
 
         private void ShowDetail(string key)
         {
@@ -97,7 +97,7 @@ namespace BookStore
                     nxb.Ten,
                     nxb.Diachi,
                     nxb.Dienthoai,
-                    nxb.Logo    // ← LOGO truyền vào đây
+                    nxb.Logo    // ← LOGO truyền vào đây  
                 );
 
                 var detailForm = new Form();
