@@ -91,8 +91,11 @@ namespace BookStore
 
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_NhapHang uc = new UC_NhapHang(); // Tạo mới UserControl
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
 
-         
         }
         
 

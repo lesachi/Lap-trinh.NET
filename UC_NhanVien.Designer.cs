@@ -40,7 +40,7 @@
             this.txtHoTenNV = new System.Windows.Forms.TextBox();
             this.txtDiaChiNV = new System.Windows.Forms.TextBox();
             this.txtEmailNV = new System.Windows.Forms.TextBox();
-            this.xtSDTNV = new System.Windows.Forms.TextBox();
+            this.txtSDTNV = new System.Windows.Forms.TextBox();
             this.btnThemNV = new System.Windows.Forms.Button();
             this.btnLuuNV = new System.Windows.Forms.Button();
             this.btnSuaNV = new System.Windows.Forms.Button();
@@ -69,10 +69,11 @@
             // dataGVNhanVien
             // 
             this.dataGVNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVNhanVien.Location = new System.Drawing.Point(0, 310);
+            this.dataGVNhanVien.Location = new System.Drawing.Point(0, 312);
             this.dataGVNhanVien.Name = "dataGVNhanVien";
             this.dataGVNhanVien.Size = new System.Drawing.Size(808, 187);
             this.dataGVNhanVien.TabIndex = 0;
+            this.dataGVNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVNhanVien_CellContentClick);
             // 
             // label1
             // 
@@ -177,12 +178,12 @@
             this.txtEmailNV.Size = new System.Drawing.Size(265, 20);
             this.txtEmailNV.TabIndex = 11;
             // 
-            // xtSDTNV
+            // txtSDTNV
             // 
-            this.xtSDTNV.Location = new System.Drawing.Point(422, 92);
-            this.xtSDTNV.Name = "xtSDTNV";
-            this.xtSDTNV.Size = new System.Drawing.Size(265, 20);
-            this.xtSDTNV.TabIndex = 12;
+            this.txtSDTNV.Location = new System.Drawing.Point(422, 92);
+            this.txtSDTNV.Name = "txtSDTNV";
+            this.txtSDTNV.Size = new System.Drawing.Size(265, 20);
+            this.txtSDTNV.TabIndex = 12;
             // 
             // btnThemNV
             // 
@@ -193,6 +194,7 @@
             this.btnThemNV.TabIndex = 13;
             this.btnThemNV.Text = "Thêm";
             this.btnThemNV.UseVisualStyleBackColor = true;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
             // btnLuuNV
             // 
@@ -203,6 +205,7 @@
             this.btnLuuNV.TabIndex = 14;
             this.btnLuuNV.Text = "Lưu";
             this.btnLuuNV.UseVisualStyleBackColor = true;
+            this.btnLuuNV.Click += new System.EventHandler(this.btnLuuNV_Click);
             // 
             // btnSuaNV
             // 
@@ -213,6 +216,7 @@
             this.btnSuaNV.TabIndex = 15;
             this.btnSuaNV.Text = "Sửa";
             this.btnSuaNV.UseVisualStyleBackColor = true;
+            this.btnSuaNV.Click += new System.EventHandler(this.btnSuaNV_Click);
             // 
             // btnXoaNV
             // 
@@ -223,6 +227,7 @@
             this.btnXoaNV.TabIndex = 16;
             this.btnXoaNV.Text = "Xóa";
             this.btnXoaNV.UseVisualStyleBackColor = true;
+            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
             // btnBoquaNV
             // 
@@ -233,6 +238,7 @@
             this.btnBoquaNV.TabIndex = 17;
             this.btnBoquaNV.Text = "Bỏ qua";
             this.btnBoquaNV.UseVisualStyleBackColor = true;
+            this.btnBoquaNV.Click += new System.EventHandler(this.btnBoquaNV_Click);
             // 
             // groupBox1
             // 
@@ -290,6 +296,7 @@
             this.btnTimKiemNV.TabIndex = 21;
             this.btnTimKiemNV.Text = "Tìm kiếm";
             this.btnTimKiemNV.UseVisualStyleBackColor = true;
+            this.btnTimKiemNV.Click += new System.EventHandler(this.btnTimKiemNV_Click);
             // 
             // cboTKNV
             // 
@@ -403,7 +410,7 @@
             this.Controls.Add(this.btnSuaNV);
             this.Controls.Add(this.btnLuuNV);
             this.Controls.Add(this.btnThemNV);
-            this.Controls.Add(this.xtSDTNV);
+            this.Controls.Add(this.txtSDTNV);
             this.Controls.Add(this.txtEmailNV);
             this.Controls.Add(this.txtDiaChiNV);
             this.Controls.Add(this.txtHoTenNV);
@@ -418,6 +425,7 @@
             this.Controls.Add(this.dataGVNhanVien);
             this.Name = "UC_NhanVien";
             this.Size = new System.Drawing.Size(808, 497);
+            this.Load += new System.EventHandler(this.UC_NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVNhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -444,7 +452,7 @@
         private System.Windows.Forms.TextBox txtHoTenNV;
         private System.Windows.Forms.TextBox txtDiaChiNV;
         private System.Windows.Forms.TextBox txtEmailNV;
-        private System.Windows.Forms.TextBox xtSDTNV;
+        private System.Windows.Forms.TextBox txtSDTNV;
         private System.Windows.Forms.Button btnThemNV;
         private System.Windows.Forms.Button btnLuuNV;
         private System.Windows.Forms.Button btnSuaNV;

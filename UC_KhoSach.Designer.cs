@@ -40,7 +40,6 @@
             this.lbMaLV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbSotrang = new System.Windows.Forms.Label();
-            this.lbAnh = new System.Windows.Forms.Label();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
@@ -52,17 +51,15 @@
             this.cbbMaLV = new System.Windows.Forms.ComboBox();
             this.cbbMaNN = new System.Windows.Forms.ComboBox();
             this.txtSoTrang = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtGVKhoSach
@@ -186,16 +183,6 @@
             this.lbSotrang.TabIndex = 12;
             this.lbSotrang.Text = "Số trang";
             // 
-            // lbAnh
-            // 
-            this.lbAnh.AutoSize = true;
-            this.lbAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAnh.Location = new System.Drawing.Point(537, 237);
-            this.lbAnh.Name = "lbAnh";
-            this.lbAnh.Size = new System.Drawing.Size(48, 25);
-            this.lbAnh.TabIndex = 13;
-            this.lbAnh.Text = "Ảnh";
-            // 
             // txtMaSach
             // 
             this.txtMaSach.Location = new System.Drawing.Point(244, 70);
@@ -278,14 +265,6 @@
             this.txtSoTrang.Size = new System.Drawing.Size(187, 26);
             this.txtSoTrang.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(666, 220);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 160);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(930, 72);
@@ -314,18 +293,9 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(542, 282);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(93, 34);
-            this.btnOpen.TabIndex = 29;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(109, 346);
+            this.btnTimkiem.Location = new System.Drawing.Point(67, 343);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(93, 34);
             this.btnTimkiem.TabIndex = 30;
@@ -360,19 +330,25 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Kho sách";
             // 
+            // txtTimkiem
+            // 
+            this.txtTimkiem.Location = new System.Drawing.Point(192, 343);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(219, 26);
+            this.txtTimkiem.TabIndex = 34;
+            // 
             // UC_KhoSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnTimkiem);
-            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSoTrang);
             this.Controls.Add(this.cbbMaNN);
             this.Controls.Add(this.cbbMaLV);
@@ -384,7 +360,6 @@
             this.Controls.Add(this.txtSL);
             this.Controls.Add(this.txtTenSach);
             this.Controls.Add(this.txtMaSach);
-            this.Controls.Add(this.lbAnh);
             this.Controls.Add(this.lbSotrang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbMaLV);
@@ -400,7 +375,6 @@
             this.Name = "UC_KhoSach";
             this.Size = new System.Drawing.Size(1182, 682);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +394,6 @@
         private System.Windows.Forms.Label lbMaLV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbSotrang;
-        private System.Windows.Forms.Label lbAnh;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.TextBox txtTenSach;
         private System.Windows.Forms.TextBox txtSL;
@@ -432,14 +405,13 @@
         private System.Windows.Forms.ComboBox cbbMaLV;
         private System.Windows.Forms.ComboBox cbbMaNN;
         private System.Windows.Forms.TextBox txtSoTrang;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTimkiem;
     }
 }

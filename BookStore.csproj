@@ -98,12 +98,6 @@
     <Compile Include="UC_NhaCungCap.Designer.cs">
       <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_NhaXuatBan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_NhaXuatBan.Designer.cs">
-      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +109,12 @@
     </Compile>
     <Compile Include="UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhaXuatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhaXuatBan.Designer.cs">
+      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_TaiKhoan.cs">
       <SubType>UserControl</SubType>
@@ -156,14 +156,14 @@
     <EmbeddedResource Include="UC_NhaCungCap.resx">
       <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_NhaXuatBan.resx">
-      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhapHang.resx">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhaXuatBan.resx">
+      <DependentUpon>UC_NhaXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_TaiKhoan.resx">
       <DependentUpon>UC_TaiKhoan.cs</DependentUpon>

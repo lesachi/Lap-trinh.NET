@@ -119,6 +119,7 @@
             this.btnKhoa.TabIndex = 10;
             this.btnKhoa.Text = "Khóa tài khoản";
             this.btnKhoa.UseVisualStyleBackColor = true;
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
             // 
             // btnXoa
             // 
@@ -128,6 +129,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa tài khoản";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThemtk
             // 
@@ -163,6 +165,7 @@
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu tài khoản";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // cbbManv
             // 
