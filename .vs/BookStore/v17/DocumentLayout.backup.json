@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\admin\\source\\repos\\lesachi\\lap-trinh.net\\dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\admin\\source\\repos\\lesachi\\lap-trinh.net\\dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\admin\\source\\repos\\lesachi\\lap-trinh.net\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -157,11 +157,19 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "KhoSachDAO.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\KhoSachDAO.cs",
               "RelativeDocumentMoniker": "DAO\\KhoSachDAO.cs",
@@ -174,19 +182,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UC_KhoSach.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs [Design]*",
-              "RelativeToolTip": "UC_KhoSach.cs [Design]*",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs [Design]",
+              "RelativeToolTip": "UC_KhoSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T03:52:50.036Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TaiKhoanDAO.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\TaiKhoanDAO.cs",
               "RelativeDocumentMoniker": "DAO\\TaiKhoanDAO.cs",
@@ -199,13 +207,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UC_KhoSach.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs*",
-              "RelativeToolTip": "UC_KhoSach.cs*",
-              "ViewState": "AgIAABcAAAAAAAAAAAAlwB8AAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
+              "RelativeToolTip": "UC_KhoSach.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAewCAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T03:54:13.907Z",
               "EditorCaption": ""

@@ -244,6 +244,28 @@ namespace BookStore
                 LoadDataToGridView();
             }
         }
+
+        private void btnMotk_Click(object sender, EventArgs e)
+        {
+            if (txtusername.Text != "")
+            {
+                using (SqlConnection conn = Database.GetConnection())
+                {
+
+                    string query = "UPDATE TaiKhoan SET TrangThai = 1 WHERE Username = @TenDangNhap";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TenDangNhap", txtusername.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã mở tài khoản.");
+                        TaiKhoanDAO.LoadData();
+                        LoadDataToGridView(); // Cập nhật lại dữ liệu hiển thị
+                    }
+                }
+
+                txtTrangthai.Text = "1"; // Cập nhật trạng thái hiển thị
+            }
+        }
     }
 }
 

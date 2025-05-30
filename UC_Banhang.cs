@@ -456,15 +456,15 @@ namespace BookStore
                     }
 
                     // Fetch detailed invoice information, including DonGiaBan and KhuyenMai
-                    string query = @"
-                SELECT hdb.SoHDB, hdb.NgayBan, nv.TenNV, kh.TenKhach, ks.TenSach, 
-                       ks.DonGiaBan, cthdb.KhuyenMai, cthdb.SoLuongBan, cthdb.ThanhTien
-                FROM HoaDonBan hdb
-                JOIN NhanVien nv ON hdb.MaNV = nv.MaNV
-                JOIN KhachHang kh ON hdb.MaKhach = kh.MaKhach
-                JOIN ChiTietHDB cthdb ON hdb.SoHDB = cthdb.SoHDB
-                JOIN KhoSach ks ON cthdb.MaSach = ks.MaSach
-                WHERE hdb.SoHDB = @SoHDB";
+                            string query = @"
+                        SELECT hdb.SoHDB, hdb.NgayBan, nv.TenNV, kh.TenKhach, ks.TenSach, 
+                               ks.DonGiaBan, cthdb.KhuyenMai, cthdb.SoLuongBan, cthdb.ThanhTien
+                        FROM HoaDonBan hdb
+                        JOIN NhanVien nv ON hdb.MaNV = nv.MaNV
+                        JOIN KhachHang kh ON hdb.MaKhach = kh.MaKhach
+                        JOIN ChiTietHDB cthdb ON hdb.SoHDB = cthdb.SoHDB
+                        JOIN KhoSach ks ON cthdb.MaSach = ks.MaSach
+                        WHERE hdb.SoHDB = @SoHDB";
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     da.SelectCommand.Parameters.AddWithValue("@SoHDB", soHDB);
                     DataTable dt = new DataTable();

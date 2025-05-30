@@ -44,6 +44,7 @@
             this.cbbManv = new System.Windows.Forms.ComboBox();
             this.txtChucvu = new System.Windows.Forms.TextBox();
             this.txtTrangthai = new System.Windows.Forms.TextBox();
+            this.btnMotk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVTaikhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@
             // 
             this.btnKhoa.Location = new System.Drawing.Point(66, 517);
             this.btnKhoa.Name = "btnKhoa";
-            this.btnKhoa.Size = new System.Drawing.Size(199, 40);
+            this.btnKhoa.Size = new System.Drawing.Size(150, 40);
             this.btnKhoa.TabIndex = 10;
             this.btnKhoa.Text = "Khóa tài khoản";
             this.btnKhoa.UseVisualStyleBackColor = true;
@@ -123,9 +124,9 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(873, 517);
+            this.btnXoa.Location = new System.Drawing.Point(926, 517);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(217, 40);
+            this.btnXoa.Size = new System.Drawing.Size(164, 40);
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa tài khoản";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -133,9 +134,9 @@
             // 
             // btnThemtk
             // 
-            this.btnThemtk.Location = new System.Drawing.Point(319, 517);
+            this.btnThemtk.Location = new System.Drawing.Point(488, 517);
             this.btnThemtk.Name = "btnThemtk";
-            this.btnThemtk.Size = new System.Drawing.Size(199, 40);
+            this.btnThemtk.Size = new System.Drawing.Size(149, 40);
             this.btnThemtk.TabIndex = 12;
             this.btnThemtk.Text = "Thêm tài khoản";
             this.btnThemtk.UseVisualStyleBackColor = true;
@@ -159,9 +160,9 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(589, 517);
+            this.btnLuu.Location = new System.Drawing.Point(703, 517);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(199, 40);
+            this.btnLuu.Size = new System.Drawing.Size(155, 40);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu tài khoản";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -189,10 +190,21 @@
             this.txtTrangthai.Size = new System.Drawing.Size(175, 26);
             this.txtTrangthai.TabIndex = 18;
             // 
+            // btnMotk
+            // 
+            this.btnMotk.Location = new System.Drawing.Point(274, 517);
+            this.btnMotk.Name = "btnMotk";
+            this.btnMotk.Size = new System.Drawing.Size(148, 40);
+            this.btnMotk.TabIndex = 19;
+            this.btnMotk.Text = "Mở tài khoản";
+            this.btnMotk.UseVisualStyleBackColor = true;
+            this.btnMotk.Click += new System.EventHandler(this.btnMotk_Click);
+            // 
             // UC_TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMotk);
             this.Controls.Add(this.txtTrangthai);
             this.Controls.Add(this.txtChucvu);
             this.Controls.Add(this.cbbManv);
@@ -236,5 +248,6 @@
         private System.Windows.Forms.ComboBox cbbManv;
         private System.Windows.Forms.TextBox txtChucvu;
         private System.Windows.Forms.TextBox txtTrangthai;
+        private System.Windows.Forms.Button btnMotk;
     }
 }
