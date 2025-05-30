@@ -26,5 +26,11 @@ namespace BookStore
         {
 
         }
+
+        private void UC_KhoSach_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

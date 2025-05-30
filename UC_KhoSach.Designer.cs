@@ -374,6 +374,7 @@
             this.Controls.Add(this.dtGVKhoSach);
             this.Name = "UC_KhoSach";
             this.Size = new System.Drawing.Size(1182, 682);
+            this.Load += new System.EventHandler(this.UC_KhoSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
