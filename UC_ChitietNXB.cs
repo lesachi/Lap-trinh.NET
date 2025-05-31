@@ -27,6 +27,10 @@ namespace BookStore
         private void UC_ChitietNXB_Load(object sender, EventArgs e)
         {
             Database.GetConnection();
+            txtMaNXB.ReadOnly = true;
+            txtTenNXB.ReadOnly = true;
+            txtDiachi.ReadOnly = true;
+            txtDienthoai.ReadOnly = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
