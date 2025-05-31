@@ -13,7 +13,7 @@ namespace BookStore
 {
     public class Database
     {
-        private static string conn = "Data Source=DESKTOP-GGAFB0R;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
+        private static string conn = "Data Source=LAPTOP-QR5K8KKV\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
 
         public static SqlConnection GetConnection()
         {
@@ -53,8 +53,30 @@ namespace BookStore
             cmb.ValueMember = value;
             cmb.DisplayMember = display;
         }
+        public static string TaoMaNXBTuDong()
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+                string sql = "SELECT TOP 1 MaNXB FROM NXB ORDER BY MaNXB DESC";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                object result = cmd.ExecuteScalar();
 
-       
+                if (result != null)
+                {
+                    string maCuoi = result.ToString(); // ví dụ "NXB015"
+                    int so = int.Parse(maCuoi.Substring(3)); // Lấy số
+                    return "NXB" + (so + 1).ToString("D3");
+                }
+                else
+                {
+                    return "NXB001";
+                }
+            }
+        }
+
+
     }
 
  }

@@ -69,6 +69,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemNXB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemNXB.Designer.cs">
+      <DependentUpon>ThemNXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_BanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNXB.resx">
+      <DependentUpon>ThemNXB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_BanHang.resx">
       <DependentUpon>UC_BanHang.cs</DependentUpon>

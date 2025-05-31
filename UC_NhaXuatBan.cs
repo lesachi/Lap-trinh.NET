@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore;
 
 namespace BookStore
 {
@@ -97,6 +98,10 @@ namespace BookStore
                     nxb.Dienthoai,
                     nxb.Logo    
                 );
+                chiTietControl.XoaThanhCong += (s, e) =>
+                {
+                    LoadNXB(); // Refresh lại danh sách
+                };
 
                 var detailForm = new Form();
                 detailForm.Text = "Chi tiết Nhà Xuất Bản";
@@ -120,5 +125,38 @@ namespace BookStore
             public Image Logo { get; set; }
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemNXB ucThem = new ThemNXB();
+            ucThem.Dock = DockStyle.Fill;
+
+            // Gán mã sau khi khởi tạo control
+            ucThem.SetMaNXB(Database.TaoMaNXBTuDong());
+
+            // Ẩn giao diện chính
+            flowLayoutPanelNXB.Visible = false;
+            btnThem.Visible = false;
+
+            // Gán sự kiện khi thêm thành công
+            ucThem.NXBThemThanhCong += (s, nxb) =>
+            {
+                nxbList[nxb.Ma] = nxb;
+                LoadNXB();
+                ucThem.Dispose(); // Loại bỏ control thêm
+                flowLayoutPanelNXB.Visible = true;
+                btnThem.Visible = true;
+            };
+
+            // Gán sự kiện khi hủy
+            ucThem.HuyThemNXB += (s, args) =>
+            {
+                ucThem.Dispose();
+                flowLayoutPanelNXB.Visible = true;
+                btnThem.Visible = true;
+            };
+
+            this.Controls.Add(ucThem);
+
+        }
     }
 }
