@@ -202,7 +202,17 @@
     <None Include="Resources\LogoVanhoc.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1984.jpg" />
+    <Content Include="Resources\2thegioi.jpg" />
+    <Content Include="Resources\animal_farm.jpg" />
     <Content Include="Resources\bookshop.jpg" />
+    <Content Include="Resources\Casual.jpg" />
+    <Content Include="Resources\chotoi.jpg" />
+    <Content Include="Resources\harrypoter.jpg" />
+    <Content Include="Resources\kafka.jpg" />
+    <Content Include="Resources\matma.jpg" />
+    <Content Include="Resources\totto.jpg" />
+    <Content Include="Resources\wood.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

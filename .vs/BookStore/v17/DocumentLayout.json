@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\admin\\source\\repos\\lesachi\\lap-trinh.net\\dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhaxuatban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|c:\\users\\admin\\source\\repos\\lesachi\\lap-trinh.net\\uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_khosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:dao\\khosachdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -37,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhaxuatban.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhaxuatban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhaxuatban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -61,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_banhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_banhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4068FD0B-2E42-4F40-B8A9-2B44699DF7DE}|BookStore.csproj|solutionrelative:uc_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BookStore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -117,7 +121,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -153,32 +157,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KhoSachDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\KhoSachDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\KhoSachDAO.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\KhoSachDAO.cs",
-              "RelativeToolTip": "DAO\\KhoSachDAO.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAswLIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:14:07.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UC_KhoSach.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
@@ -190,92 +173,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TaiKhoanDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\TaiKhoanDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\TaiKhoanDAO.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\TaiKhoanDAO.cs",
-              "RelativeToolTip": "DAO\\TaiKhoanDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "KhoSachDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\KhoSachDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\KhoSachDAO.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\KhoSachDAO.cs",
+              "RelativeToolTip": "DAO\\KhoSachDAO.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAwwK0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T11:24:22.547Z",
+              "WhenOpened": "2025-05-30T15:14:07.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UC_KhoSach.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeDocumentMoniker": "UC_KhoSach.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhoSach.cs",
               "RelativeToolTip": "UC_KhoSach.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAvwCAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T03:54:13.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_TaiKhoan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs",
-              "RelativeDocumentMoniker": "UC_TaiKhoan.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs [Design]*",
-              "RelativeToolTip": "UC_TaiKhoan.cs [Design]*",
+              "DocumentIndex": 4,
+              "Title": "UC_NhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhanVien.cs",
+              "RelativeDocumentMoniker": "UC_NhanVien.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhanVien.cs",
+              "RelativeToolTip": "UC_NhanVien.cs",
+              "ViewState": "AgIAAJYBAAAAAAAAAAAowLUBAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:37:02.705Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-30T14:03:35.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UC_TaiKhoan.cs",
+              "DocumentIndex": 5,
+              "Title": "UC_TaiKhoan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs",
               "RelativeDocumentMoniker": "UC_TaiKhoan.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs*",
-              "RelativeToolTip": "UC_TaiKhoan.cs*",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAwwA8BAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs [Design]",
+              "RelativeToolTip": "UC_TaiKhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:16:23.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T15:37:02.705Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.cs [Design]",
-              "RelativeToolTip": "MainForm.cs [Design]",
+              "Title": "UC_NhaCungCap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaCungCap.cs",
+              "RelativeDocumentMoniker": "UC_NhaCungCap.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaCungCap.cs [Design]",
+              "RelativeToolTip": "UC_NhaCungCap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T02:09:56.69Z"
+              "WhenOpened": "2025-05-31T03:51:56.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.cs [Design]",
-              "RelativeToolTip": "LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:21:39.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "UC_NhaXuatBan.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaXuatBan.Designer.cs",
               "RelativeDocumentMoniker": "UC_NhaXuatBan.Designer.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaXuatBan.Designer.cs",
               "RelativeToolTip": "UC_NhaXuatBan.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T15:21:36.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
+              "Title": "UC_TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs",
+              "RelativeDocumentMoniker": "UC_TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.cs",
+              "RelativeToolTip": "UC_TaiKhoan.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAwwA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:16:23.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UC_NhaXuatBan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaXuatBan.cs",
               "RelativeDocumentMoniker": "UC_NhaXuatBan.cs",
@@ -287,6 +269,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "TaiKhoanDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\TaiKhoanDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\TaiKhoanDAO.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\TaiKhoanDAO.cs",
+              "RelativeToolTip": "DAO\\TaiKhoanDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T11:24:22.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T02:09:56.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:21:39.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UC_NhaXuatBan.resx",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhaXuatBan.resx",
               "RelativeDocumentMoniker": "UC_NhaXuatBan.resx",
@@ -297,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UC_KhachHang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_KhachHang.cs",
               "RelativeDocumentMoniker": "UC_KhachHang.cs",
@@ -308,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UC_NhanVien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhanVien.cs",
               "RelativeDocumentMoniker": "UC_NhanVien.cs",
@@ -319,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\DAO\\Database.cs",
               "RelativeDocumentMoniker": "DAO\\Database.cs",
@@ -331,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "UC_BanHang.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_BanHang.Designer.cs",
               "RelativeDocumentMoniker": "UC_BanHang.Designer.cs",
@@ -343,19 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UC_NhanVien.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhanVien.cs",
-              "RelativeDocumentMoniker": "UC_NhanVien.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_NhanVien.cs",
-              "RelativeToolTip": "UC_NhanVien.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:03:35.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BookStore",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\BookStore.csproj",
               "RelativeDocumentMoniker": "BookStore.csproj",
@@ -366,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -378,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -390,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\RegisterForm.cs",
               "RelativeDocumentMoniker": "RegisterForm.cs",
@@ -401,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "RegisterForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\RegisterForm.Designer.cs",
               "RelativeDocumentMoniker": "RegisterForm.Designer.cs",
@@ -413,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UC_ChitietNXB.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_ChitietNXB.cs",
               "RelativeDocumentMoniker": "UC_ChitietNXB.cs",
@@ -424,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
@@ -436,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "RegisterForm.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\RegisterForm.cs",
               "RelativeDocumentMoniker": "RegisterForm.cs",
@@ -448,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -460,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -472,15 +476,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "UC_TaiKhoan.resx",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.resx",
               "RelativeDocumentMoniker": "UC_TaiKhoan.resx",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.resx*",
-              "RelativeToolTip": "UC_TaiKhoan.resx*",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\lesachi\\Lap-trinh.NET\\UC_TaiKhoan.resx",
+              "RelativeToolTip": "UC_TaiKhoan.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-27T15:12:28.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T15:12:28.332Z"
             }
           ]
         },

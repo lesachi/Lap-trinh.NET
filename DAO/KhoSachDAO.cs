@@ -25,7 +25,8 @@ SELECT
     nxb.MaNXB,
     lv.MaLinhVuc,
     nn.MaNgonNgu,
-    s.SoTrang
+    s.SoTrang,
+    s.Anh
 FROM KhoSach s
 LEFT JOIN LoaiSach l ON s.MaLoai = l.MaLoai
 LEFT JOIN TacGia tg ON s.MaTG = tg.MaTG
@@ -101,13 +102,21 @@ ORDER BY s.MaSach";
                 return dt;
             }
         }
-        public static void Insert(string maSach, string tenSach, int soLuong, decimal donGiaNhap, decimal donGiaBan,
-         string maLoai, string maTG, string maNXB, string maLV, string maNN, int soTrang)
+        public static void Insert(string maSach, string tenSach, int soLuong,
+                            decimal donGiaNhap, decimal donGiaBan,
+                            string maLoai, string maTG, string maNXB,
+                            string maLV, string maNN, int soTrang,
+                            string hinhAnh)  
         {
-            string query = @"INSERT INTO KhoSach (MaSach, TenSach, SoLuong, DonGiaNhap, DonGiaBan, MaLoai, MaTG, MaNXB, MaLinhVuc, MaNgonNgu, SoTrang)
-                     VALUES (@MaSach, @TenSach, @SoLuong, @DonGiaNhap, @DonGiaBan, @MaLoai, @MaTG, @MaNXB, @MaLinhVuc, @MaNgonNgu, @SoTrang)";
             using (SqlConnection conn = Database.GetConnection())
             {
+                string query = @"INSERT INTO KhoSach 
+                         (MaSach, TenSach, SoLuong, DonGiaNhap, DonGiaBan,
+                          MaLoai, MaTG, MaNXB, MaLinhVuc, MaNgonNgu, SoTrang, Anh)
+                         VALUES 
+                         (@MaSach, @TenSach, @SoLuong, @DonGiaNhap, @DonGiaBan,
+                          @MaLoai, @MaTG, @MaNXB, @MaLV, @MaNN, @SoTrang, @Anh)";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@MaSach", maSach);
                 cmd.Parameters.AddWithValue("@TenSach", tenSach);
@@ -117,21 +126,22 @@ ORDER BY s.MaSach";
                 cmd.Parameters.AddWithValue("@MaLoai", maLoai);
                 cmd.Parameters.AddWithValue("@MaTG", maTG);
                 cmd.Parameters.AddWithValue("@MaNXB", maNXB);
-                cmd.Parameters.AddWithValue("@MaLinhVuc", maLV);
-                cmd.Parameters.AddWithValue("@MaNgonNgu", maNN);
+                cmd.Parameters.AddWithValue("@MaLV", maLV);
+                cmd.Parameters.AddWithValue("@MaNN", maNN);
                 cmd.Parameters.AddWithValue("@SoTrang", soTrang);
-                if (conn.State != ConnectionState.Open)
-                    conn.Open();
+                cmd.Parameters.AddWithValue("@Anh", hinhAnh);
+
                 cmd.ExecuteNonQuery();
             }
         }
 
+
         public static void Update(string maSach, string tenSach, int soLuong, decimal donGiaNhap, decimal donGiaBan,
-         string maLoai, string maTG, string maNXB, string maLV, string maNN, int soTrang)
+     string maLoai, string maTG, string maNXB, string maLV, string maNN, int soTrang, string hinhAnh)
         {
             string query = @"UPDATE KhoSach SET TenSach=@TenSach, SoLuong=@SoLuong, DonGiaNhap=@DonGiaNhap, DonGiaBan=@DonGiaBan,
-                     MaLoai=@MaLoai, MaTG=@MaTG, MaNXB=@MaNXB, MaLinhVuc=@MaLinhVuc, MaNgonNgu=@MaNgonNgu, SoTrang=@SoTrang
-                     WHERE MaSach=@MaSach";
+             MaLoai=@MaLoai, MaTG=@MaTG, MaNXB=@MaNXB, MaLinhVuc=@MaLinhVuc, MaNgonNgu=@MaNgonNgu, SoTrang=@SoTrang, Anh=@Anh
+             WHERE MaSach=@MaSach";
             using (SqlConnection conn = Database.GetConnection())
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -147,10 +157,23 @@ ORDER BY s.MaSach";
                     cmd.Parameters.AddWithValue("@MaLinhVuc", maLV);
                     cmd.Parameters.AddWithValue("@MaNgonNgu", maNN);
                     cmd.Parameters.AddWithValue("@SoTrang", soTrang);
+                    cmd.Parameters.AddWithValue("@Anh", hinhAnh ?? (object)DBNull.Value);
                     if (conn.State != ConnectionState.Open)
                         conn.Open();
                     cmd.ExecuteNonQuery();
                 }
+            }
+        }
+        public static bool CheckMaSachTonTai(string maSach)
+        {
+            string sql = "SELECT COUNT(*) FROM KhoSach WHERE MaSach = @MaSach";
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@MaSach", maSach);
+                //onn.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
             }
         }
 

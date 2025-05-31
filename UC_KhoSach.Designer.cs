@@ -58,7 +58,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.picAnh = new System.Windows.Forms.PictureBox();
+            this.lbAnh = new System.Windows.Forms.Label();
+            this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // dtGVKhoSach
@@ -335,10 +339,41 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Kho sách";
             // 
+            // picAnh
+            // 
+            this.picAnh.Location = new System.Drawing.Point(666, 228);
+            this.picAnh.Name = "picAnh";
+            this.picAnh.Size = new System.Drawing.Size(167, 170);
+            this.picAnh.TabIndex = 34;
+            this.picAnh.TabStop = false;
+            // 
+            // lbAnh
+            // 
+            this.lbAnh.AutoSize = true;
+            this.lbAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAnh.Location = new System.Drawing.Point(538, 228);
+            this.lbAnh.Name = "lbAnh";
+            this.lbAnh.Size = new System.Drawing.Size(48, 25);
+            this.lbAnh.TabIndex = 35;
+            this.lbAnh.Text = "Ảnh";
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(542, 281);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(80, 35);
+            this.btnOpen.TabIndex = 36;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
             // UC_KhoSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.lbAnh);
+            this.Controls.Add(this.picAnh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.button2);
@@ -373,6 +408,7 @@
             this.Size = new System.Drawing.Size(1182, 682);
             this.Load += new System.EventHandler(this.UC_KhoSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhoSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +446,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picAnh;
+        private System.Windows.Forms.Label lbAnh;
+        private System.Windows.Forms.Button btnOpen;
     }
 }

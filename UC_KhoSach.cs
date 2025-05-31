@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookStore.DAO;
 using System.Data.SqlClient;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace BookStore
 {
@@ -19,8 +21,8 @@ namespace BookStore
             InitializeComponent();
             this.Load += UC_KhoSach_Load;
         }
-        
 
+        private string currentImagePath = "";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -28,21 +30,64 @@ namespace BookStore
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+           
+            if (string.IsNullOrWhiteSpace(txtSL.Text) || string.IsNullOrEmpty(txtMaSach.Text) ||
+                string.IsNullOrWhiteSpace(txtDGN.Text) || string.IsNullOrEmpty(txtTenSach.Text) ||
+                string.IsNullOrWhiteSpace(txtDGB.Text)||
+                string.IsNullOrWhiteSpace(txtSoTrang.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            if (!int.TryParse(txtSL.Text, out int SoLuong))
+            {
+                MessageBox.Show("Số lượng phải là số nguyên!");
+                return;
+            }
+            if (!decimal.TryParse(txtDGN.Text, out decimal donGiaNhap))
+            {
+                MessageBox.Show("Đơn giá nhập phải là số!");
+                return;
+            }
+            if (!decimal.TryParse(txtDGB.Text, out decimal donGiaBan))
+            {
+                MessageBox.Show("Đơn giá bán phải là số!");
+                return;
+            }
+            if (!int.TryParse(txtSoTrang.Text, out int soTrang))
+            {
+                MessageBox.Show("Số trang phải là số nguyên!");
+                return;
+            }
+            string maLoai = cbbMaLoai.SelectedValue?.ToString();
+            string maTG = cbbMaTG.SelectedValue?.ToString();
+            string maNXB = cbbMaNXB.SelectedValue?.ToString();
+            string maLV = cbbMaLV.SelectedValue?.ToString();
+            string maNN = cbbMaNN.SelectedValue?.ToString();
+
+            if (string.IsNullOrEmpty(maLoai) || string.IsNullOrEmpty(maTG) ||
+                string.IsNullOrEmpty(maNXB) || string.IsNullOrEmpty(maLV) || string.IsNullOrEmpty(maNN))
+            {
+                MessageBox.Show("Vui lòng chọn đầy đủ các mục bắt buộc!");
+                return;
+            }
+
             try
             {
-                
                 KhoSachDAO.Update(
                     txtMaSach.Text.Trim(),
                     txtTenSach.Text.Trim(),
-                    int.TryParse(txtSL.Text, out int sl) ? sl : 0,
-                    decimal.TryParse(txtDGB.Text, out decimal dgn) ? dgn : 0,
-                    decimal.TryParse(txtDGN.Text, out decimal dgb) ? dgb : 0,
-                    cbbMaLoai.SelectedValue?.ToString(),
-                    cbbMaTG.SelectedValue?.ToString(),
-                    cbbMaNXB.SelectedValue?.ToString(),
-                    cbbMaLV.SelectedValue?.ToString(),
-                    cbbMaNN.SelectedValue?.ToString(),
-                    int.TryParse(txtSoTrang.Text, out int st) ? st : 0
+                    SoLuong,
+                    donGiaNhap,
+                    donGiaBan,
+                    maLoai,
+                    maTG,
+                    maNXB,
+                    maLV,
+                    maNN,
+                    soTrang,
+                    currentImagePath
                 );
                 MessageBox.Show("Sửa thành công!");
                 LoadDataToGridView();
@@ -52,17 +97,16 @@ namespace BookStore
             {
                 MessageBox.Show("Lỗi sửa sách: " + ex.Message);
             }
+
+
         }
-        
+
+
 
         private void UC_KhoSach_Load(object sender, EventArgs e)
         {
           LoadDataToGridView();
           LoadComboBoxes();
-         
-
-
-
             // Reset ComboBox
             ResetComboBoxes();
         }
@@ -78,7 +122,7 @@ namespace BookStore
 
         private void LoadDataToGridView()
         {
-         
+       
             try
             { 
                 DataTable dataTable = KhoSachDAO.LoadData();
@@ -95,6 +139,7 @@ namespace BookStore
                 dtGVKhoSach.Columns["MaLinhVuc"].HeaderText = "Lĩnh vực";
                 dtGVKhoSach.Columns["MaNgonNgu"].HeaderText = "Ngôn ngữ";
                 dtGVKhoSach.Columns["SoTrang"].HeaderText = "Số trang";
+                dtGVKhoSach.Columns["Anh"].HeaderText = "Ảnh";
 
             }
             catch (Exception ex)
@@ -142,7 +187,7 @@ namespace BookStore
                 txtMaSach.Text = row.Cells["MaSach"].Value.ToString();
                 txtTenSach.Text = row.Cells["TenSach"].Value.ToString();
                 txtSL.Text = row.Cells["SoLuong"].Value.ToString();
-                txtDGN.Text = row.Cells["DonGiaBan"].Value.ToString(); 
+                txtDGN.Text = row.Cells["DonGiaBan"].Value.ToString();
                 txtDGB.Text = row.Cells["DonGiaNhap"].Value.ToString();
                 txtSoTrang.Text = row.Cells["SoTrang"].Value.ToString();
 
@@ -151,8 +196,25 @@ namespace BookStore
                 cbbMaNXB.SelectedValue = row.Cells["MaNXB"].Value.ToString();
                 cbbMaLV.SelectedValue = row.Cells["MaLinhVuc"].Value.ToString();
                 cbbMaNN.SelectedValue = row.Cells["MaNgonNgu"].Value.ToString();
+
+
+                string imagePath = dtGVKhoSach.Rows[e.RowIndex].Cells["Anh"].Value?.ToString();
+                currentImagePath = imagePath; 
+
+                if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                {
+                    picAnh.Image = Image.FromFile(imagePath);
+                    picAnh.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                else
+                {
+                    picAnh.Image = null;
+                }
+                txtMaSach.ReadOnly = true;
             }
+            
         }
+
       
 
         private void button2_Click(object sender, EventArgs e)
@@ -164,10 +226,11 @@ namespace BookStore
             txtDGN.Clear();
             txtDGB.Clear();
             txtSoTrang.Clear();
-
+            picAnh.Image = null;
+            currentImagePath = ""; 
             ResetComboBoxes();
+            txtMaSach.ReadOnly = false;
 
-         
 
             // Bỏ chọn trong DataGridView
             dtGVKhoSach.ClearSelection();
@@ -182,10 +245,10 @@ namespace BookStore
             txtDGN.Clear();
             txtDGB.Clear();
             txtSoTrang.Clear();
-
+            picAnh.Image = null;
+            currentImagePath = "";
             ResetComboBoxes();
-
-          
+            txtMaSach.ReadOnly = false;
 
             // Bỏ chọn trong DataGridView
             dtGVKhoSach.ClearSelection();
@@ -193,36 +256,71 @@ namespace BookStore
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            txtMaSach.ReadOnly = false;
             // Lấy dữ liệu từ các control
             string maSach = txtMaSach.Text.Trim();
             string tenSach = txtTenSach.Text.Trim();
-            int soLuong = int.TryParse(txtSL.Text, out int sl) ? sl : 0;
-            decimal donGiaNhap = decimal.TryParse(txtDGB.Text, out decimal dgn) ? dgn : 0;
-            decimal donGiaBan = decimal.TryParse(txtDGN.Text, out decimal dgb) ? dgb : 0;
             string maLoai = cbbMaLoai.SelectedValue?.ToString();
             string maTG = cbbMaTG.SelectedValue?.ToString();
             string maNXB = cbbMaNXB.SelectedValue?.ToString();
             string maLV = cbbMaLV.SelectedValue?.ToString();
             string maNN = cbbMaNN.SelectedValue?.ToString();
-            int soTrang = int.TryParse(txtSoTrang.Text, out int st) ? st : 0;
+           
+            // Kiểm tra mã sách đã tồn tại chưa
+            if (KhoSachDAO.CheckMaSachTonTai(maSach))
+            {
+                MessageBox.Show("Mã sách đã tồn tại");
+                return;
+            }
+
 
             // Kiểm tra dữ liệu bắt buộc
-            if (string.IsNullOrEmpty(maSach) || string.IsNullOrEmpty(tenSach))
+            if(string.IsNullOrEmpty(maLoai) || string.IsNullOrEmpty(maTG) ||
+                string.IsNullOrEmpty(maNXB) || string.IsNullOrEmpty(maLV) || string.IsNullOrEmpty(maNN)
+                )
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin sách!");
                 return;
             }
+            if (string.IsNullOrWhiteSpace(txtSL.Text) ||
+                string.IsNullOrWhiteSpace(txtDGN.Text) ||
+                string.IsNullOrWhiteSpace(txtDGB.Text) ||
+                string.IsNullOrWhiteSpace(txtSoTrang.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ Số lượng, Đơn giá nhập, Đơn giá bán, Số trang!");
+                return;
+            }
+
+            if (!int.TryParse(txtSL.Text, out int SoLuong))
+            {
+                MessageBox.Show("Số lượng phải là số nguyên!");
+                return;
+            }
+            if (!decimal.TryParse(txtDGN.Text, out decimal donGiaNhap))
+            {
+                MessageBox.Show("Đơn giá nhập phải là số!");
+                return;
+            }
+            if (!decimal.TryParse(txtDGB.Text, out decimal donGiaBan))
+            {
+                MessageBox.Show("Đơn giá bán phải là số!");
+                return;
+            }
+            if (!int.TryParse(txtSoTrang.Text, out int soTrang))
+            {
+                MessageBox.Show("Số trang phải là số nguyên!");
+                return;
+            }
+            
+
 
             // Gọi DAO để lưu dữ liệu
             try
             {
                 KhoSachDAO.Insert(
-                    maSach, tenSach, soLuong, donGiaNhap, donGiaBan,
-                    maLoai, maTG, maNXB, maLV, maNN, soTrang
-                );
-                MessageBox.Show("Lưu sách thành công!");
-                LoadDataToGridView();
-                button2_Click(null, null); // Reset form
+                maSach, tenSach, SoLuong, donGiaNhap, donGiaBan,
+                maLoai, maTG, maNXB, maLV, maNN, soTrang,
+                currentImagePath); 
             }
             catch (Exception ex)
             {
@@ -250,6 +348,7 @@ namespace BookStore
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
+            txtMaSach.ReadOnly = false;
             string maSach = txtMaSach.Text.Trim();
             string tenSach = txtTenSach.Text.Trim();
             string maLoai = cbbMaLoai.SelectedValue?.ToString();
@@ -258,6 +357,19 @@ namespace BookStore
 
             DataTable dt = KhoSachDAO.Search(maSach, tenSach, maLoai, maTG, maNXB);
             dtGVKhoSach.DataSource = dt;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Ảnh (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                currentImagePath = ofd.FileName; // lưu đường dẫn ảnh đã chọn
+                picAnh.Image = Image.FromFile(currentImagePath);
+                picAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            }
         }
     }
 
