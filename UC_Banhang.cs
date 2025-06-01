@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore.DAO;
 
 namespace BookStore
 {
@@ -352,9 +353,23 @@ namespace BookStore
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
                 return;
             }
+            if (!int.TryParse(txtSoLuong.Text, out int soLuong) || soLuong <= 0)
+            {
+                MessageBox.Show("Số lượng bán phải là số nguyên dương!");
+                return;
+            }
+
+            // Kiểm tra tồn kho trước khi bán
+            string maSach = cmbMaSach.SelectedValue.ToString();
+            if (!KhoSachDAO.CheckSoLuongDuDeBan(maSach, soLuong))
+            {
+                int soLuongTon = KhoSachDAO.GetSoLuongTonKho(maSach);
+                MessageBox.Show($"Số lượng tồn kho hiện tại chỉ còn {soLuongTon}.");
+                return;
+            }
 
             decimal donGia = decimal.Parse(txtDonGia.Text);
-            int soLuong = int.Parse(txtSoLuong.Text);
+           
             decimal giamGia = string.IsNullOrEmpty(txtGiamGia.Text) ? 0 : decimal.Parse(txtGiamGia.Text);
             decimal thanhTien = (donGia * soLuong) * (1 - giamGia / 100);
 
@@ -421,6 +436,9 @@ namespace BookStore
                     LoadHoaDonBan();
                     txtTongTien.Text = thanhTien.ToString();
                     MessageBox.Show("Lưu thành công!");
+                    // Cập nhật tồn kho sau khi bán hàng
+                    KhoSachDAO.CapNhatBanHang(cmbMaSach.SelectedValue.ToString(), soLuong);
+
                 }
                 catch (Exception ex)
                 {
