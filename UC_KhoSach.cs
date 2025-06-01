@@ -20,6 +20,7 @@ namespace BookStore
         {
             InitializeComponent();
             this.Load += UC_KhoSach_Load;
+            txtDGB.TextChanged += txtDGN_TextChanged;
         }
 
         private string currentImagePath = "";
@@ -75,7 +76,7 @@ namespace BookStore
 
             try
             {
-                KhoSachDAO.Update(
+                KhoSachDAO.Update( 
                     txtMaSach.Text.Trim(),
                     txtTenSach.Text.Trim(),
                     SoLuong,
@@ -187,8 +188,9 @@ namespace BookStore
                 txtMaSach.Text = row.Cells["MaSach"].Value.ToString();
                 txtTenSach.Text = row.Cells["TenSach"].Value.ToString();
                 txtSL.Text = row.Cells["SoLuong"].Value.ToString();
-                txtDGN.Text = row.Cells["DonGiaBan"].Value.ToString();
-                txtDGB.Text = row.Cells["DonGiaNhap"].Value.ToString();
+                txtDGN.Text = row.Cells["DonGiaNhap"].Value.ToString();
+                txtDGB.Text = row.Cells["DonGiaBan"].Value.ToString();
+              
                 txtSoTrang.Text = row.Cells["SoTrang"].Value.ToString();
 
                 cbbMaLoai.SelectedValue = row.Cells["MaLoai"].Value.ToString();
@@ -214,9 +216,20 @@ namespace BookStore
             }
             
         }
+        private void txtDGN_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtDGN.Text, out decimal donGiaNhap))
+            {
+                decimal donGiaBan = Math.Round(donGiaNhap * 1.1m, 0); // Làm tròn đến số nguyên
+                txtDGB.Text = donGiaBan.ToString();
+            }
+            else
+            {
+                txtDGB.Text = "";
+            }
+        }
 
-      
-
+        //btnBoqua
         private void button2_Click(object sender, EventArgs e)
         {
             // Xóa dữ liệu trên form
