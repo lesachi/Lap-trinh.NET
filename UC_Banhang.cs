@@ -16,14 +16,18 @@ namespace BookStore
     {
         private DataTable dtHoaDonBan;
         private string currentSoHDB = "";
-       // private decimal totalAmount = 0;
-
-        public UC_BanHang()
+        // private decimal totalAmount = 0;
+        private string _maNV;
+        public UC_BanHang(string maNV)
         {
             InitializeComponent();
+            _maNV = maNV;
             SetupDataGridView(); // Initialize dtHoaDonBan first
             LoadData(); // Then load data, which calls LoadHoaDonBan()
             dtPNgayNhapBanHang.Value = DateTime.Now;
+            cmbMaNV.SelectedItem = _maNV;
+            cmbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMaNV.Enabled = false;
 
             // Attach event handlers
             cmbMaNV.SelectedIndexChanged += cmbMaNV_SelectedIndexChanged;
@@ -43,6 +47,21 @@ namespace BookStore
                 SqlDataAdapter da = new SqlDataAdapter("SELECT MaNV, TenNV FROM NhanVien", conn);
                 DataTable dtNV = new DataTable();
                 da.Fill(dtNV);
+                // Chọn đúng mã nhân viên đăng nhập
+                cmbMaNV.SelectedValue = _maNV;
+                cmbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbMaNV.Enabled = false;
+
+                // Hiển thị tên nhân viên tương ứng
+   
+                {
+                    string query = "SELECT TenNV FROM NhanVien WHERE MaNV = @MaNV";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MaNV", _maNV);
+                    txtTenNV.Text = cmd.ExecuteScalar()?.ToString() ?? "";
+                    txtTenNV.ReadOnly = true;
+
+                }
                 cmbMaNV.DataSource = dtNV;
                 cmbMaNV.DisplayMember = "MaNV";
                 cmbMaNV.ValueMember = "MaNV";
@@ -394,7 +413,7 @@ namespace BookStore
                             "INSERT INTO HoaDonBan (SoHDB, MaNV, NgayBan, MaKhach, TongTien) VALUES (@SoHDB, @MaNV, @NgayBan, @MaKhach, @TongTien)",
                             conn, transaction);
                         cmdInsertHD.Parameters.AddWithValue("@SoHDB", soHDB);
-                        cmdInsertHD.Parameters.AddWithValue("@MaNV", cmbMaNV.SelectedValue);
+                        cmdInsertHD.Parameters.AddWithValue("@MaNV", _maNV);
                         cmdInsertHD.Parameters.AddWithValue("@NgayBan", dtPNgayNhapBanHang.Value);
                         cmdInsertHD.Parameters.AddWithValue("@MaKhach", cmbMaKH.SelectedValue);
                         cmdInsertHD.Parameters.AddWithValue("@TongTien", thanhTien);
@@ -407,7 +426,7 @@ namespace BookStore
                             "UPDATE HoaDonBan SET MaNV = @MaNV, NgayBan = @NgayBan, MaKhach = @MaKhach, TongTien = TongTien + @TongTien WHERE SoHDB = @SoHDB",
                             conn, transaction);
                         cmdUpdateHD.Parameters.AddWithValue("@SoHDB", soHDB);
-                        cmdUpdateHD.Parameters.AddWithValue("@MaNV", cmbMaNV.SelectedValue);
+                        cmdUpdateHD.Parameters.AddWithValue("@MaNV", _maNV);
                         cmdUpdateHD.Parameters.AddWithValue("@NgayBan", dtPNgayNhapBanHang.Value);
                         cmdUpdateHD.Parameters.AddWithValue("@MaKhach", cmbMaKH.SelectedValue);
                         cmdUpdateHD.Parameters.AddWithValue("@TongTien", thanhTien);
