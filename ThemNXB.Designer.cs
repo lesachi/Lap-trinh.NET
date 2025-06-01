@@ -196,6 +196,7 @@
             this.Controls.Add(this.label2);
             this.Name = "ThemNXB";
             this.Size = new System.Drawing.Size(897, 597);
+            this.Load += new System.EventHandler(this.ThemNXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

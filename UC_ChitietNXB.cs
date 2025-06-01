@@ -121,7 +121,8 @@ namespace BookStore
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Xóa thành công!");
                     XoaThanhCong?.Invoke(this, EventArgs.Empty);
-
+                    Form parentForm = this.FindForm();
+                    parentForm?.Close();
                 }
                 catch (Exception ex)
                 {
