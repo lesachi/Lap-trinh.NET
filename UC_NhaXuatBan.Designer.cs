@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelNXB = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThem = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -65,6 +66,16 @@
             this.flowLayoutPanelNXB.Name = "flowLayoutPanelNXB";
             this.flowLayoutPanelNXB.Size = new System.Drawing.Size(767, 371);
             this.flowLayoutPanelNXB.TabIndex = 1;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(565, 498);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 2;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // pictureBox1
             // 
@@ -120,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.flowLayoutPanelNXB);
             this.Controls.Add(this.label1);
             this.Name = "UC_NhaXuatBan";
@@ -145,5 +157,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnThem;
     }
 }

@@ -13,6 +13,8 @@ namespace BookStore
 {
     public partial class UC_ChitietNXB : UserControl
     {
+        public event EventHandler XoaThanhCong;
+
         public UC_ChitietNXB(string ma, string ten, string diachi, string dienthoai, Image logo)
         {
             InitializeComponent();
@@ -27,6 +29,10 @@ namespace BookStore
         private void UC_ChitietNXB_Load(object sender, EventArgs e)
         {
             Database.GetConnection();
+            txtMaNXB.ReadOnly = true;
+            txtTenNXB.ReadOnly = true;
+            txtDiachi.ReadOnly = true;
+            txtDienthoai.ReadOnly = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -114,6 +120,8 @@ namespace BookStore
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Xóa thành công!");
+                    XoaThanhCong?.Invoke(this, EventArgs.Empty);
+
                 }
                 catch (Exception ex)
                 {
