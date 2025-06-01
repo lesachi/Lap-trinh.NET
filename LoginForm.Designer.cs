@@ -39,7 +39,6 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.cbPass = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lbLink = new System.Windows.Forms.Label();
             this.panelSidetop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,24 +159,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lbLink
-            // 
-            this.lbLink.AutoSize = true;
-            this.lbLink.ForeColor = System.Drawing.Color.SeaShell;
-            this.lbLink.Location = new System.Drawing.Point(359, 431);
-            this.lbLink.Name = "lbLink";
-            this.lbLink.Size = new System.Drawing.Size(273, 20);
-            this.lbLink.TabIndex = 10;
-            this.lbLink.Text = "Don\'t have an account?Register here";
-            this.lbLink.Click += new System.EventHandler(this.lbLink_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(694, 521);
-            this.Controls.Add(this.lbLink);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cbPass);
             this.Controls.Add(this.txtpass);
@@ -211,6 +198,5 @@
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.CheckBox cbPass;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lbLink;
     }
 }

@@ -19,12 +19,28 @@ namespace BookStore
         private string selectedSoHDN = null;
         private Dictionary<string, string> maSachToTenSachMap = new Dictionary<string, string>();
         private string currentSoHDN = null;
-
-        public UC_NhapHang()
+        private string _maNV;
+        public UC_NhapHang(string maNV)
         {
             InitializeComponent();
+            _maNV = maNV;
+           
             InitializeDataTable();
             LoadComboBoxData();
+            //đảm bảo mã nv đăng nhập luôn được chọn 
+            cmbMaNV.SelectedItem = _maNV;
+            cmbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMaNV.Enabled = false;
+            //hiển thị tên nhân viên tương ứng với mã nhân viên
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT TenNV FROM NhanVien WHERE MaNV = @MaNV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaNV", _maNV);
+                cmbTenNV.SelectedItem = cmd.ExecuteScalar()?.ToString() ?? "";
+                cmbTenNV.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbTenNV.Enabled = false;
+            }
             LoadPhieuNhapHang();
             dtPNgayNhapHang.Value = DateTime.Now;
             CalculateTotal();

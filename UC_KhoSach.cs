@@ -339,6 +339,8 @@ namespace BookStore
             {
                 MessageBox.Show("Lỗi lưu sách: " + ex.Message);
             }
+            LoadDataToGridView();
+            button2_Click(null, null); // Reset form sau khi lưu
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
