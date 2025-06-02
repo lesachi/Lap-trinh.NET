@@ -84,7 +84,7 @@
             this.panelBaocao.Controls.Add(this.btnBCKhachhang);
             this.panelBaocao.Controls.Add(this.btnDoanhthu);
             this.panelBaocao.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBaocao.Location = new System.Drawing.Point(0, 666);
+            this.panelBaocao.Location = new System.Drawing.Point(0, 660);
             this.panelBaocao.Name = "panelBaocao";
             this.panelBaocao.Size = new System.Drawing.Size(224, 137);
             this.panelBaocao.TabIndex = 6;
@@ -159,7 +159,7 @@
             this.btnBaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaocao.Location = new System.Drawing.Point(0, 608);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(224, 58);
+            this.btnBaocao.Size = new System.Drawing.Size(224, 52);
             this.btnBaocao.TabIndex = 1;
             this.btnBaocao.Text = "Báo cáo";
             this.btnBaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
