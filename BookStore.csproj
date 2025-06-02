@@ -87,6 +87,12 @@
     <Compile Include="UC_BanHang.Designer.cs">
       <DependentUpon>UC_BanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_BCKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BCKhachHang.Designer.cs">
+      <DependentUpon>UC_BCKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ChitietNXB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_BanHang.resx">
       <DependentUpon>UC_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BCKhachHang.resx">
+      <DependentUpon>UC_BCKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ChitietNXB.resx">
       <DependentUpon>UC_ChitietNXB.cs</DependentUpon>

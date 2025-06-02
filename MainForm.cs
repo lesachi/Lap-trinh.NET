@@ -133,6 +133,13 @@ namespace BookStore
             panelBaocao.Visible = !panelBaocao.Visible;
         }
 
-    
-     }
+        private void btnBCKhachhang_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear();
+            UC_BCKhachHang uc = new UC_BCKhachHang();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+
+        }
+    }
 } 

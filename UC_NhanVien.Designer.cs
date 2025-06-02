@@ -324,8 +324,8 @@
             // 
             this.cboChucVu.FormattingEnabled = true;
             this.cboChucVu.Items.AddRange(new object[] {
-            "admin",
-            "Nhân viên"});
+            "Quản lý",
+            "Nhân viên bán hàng"});
             this.cboChucVu.Location = new System.Drawing.Point(160, 209);
             this.cboChucVu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboChucVu.Name = "cboChucVu";
