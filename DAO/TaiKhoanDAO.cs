@@ -25,6 +25,8 @@ namespace BookStore.DAO
                 return role?.ToString();
             }
         }
+        
+
         public static bool Exist(string username)
         {
             using (SqlConnection conn = Database.GetConnection())

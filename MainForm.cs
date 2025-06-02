@@ -13,10 +13,12 @@ namespace BookStore
     public partial class MainFrm: Form
     {
         private string _role;
-        public MainFrm(string role)
+        private string _maNV;
+        public MainFrm(string role, string maNV)
         {
             InitializeComponent();
             _role = role;
+            _maNV = maNV;
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -84,7 +86,7 @@ namespace BookStore
         private void btnBanhang_Click(object sender, EventArgs e)
         {
            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
-            UC_BanHang uc = new UC_BanHang(); // Tạo mới UserControl
+            UC_BanHang uc = new UC_BanHang(_maNV); // Tạo mới UserControl
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
         }
@@ -92,7 +94,7 @@ namespace BookStore
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
             panelChildForm.Controls.Clear(); // Xóa nội dung cũ
-            UC_NhapHang uc = new UC_NhapHang(); // Tạo mới UserControl
+            UC_NhapHang uc = new UC_NhapHang(_maNV); // Tạo mới UserControl
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
 
@@ -118,7 +120,7 @@ namespace BookStore
             }
 
             panelChildForm.Controls.Clear(); // Xóa nội dung cũ
-            UC_NhapHang uc = new UC_NhapHang(); // Tạo mới UserControl
+            UC_NhapHang uc = new UC_NhapHang(_maNV); // Tạo mới UserControl
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
 

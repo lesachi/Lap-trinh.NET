@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore.DAO;
 
 namespace BookStore
 {
@@ -15,14 +16,18 @@ namespace BookStore
     {
         private DataTable dtHoaDonBan;
         private string currentSoHDB = "";
-       // private decimal totalAmount = 0;
-
-        public UC_BanHang()
+        // private decimal totalAmount = 0;
+        private string _maNV;
+        public UC_BanHang(string maNV)
         {
             InitializeComponent();
+            _maNV = maNV;
             SetupDataGridView(); // Initialize dtHoaDonBan first
             LoadData(); // Then load data, which calls LoadHoaDonBan()
             dtPNgayNhapBanHang.Value = DateTime.Now;
+            cmbMaNV.SelectedItem = _maNV;
+            cmbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMaNV.Enabled = false;
 
             // Attach event handlers
             cmbMaNV.SelectedIndexChanged += cmbMaNV_SelectedIndexChanged;
@@ -42,6 +47,21 @@ namespace BookStore
                 SqlDataAdapter da = new SqlDataAdapter("SELECT MaNV, TenNV FROM NhanVien", conn);
                 DataTable dtNV = new DataTable();
                 da.Fill(dtNV);
+                // Chọn đúng mã nhân viên đăng nhập
+                cmbMaNV.SelectedValue = _maNV;
+                cmbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbMaNV.Enabled = false;
+
+                // Hiển thị tên nhân viên tương ứng
+   
+                {
+                    string query = "SELECT TenNV FROM NhanVien WHERE MaNV = @MaNV";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MaNV", _maNV);
+                    txtTenNV.Text = cmd.ExecuteScalar()?.ToString() ?? "";
+                    txtTenNV.ReadOnly = true;
+
+                }
                 cmbMaNV.DataSource = dtNV;
                 cmbMaNV.DisplayMember = "MaNV";
                 cmbMaNV.ValueMember = "MaNV";
@@ -352,9 +372,23 @@ namespace BookStore
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
                 return;
             }
+            if (!int.TryParse(txtSoLuong.Text, out int soLuong) || soLuong <= 0)
+            {
+                MessageBox.Show("Số lượng bán phải là số nguyên dương!");
+                return;
+            }
+
+            // Kiểm tra tồn kho trước khi bán
+            string maSach = cmbMaSach.SelectedValue.ToString();
+            if (!KhoSachDAO.CheckSoLuongDuDeBan(maSach, soLuong))
+            {
+                int soLuongTon = KhoSachDAO.GetSoLuongTonKho(maSach);
+                MessageBox.Show($"Số lượng tồn kho hiện tại chỉ còn {soLuongTon}.");
+                return;
+            }
 
             decimal donGia = decimal.Parse(txtDonGia.Text);
-            int soLuong = int.Parse(txtSoLuong.Text);
+           
             decimal giamGia = string.IsNullOrEmpty(txtGiamGia.Text) ? 0 : decimal.Parse(txtGiamGia.Text);
             decimal thanhTien = (donGia * soLuong) * (1 - giamGia / 100);
 
@@ -379,7 +413,7 @@ namespace BookStore
                             "INSERT INTO HoaDonBan (SoHDB, MaNV, NgayBan, MaKhach, TongTien) VALUES (@SoHDB, @MaNV, @NgayBan, @MaKhach, @TongTien)",
                             conn, transaction);
                         cmdInsertHD.Parameters.AddWithValue("@SoHDB", soHDB);
-                        cmdInsertHD.Parameters.AddWithValue("@MaNV", cmbMaNV.SelectedValue);
+                        cmdInsertHD.Parameters.AddWithValue("@MaNV", _maNV);
                         cmdInsertHD.Parameters.AddWithValue("@NgayBan", dtPNgayNhapBanHang.Value);
                         cmdInsertHD.Parameters.AddWithValue("@MaKhach", cmbMaKH.SelectedValue);
                         cmdInsertHD.Parameters.AddWithValue("@TongTien", thanhTien);
@@ -392,7 +426,7 @@ namespace BookStore
                             "UPDATE HoaDonBan SET MaNV = @MaNV, NgayBan = @NgayBan, MaKhach = @MaKhach, TongTien = TongTien + @TongTien WHERE SoHDB = @SoHDB",
                             conn, transaction);
                         cmdUpdateHD.Parameters.AddWithValue("@SoHDB", soHDB);
-                        cmdUpdateHD.Parameters.AddWithValue("@MaNV", cmbMaNV.SelectedValue);
+                        cmdUpdateHD.Parameters.AddWithValue("@MaNV", _maNV);
                         cmdUpdateHD.Parameters.AddWithValue("@NgayBan", dtPNgayNhapBanHang.Value);
                         cmdUpdateHD.Parameters.AddWithValue("@MaKhach", cmbMaKH.SelectedValue);
                         cmdUpdateHD.Parameters.AddWithValue("@TongTien", thanhTien);
@@ -421,6 +455,9 @@ namespace BookStore
                     LoadHoaDonBan();
                     txtTongTien.Text = thanhTien.ToString();
                     MessageBox.Show("Lưu thành công!");
+                    // Cập nhật tồn kho sau khi bán hàng
+                    KhoSachDAO.CapNhatBanHang(cmbMaSach.SelectedValue.ToString(), soLuong);
+
                 }
                 catch (Exception ex)
                 {

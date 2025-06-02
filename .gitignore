@@ -17,3 +17,5 @@ obj/
 *.pdb
 *.cache
 *.sqlite
+.vs/
+.vs/
