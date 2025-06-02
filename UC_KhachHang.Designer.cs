@@ -45,19 +45,17 @@
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radNuTK = new System.Windows.Forms.RadioButton();
-            this.radNamTK = new System.Windows.Forms.RadioButton();
             this.cboTimKiemKH = new System.Windows.Forms.ComboBox();
             this.btnTimKH = new System.Windows.Forms.Button();
             this.txtTimKiemKH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChiKH = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGVKhachHang
@@ -238,7 +236,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cboTimKiemKH);
             this.groupBox2.Controls.Add(this.btnTimKH);
             this.groupBox2.Controls.Add(this.txtTimKiemKH);
@@ -252,42 +251,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radNuTK);
-            this.groupBox3.Controls.Add(this.radNamTK);
-            this.groupBox3.Location = new System.Drawing.Point(26, 108);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(300, 75);
-            this.groupBox3.TabIndex = 17;
-            this.groupBox3.TabStop = false;
-            // 
-            // radNuTK
-            // 
-            this.radNuTK.AutoSize = true;
-            this.radNuTK.Location = new System.Drawing.Point(148, 43);
-            this.radNuTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radNuTK.Name = "radNuTK";
-            this.radNuTK.Size = new System.Drawing.Size(62, 29);
-            this.radNuTK.TabIndex = 1;
-            this.radNuTK.TabStop = true;
-            this.radNuTK.Text = "Nữ";
-            this.radNuTK.UseVisualStyleBackColor = true;
-            // 
-            // radNamTK
-            // 
-            this.radNamTK.AutoSize = true;
-            this.radNamTK.Location = new System.Drawing.Point(10, 43);
-            this.radNamTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radNamTK.Name = "radNamTK";
-            this.radNamTK.Size = new System.Drawing.Size(78, 29);
-            this.radNamTK.TabIndex = 0;
-            this.radNamTK.TabStop = true;
-            this.radNamTK.Text = "Nam";
-            this.radNamTK.UseVisualStyleBackColor = true;
-            // 
             // cboTimKiemKH
             // 
             this.cboTimKiemKH.FormattingEnabled = true;
@@ -295,10 +258,11 @@
             "Mã khách hàng",
             "Họ tên",
             "Ngày sinh",
+            "Giới tính",
             "Địa chỉ",
             "Email",
             "SĐT"});
-            this.cboTimKiemKH.Location = new System.Drawing.Point(26, 58);
+            this.cboTimKiemKH.Location = new System.Drawing.Point(26, 63);
             this.cboTimKiemKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboTimKiemKH.Name = "cboTimKiemKH";
             this.cboTimKiemKH.Size = new System.Drawing.Size(348, 33);
@@ -317,7 +281,7 @@
             // 
             // txtTimKiemKH
             // 
-            this.txtTimKiemKH.Location = new System.Drawing.Point(26, 197);
+            this.txtTimKiemKH.Location = new System.Drawing.Point(26, 160);
             this.txtTimKiemKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTimKiemKH.Name = "txtTimKiemKH";
             this.txtTimKiemKH.Size = new System.Drawing.Size(348, 30);
@@ -353,6 +317,24 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Chọn tiêu chí";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nhập từ khóa";
+            // 
             // UC_KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -384,8 +366,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,11 +393,10 @@
         private System.Windows.Forms.Button btnTimKH;
         private System.Windows.Forms.TextBox txtTimKiemKH;
         private System.Windows.Forms.ComboBox cboTimKiemKH;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radNuTK;
-        private System.Windows.Forms.RadioButton radNamTK;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiaChiKH;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

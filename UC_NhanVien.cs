@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,7 +57,7 @@ namespace BookStore
         {
             using (SqlConnection connection = Database.GetConnection())
             {
-                string sql = "SELECT * FROM NhanVien";
+                string sql = "SELECT MaNV, TenNV,  FROM NhanVien";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -410,37 +411,95 @@ namespace BookStore
 
         private void btnTimKiemNV_Click(object sender, EventArgs e)
         {
+            string manv = txtMaNV.Text.Trim();
+            string hoten = txtHoTenNV.Text.Trim();
+            string chucvu = cboChucVu.Text.Trim();
+            string gioitinh = GetGioiTinh();
+            string diachi = txtDiaChiNV.Text.Trim();
+            string email = txtEmailNV.Text.Trim();
+            string sdt = txtSDTNV.Text.Trim();
 
-            string searchValue = txtTimKiemNV.Text.Trim();
-            string filterColumn = cboTKNV.SelectedItem?.ToString();
+            // Nếu dùng DateTimePicker có ShowCheckBox
+            DateTime? ngaysinh = null;
+            if (dateNV is DateTimePicker dtp && dtp.ShowCheckBox && dtp.Checked)
+                ngaysinh = dtp.Value.Date;
 
-            if (string.IsNullOrEmpty(searchValue) || string.IsNullOrEmpty(filterColumn))
+            // Nếu không có ShowCheckBox, chỉ tìm khi khác ngày mặc định
+            // DateTime? ngaysinh = (dateNV.Value != DateTime.Now) ? dateNV.Value.Date : (DateTime?)null;
+
+            DataTable dt = SearchNhanVien(manv, hoten, chucvu, gioitinh, ngaysinh, diachi, email, sdt);
+            dataGVNhanVien.DataSource = dt;
+            if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("Vui lòng nhập giá trị tìm kiếm và chọn bộ lọc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            StringBuilder sql = new StringBuilder($"SELECT * FROM NhanVien WHERE {filterColumn} LIKE N'%{searchValue}%'");
-
-            if (radTKNVNam.Checked)
-            {
-                sql.Append(" AND GioiTinh = N'Nam'");
-            }
-            else if (radTKNVNu.Checked)
-            {
-                sql.Append(" AND GioiTinh = N'Nữ'");
-            }
-
-            using (SqlConnection connection = Database.GetConnection())
-            {
-                SqlDataAdapter adapter = new SqlDataAdapter(sql.ToString(), connection);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGVNhanVien.DataSource = dt;
+                MessageBox.Show("Không tìm thấy nhân viên nào phù hợp với tiêu chí tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public static DataTable SearchNhanVien(
+    string maNV, string hoTen, string chucVu, string gioiTinh,
+    DateTime? ngaySinh, string diaChi, string email, string sdt)
+        {
+            var query = new StringBuilder(@"
+    SELECT nv.*, cv.TenCongViec
+    FROM NhanVien nv
+    LEFT JOIN CongViec cv ON nv.MaCV = cv.MaCongViec
+    WHERE 1=1");
 
+            var parameters = new List<SqlParameter>();
+
+            if (!string.IsNullOrEmpty(maNV))
+            {
+                query.Append(" AND MaNV LIKE @MaNV");
+                parameters.Add(new SqlParameter("@MaNV", "%" + maNV + "%"));
+            }
+            if (!string.IsNullOrEmpty(hoTen))
+            {
+                query.Append(" AND TenNV LIKE @HoTen");
+                parameters.Add(new SqlParameter("@HoTen", "%" + hoTen + "%"));
+            }
+            if (!string.IsNullOrEmpty(chucVu))
+            {
+                query.Append(" AND cv.TenCongViec LIKE @ChucVu");
+                parameters.Add(new SqlParameter("@ChucVu", "%" + chucVu + "%"));
+            }
+            if (!string.IsNullOrEmpty(gioiTinh))
+            {
+                query.Append(" AND GioiTinh = @GioiTinh");
+                parameters.Add(new SqlParameter("@GioiTinh", gioiTinh));
+            }
+            if (ngaySinh.HasValue)
+            {
+                query.Append(" AND NgaySinh = @NgaySinh");
+                parameters.Add(new SqlParameter("@NgaySinh", ngaySinh.Value.Date));
+            }
+            if (!string.IsNullOrEmpty(diaChi))
+            {
+                query.Append(" AND DiaChi LIKE @DiaChi");
+                parameters.Add(new SqlParameter("@DiaChi", "%" + diaChi + "%"));
+            }
+            if (!string.IsNullOrEmpty(email))
+            {
+                query.Append(" AND Email LIKE @Email");
+                parameters.Add(new SqlParameter("@Email", "%" + email + "%"));
+            }
+            if (!string.IsNullOrEmpty(sdt))
+            {
+                query.Append(" AND DienThoai LIKE @SDT");
+                parameters.Add(new SqlParameter("@SDT", "%" + sdt + "%"));
+            }
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query.ToString(), conn);
+                cmd.Parameters.AddRange(parameters.ToArray());
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
     }
-
 }
 

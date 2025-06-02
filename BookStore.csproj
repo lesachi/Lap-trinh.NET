@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaoCaoTonKho.Designer.cs">
+      <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\KhoSachDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\Database.cs" />
@@ -129,6 +135,9 @@
     <Compile Include="UC_TaiKhoan.Designer.cs">
       <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCaoTonKho.resx">
+      <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -125,5 +125,14 @@ namespace BookStore
             panelChildForm.Controls.Add(uc); // Hiển thị vào panelMain
 
         }
-    }
-}
+
+        private void btnBaocao_Click(object sender, EventArgs e)
+        {
+            
+
+            panelBaocao.Visible = !panelBaocao.Visible;
+        }
+
+    
+     }
+} 
