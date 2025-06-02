@@ -67,6 +67,8 @@ namespace BookStore
         private void btnThem_Click(object sender, EventArgs e)
         {
             clear();
+            txtMaNCC.Text = SinhMaNCC();
+            txtMaNCC.ReadOnly = true;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -81,12 +83,12 @@ namespace BookStore
             string DiaChi = txtDiachi.Text;
             string SDT = txtDienthoai.Text;
 
-            if (MaNCC == "")
+            /*if (MaNCC == "")
             {
                 MessageBox.Show("Bạn chưa nhập mã nhà cung cấp!");
                 txtMaNCC.Focus();
                 return;
-            }
+            }*/
             if (TenNCC == "")
             {
                 MessageBox.Show("Bạn chưa nhập tên nhà cung cấp!");
@@ -194,6 +196,27 @@ namespace BookStore
                 return;
             }
         }
+        private string SinhMaNCC()
+        {
+            string sql = "SELECT TOP 1 MaNCC FROM NhaCungCap ORDER BY MaNCC DESC";
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    string lastMa = result.ToString(); // ví dụ: "NCC009"
+                    int number = int.Parse(lastMa.Substring(3)); // lấy "009" -> 9
+                    return "NCC" + (number + 1).ToString("D3"); // thành "NCC010"
+                }
+                else
+                {
+                    return "NCC001"; // chưa có nhà cung cấp nào
+                }
+            }
+        }
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {

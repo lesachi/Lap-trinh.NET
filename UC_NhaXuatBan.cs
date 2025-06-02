@@ -108,7 +108,18 @@ namespace BookStore
                 string ten = reader["TenNXB"].ToString();
                 string diachi = reader["DiaChi"].ToString();
                 string dienthoai = reader["DienThoai"].ToString();
-                Image logo = GetLogoResource(ma);
+
+                reader.Close(); // Đóng Reader trước khi lấy ảnh
+
+                Image logo;
+                if (nxbList.ContainsKey(ma))
+                {
+                    logo = nxbList[ma].Logo; // nếu đã có trong danh sách => dùng ảnh đã chọn
+                }
+                else
+                {
+                    logo = GetLogoResource(ma); // nếu chưa có => fallback
+                }
 
                 reader.Close(); // Đừng quên đóng Reader
 

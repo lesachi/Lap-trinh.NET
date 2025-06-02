@@ -133,7 +133,7 @@ namespace BookStore
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            //HuyThemNXB?.Invoke(this, EventArgs.Empty);
+
             clear();
         }
 
@@ -142,6 +142,7 @@ namespace BookStore
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                HuyThemNXB?.Invoke(this, EventArgs.Empty);
                 /*Form parentForm = this.FindForm();
                 parentForm?.Close();*/
                 if (this.Parent != null)
