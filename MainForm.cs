@@ -141,5 +141,33 @@ namespace BookStore
             panelChildForm.Controls.Add(uc);
 
         }
+
+        private void btnDangxuat_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(
+                   "Bạn có chắc muốn đăng xuất không?",
+                   "Xác nhận đăng xuất",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question
+               );
+
+            if (result == DialogResult.Yes)
+            {
+                // Đăng xuất: ẩn MainForm, hiện LoginForm
+                this.Hide();
+                var loginForm = new LoginForm();
+                loginForm.Show();
+            }
+            // Nếu chọn No thì không làm gì cả
+        }
+
+        private void btnDoanhthu_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear();
+            Baocaodoanhthu uc = new Baocaodoanhthu();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
     }
+    
 } 

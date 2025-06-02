@@ -98,6 +98,7 @@
             this.dataKHTT.RowTemplate.Height = 28;
             this.dataKHTT.Size = new System.Drawing.Size(872, 240);
             this.dataKHTT.TabIndex = 5;
+            this.dataKHTT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataKHTT_CellContentClick);
             // 
             // btnXuat
             // 
@@ -125,6 +126,7 @@
             this.txtSoLanMua.Name = "txtSoLanMua";
             this.txtSoLanMua.Size = new System.Drawing.Size(339, 26);
             this.txtSoLanMua.TabIndex = 9;
+            this.txtSoLanMua.TextChanged += new System.EventHandler(this.txtSoLanMua_TextChanged);
             // 
             // txtTongChi
             // 

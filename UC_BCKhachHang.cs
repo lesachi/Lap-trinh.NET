@@ -178,8 +178,6 @@ namespace BookStore
 
             DateTime startDate = dateNgay1.Value;
             DateTime endDate = dateNgay2.Value;
-            int minSoLanMua;
-            decimal minTongChi;
 
             if (endDate < startDate)
             {
@@ -187,69 +185,60 @@ namespace BookStore
                 dateNgay2.Focus();
                 return;
             }
-            if (!int.TryParse(txtSoLanMua.Text, out minSoLanMua) || minSoLanMua < 0)
-            {
-                MessageBox.Show("Số lần mua phải là một số nguyên không âm.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSoLanMua.Focus();
-                return;
-            }
-            if (!decimal.TryParse(txtTongChi.Text, out minTongChi) || minTongChi < 0)
-            {
-                MessageBox.Show("Tổng hóa đơn phải là một số không âm.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTongChi.Focus();
-                return;
-            }
 
             try
             {
-                DataTable dt = GetLoyalCustomers(startDate, endDate, minSoLanMua, minTongChi);
+                DataTable dt = GetLoyalCustomers(startDate, endDate);
                 dataKHTT.DataSource = null;
+
                 if (dt != null && dt.Rows.Count > 0)
                 {
                     dataKHTT.DataSource = dt;
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy khách hàng nào thỏa mãn điều kiện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không có khách hàng nào thỏa điều kiện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Đã xảy ra lỗi khi lấy dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi khi lấy dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
         }
 
-        public DataTable GetLoyalCustomers(DateTime startDate, DateTime endDate, int minSoLanMua, decimal minTongChi)
+        public DataTable GetLoyalCustomers(DateTime startDate, DateTime endDate)
         {
             using (var conn = Database.GetConnection())
             {
-                string sql = @"
-            SELECT 
-                kh.MaKhach, 
-                kh.TenKhach, 
-                kh.DienThoai, 
-                COUNT(DISTINCT hd.SoHDB) AS SoLanMua,
-                SUM(hd.TongTien) AS TongTien
-            FROM KhachHang kh
-            JOIN HoaDonBan hd on kh.MaKhach = hd.MaKhach
-            JOIN ChiTietHDB cthdb ON hd.SoHDB = cthdb.SoHDB
-            WHERE hd.NgayBan >= @StartDate AND hd.NgayBan <= @EndDate
-            GROUP BY kh.MaKhach, kh.TenKhach, kh.DienThoai
-            HAVING COUNT(DISTINCT hd.SoHDB) >= @MinSoLanMua
-               AND SUM(hd.TongTien) >= @MinTongChi
-            ORDER BY TongTien DESC";
-                using (var da = new SqlDataAdapter(sql, conn))
-                {
-                    da.SelectCommand.Parameters.AddWithValue("@StartDate", startDate.Date);
-                    da.SelectCommand.Parameters.AddWithValue("@EndDate", endDate.Date);
-                    da.SelectCommand.Parameters.AddWithValue("@MinSoLanMua", minSoLanMua);
-                    da.SelectCommand.Parameters.AddWithValue("@MinTongChi", minTongChi);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
+                string query = @"
+            SELECT KH.MaKhach, KH.TenKhach, 
+                   COUNT(HD.SoHDB) AS SoLanMua,
+                   SUM(HD.TongTien) AS TongChi
+            FROM KhachHang KH
+            JOIN HoaDonBan HD ON KH.MaKhach = HD.MaKhach
+            WHERE HD.NgayBan BETWEEN @startDate AND @endDate
+            GROUP BY KH.MaKhach, KH.TenKhach
+            HAVING COUNT(HD.SoHDB) = (
+                SELECT MAX(SoLanMua)
+                FROM (
+                    SELECT COUNT(HD1.SoHDB) AS SoLanMua
+                    FROM KhachHang KH1
+                    JOIN HoaDonBan HD1 ON KH1.MaKhach = HD1.MaKhach
+                    WHERE HD1.NgayBan BETWEEN @startDate AND @endDate
+                    GROUP BY KH1.MaKhach
+                ) AS Sub
+            )";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@startDate", startDate);
+                cmd.Parameters.AddWithValue("@endDate", endDate);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
         }
 
@@ -269,6 +258,19 @@ namespace BookStore
             }
         }
 
+        private void txtSoLanMua_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void dataKHTT_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataKHTT.Rows[e.RowIndex];
+                txtSoLanMua.Text = row.Cells["SoLanMua"].Value.ToString();
+                txtTongChi.Text = row.Cells["TongChi"].Value.ToString();
+            }
+        }
     }
 }

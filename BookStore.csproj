@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoTonKho.cs">
+    <Compile Include="Baocaodoanhthu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BaoCaoTonKho.Designer.cs">
-      <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
+    <Compile Include="Baocaodoanhthu.Designer.cs">
+      <DependentUpon>Baocaodoanhthu.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\KhoSachDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
@@ -141,8 +142,8 @@
     <Compile Include="UC_TaiKhoan.Designer.cs">
       <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCaoTonKho.resx">
-      <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
+    <EmbeddedResource Include="Baocaodoanhthu.resx">
+      <DependentUpon>Baocaodoanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
