@@ -33,7 +33,7 @@ namespace BookStore
         {
             using (SqlConnection connection = Database.GetConnection())
             {
-                string sql = "SELECT * FROM KhachHang";
+                string sql = "SELECT MaKhach, TenKhach, GioiTinh, DiaChi,DienThoai FROM KhachHang";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, Database.GetConnection());
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -43,11 +43,7 @@ namespace BookStore
                 dataGVKhachHang.Columns[2].HeaderText = "Giới tính";
                 dataGVKhachHang.Columns[3].HeaderText = "Địa chỉ";
                 dataGVKhachHang.Columns[4].HeaderText = "SĐT";
-                dataGVKhachHang.Columns[0].Width = 100;
-                dataGVKhachHang.Columns[1].Width = 150;
-                dataGVKhachHang.Columns[2].Width = 100;
-                dataGVKhachHang.Columns[3].Width = 100;
-                dataGVKhachHang.Columns[4].Width = 200;
+                
                 
                 
             }
@@ -162,26 +158,36 @@ namespace BookStore
                 txtSDTKH.Focus();
                 return;
             }
-            string sqlCheck = "Select * from KhachHang where MaKH = N'" + makh + "'";
+            string sqlCheck = "Select * from KhachHang where MaKhach = N'" + makh + "'";
             if (!Database.CheckKey(sqlCheck))
             {
-                string sql = "Insert into KhachHang values (N'" + makh + "', N'" + hoten + "', N'" + gioitinh + "', N'" + diachi + "', '" + sdt + "')";
+                string sql = "INSERT INTO KhachHang (MaKhach, TenKhach, GioiTinh, DiaChi, DienThoai) " +
+             "VALUES (@MaKhach, @TenKhach, @GioiTinh, @DiaChi, @DienThoai)";
                 using (SqlConnection connection = Database.GetConnection())
                 {
-                    SqlCommand cmd = new SqlCommand(sql, connection);
-                    
-                    try
+                    using (SqlCommand cmd = new SqlCommand(sql, connection))
                     {
-                        cmd.ExecuteNonQuery();
-                        LoadDataToGridView();
-                        Clear();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        return;
+                        cmd.Parameters.AddWithValue("@MaKhach", makh);
+                        cmd.Parameters.AddWithValue("@TenKhach", hoten);
+                        cmd.Parameters.AddWithValue("@GioiTinh", gioitinh);
+                        cmd.Parameters.AddWithValue("@DiaChi", diachi);
+                        cmd.Parameters.AddWithValue("@DienThoai", sdt);
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                            LoadDataToGridView();
+                            Clear();
+                            MessageBox.Show("Lưu khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            return;
+                        }
                     }
                 }
+
             }
             else
             {
@@ -192,11 +198,12 @@ namespace BookStore
 
         private void btnSuaKH_Click(object sender, EventArgs e)
         {
-            if (dataGVKhachHang.SelectedRows.Count == 0)
+            if (dataGVKhachHang.CurrentRow == null)
             {
                 MessageBox.Show("Bạn chưa chọn khách hàng để sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             string makh = txtMaKH.Text;
             string hoten = txtHoTenKH.Text;
             string gioitinh = GetGioiTinh();
@@ -247,10 +254,10 @@ namespace BookStore
                 txtSDTKH.Focus();
                 return;
             }
-            string sqlCheck = "Select * from KhachHang where MaKH = N'" + makh + "'";
+            string sqlCheck = "Select * from KhachHang where MaKhach = N'" + makh + "'";
             if (Database.CheckKey(sqlCheck))
             {
-                string sql = "Update KhachHang set HoTenKH = N'" + hoten + "', GioiTinh = N'" + gioitinh + "', DiaChi = N'" + diachi + "', SDT = '" + sdt + "' where MaKH = N'" + makh + "'";
+                string sql = "Update KhachHang set TenKhach = N'" + hoten + "', GioiTinh = N'" + gioitinh + "', DiaChi = N'" + diachi + "', DienThoai = '" + sdt + "' where MaKhach = N'" + makh + "'";
                 using (SqlConnection connection = Database.GetConnection())
                 {
                     SqlCommand cmd = new SqlCommand(sql, connection);
@@ -260,6 +267,7 @@ namespace BookStore
                         cmd.ExecuteNonQuery();
                         LoadDataToGridView();
                         Clear();
+                        MessageBox.Show("Sửa khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -278,13 +286,14 @@ namespace BookStore
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
 
-            if (dataGVKhachHang.SelectedRows.Count == 0)
+            if (dataGVKhachHang.CurrentRow == null)
             {
                 MessageBox.Show("Bạn chưa chọn khách hàng để xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             string makh = txtMaKH.Text;
-            string sqlCheck = "Select * from KhachHang where MaKH = N'" + makh + "'";
+            string sqlCheck = "Select * from KhachHang where MaKhach = N'" + makh + "'";
             if (string.IsNullOrEmpty(sqlCheck))
             {
                 MessageBox.Show("Mã khách hàng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -296,7 +305,7 @@ namespace BookStore
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "Delete from KhachHang where MaKH = N'" + makh + "'";
+                    string sql = "Delete from KhachHang where MaKhach = N'" + makh + "'";
                     using (SqlConnection connection = Database.GetConnection())
                     {
                         SqlCommand cmd = new SqlCommand(sql, connection);
@@ -305,6 +314,7 @@ namespace BookStore
                             cmd.ExecuteNonQuery();
                             LoadDataToGridView();
                             Clear();
+                            MessageBox.Show("Xóa khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
@@ -323,35 +333,73 @@ namespace BookStore
 
         private void btnTimKH_Click(object sender, EventArgs e)
         {
+           
+            string maKH = txtMaKH.Text.Trim();
+            string tenKH = txtHoTenKH.Text.Trim();
+            string gioiTinh = GetGioiTinh();
+            string diaChi = txtDiaChiKH.Text.Trim();
+            string dienThoai = txtSDTKH.Text.Trim();
 
-            string searchValue = txtTimKiemKH.Text.Trim();
-            string filterColumn = cboTimKiemKH.SelectedItem?.ToString();
-
-            if (string.IsNullOrEmpty(searchValue) || string.IsNullOrEmpty(filterColumn))
+            DataTable dt = SearchKhachHang(maKH, tenKH, gioiTinh, diaChi, dienThoai);
+            dataGVKhachHang.DataSource = dt;
+            if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("Vui lòng nhập giá trị tìm kiếm và chọn bộ lọc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            StringBuilder sql = new StringBuilder($"SELECT * FROM NhanVien WHERE {filterColumn} LIKE N'%{searchValue}%'");
-
-            if (radNam.Checked)
-            {
-                sql.Append(" AND GioiTinh = N'Nam'");
-            }
-            else if (radNu.Checked)
-            {
-                sql.Append(" AND GioiTinh = N'Nữ'");
-            }
-
-            using (SqlConnection connection = Database.GetConnection())
-            {
-                SqlDataAdapter adapter = new SqlDataAdapter(sql.ToString(), connection);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGVKhachHang.DataSource = dt;
+                MessageBox.Show("Không tìm thấy khách hàng nào phù hợp với tiêu chí tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        public static DataTable SearchKhachHang(
+    string maKH, string tenKH, string gioiTinh, string diaChi, string dienThoai)
+        {
+            var query = new StringBuilder(@"
+        SELECT MaKhach, TenKhach, GioiTinh, DiaChi, DienThoai
+        FROM KhachHang
+        WHERE 1=1");
+
+            var parameters = new List<SqlParameter>();
+
+            if (!string.IsNullOrEmpty(maKH))
+            {
+                query.Append(" AND MaKhach LIKE @MaKH");
+                parameters.Add(new SqlParameter("@MaKH", "%" + maKH + "%"));
+            }
+            if (!string.IsNullOrEmpty(tenKH))
+            {
+                query.Append(" AND TenKhach LIKE @TenKH");
+                parameters.Add(new SqlParameter("@TenKH", "%" + tenKH + "%"));
+            }
+            if (!string.IsNullOrEmpty(gioiTinh))
+            {
+                query.Append(" AND GioiTinh = @GioiTinh");
+                parameters.Add(new SqlParameter("@GioiTinh", gioiTinh));
+            }
+            if (!string.IsNullOrEmpty(diaChi))
+            {
+                query.Append(" AND DiaChi LIKE @DiaChi");
+                parameters.Add(new SqlParameter("@DiaChi", "%" + diaChi + "%"));
+            }
+            if (!string.IsNullOrEmpty(dienThoai))
+            {
+                query.Append(" AND DienThoai LIKE @DienThoai");
+                parameters.Add(new SqlParameter("@DienThoai", "%" + dienThoai + "%"));
+            }
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query.ToString(), conn);
+                cmd.Parameters.AddRange(parameters.ToArray());
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
+
+
+
 
         private void btnBoQuaKH_Click(object sender, EventArgs e)
         {

@@ -57,7 +57,11 @@ namespace BookStore
         {
             using (SqlConnection connection = Database.GetConnection())
             {
-                string sql = "SELECT MaNV, TenNV,  FROM NhanVien";
+                string sql = @"
+    SELECT nv.MaNV, nv.TenNV, cv.TenCongViec, nv.GioiTinh, nv.NgaySinh, nv.DiaChi, nv.Email, nv.DienThoai
+    FROM NhanVien nv
+    LEFT JOIN CongViec cv ON nv.MaCV = cv.MaCongViec";
+
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -85,6 +89,16 @@ namespace BookStore
         {
             Database.GetConnection();
             LoadDataToGridView();
+            DataTable dtCV = new DataTable();
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter("SELECT MaCongViec, TenCongViec FROM CongViec", conn);
+                da.Fill(dtCV);
+            }
+            cboChucVu.DataSource = dtCV;
+            cboChucVu.DisplayMember = "TenCongViec";
+            cboChucVu.ValueMember = "MaCongViec";
+
         }
 
         private void dataGVNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,21 +109,16 @@ namespace BookStore
                 DataGridViewRow row = dataGVNhanVien.Rows[e.RowIndex];
                 txtMaNV.Text = row.Cells[0].Value.ToString();
                 txtHoTenNV.Text = row.Cells[1].Value.ToString();
-                cboChucVu.Text = row.Cells[2].Value.ToString();
+                cboChucVu.Text = row.Cells[2].Value.ToString(); // TenCongViec
                 SetGioiTinh(row.Cells[3].Value.ToString());
                 if (DateTime.TryParse(row.Cells[4].Value?.ToString(), out DateTime parsedDate))
-                {
                     dateNV.Value = parsedDate;
-                }
                 else
-                {
-                    // Xử lý khi giá trị không hợp lệ, ví dụ:
                     dateNV.Value = DateTime.Now;
-                }
-
                 txtDiaChiNV.Text = row.Cells[5].Value.ToString();
                 txtEmailNV.Text = row.Cells[6].Value.ToString();
                 txtSDTNV.Text = row.Cells[7].Value.ToString();
+
             }
         }
 
@@ -161,6 +170,7 @@ namespace BookStore
             string chucvu = cboChucVu.Text;
             string gioitinh = GetGioiTinh();
             DateTime ngaysinh = dateNV.Value;
+            string dienthoai = txtSDTNV.Text;
             string diachi = txtDiaChiNV.Text;
             string email = txtEmailNV.Text;
 
@@ -239,7 +249,10 @@ namespace BookStore
             string sqlCheck = "Select * from NhanVien where MaNV = N'" + manv + "'";
             if (!Database.CheckKey(sqlCheck))
             {
-                string sql = "Insert into NhanVien values (N'" + manv + "', N'" + hoten + "', N'" + chucvu + "', N'" + gioitinh + "', @ngaysinh, N'" + diachi + "', N'" + email + "', '" + txtSDTNV.Text + "')";
+                string macv = cboChucVu.SelectedValue?.ToString() ?? "";
+                string sql = "INSERT INTO NhanVien (MaNV, TenNV, MaCV, GioiTinh, NgaySinh, DiaChi, Email, DienThoai) " +
+                             "VALUES (N'" + manv + "', N'" + hoten + "', N'" + macv + "', N'" + gioitinh + "', @ngaysinh, N'" + diachi + "', N'" + email + "', '" + txtSDTNV.Text + "')";
+
                 using (SqlConnection connection = Database.GetConnection())
                 {
                     SqlCommand cmd = new SqlCommand(sql, connection);
@@ -249,6 +262,7 @@ namespace BookStore
                         cmd.ExecuteNonQuery();
                         LoadDataToGridView();
                         Clear();
+                        MessageBox.Show("Lưu nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -262,8 +276,6 @@ namespace BookStore
                 MessageBox.Show("Đã trùng mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
@@ -350,12 +362,14 @@ namespace BookStore
                 return;
             }
 
+            string macv = cboChucVu.SelectedValue?.ToString() ?? "";
+
             string sql = "Update NhanVien set " +
-                "HoTen = N'" + hoten + "', ChucVu = N'" + chucvu + "', GioiTinh = N'" + gioitinh + "', NgaySinh = @ngaysinh, DiaChi = N'" + diachi + "', Email = N'" + email + "', SDT = '" + txtSDTNV.Text + "'" +
+                "TenNV = N'" + hoten + "', MaCV = N'" + macv + "', GioiTinh = N'" + gioitinh + "', NgaySinh = @ngaysinh, DiaChi = N'" + diachi + "', Email = N'" + email + "', DienThoai = '" + txtSDTNV.Text + "'" +
                 " Where MaNV = N'" + manv + "'";
+
             using (SqlConnection connection = Database.GetConnection())
             {
-
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@ngaysinh", ngaysinh);
                 try
@@ -363,12 +377,14 @@ namespace BookStore
                     cmd.ExecuteNonQuery();
                     LoadDataToGridView();
                     Clear();
+                    MessageBox.Show("Sửa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     return;
                 }
+                
             }
         }
 
@@ -393,6 +409,7 @@ namespace BookStore
                         cmd.ExecuteNonQuery();
                         LoadDataToGridView();
                         Clear();
+                        MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); return; }
                 }
@@ -419,13 +436,12 @@ namespace BookStore
             string email = txtEmailNV.Text.Trim();
             string sdt = txtSDTNV.Text.Trim();
 
-            // Nếu dùng DateTimePicker có ShowCheckBox
+            
             DateTime? ngaysinh = null;
             if (dateNV is DateTimePicker dtp && dtp.ShowCheckBox && dtp.Checked)
                 ngaysinh = dtp.Value.Date;
 
-            // Nếu không có ShowCheckBox, chỉ tìm khi khác ngày mặc định
-            // DateTime? ngaysinh = (dateNV.Value != DateTime.Now) ? dateNV.Value.Date : (DateTime?)null;
+            
 
             DataTable dt = SearchNhanVien(manv, hoten, chucvu, gioitinh, ngaysinh, diachi, email, sdt);
             dataGVNhanVien.DataSource = dt;

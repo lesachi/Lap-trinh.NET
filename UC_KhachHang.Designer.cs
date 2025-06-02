@@ -44,28 +44,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboTimKiemKH = new System.Windows.Forms.ComboBox();
             this.btnTimKH = new System.Windows.Forms.Button();
-            this.txtTimKiemKH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChiKH = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGVKhachHang
             // 
             this.dataGVKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVKhachHang.Location = new System.Drawing.Point(0, 463);
+            this.dataGVKhachHang.Location = new System.Drawing.Point(0, 401);
             this.dataGVKhachHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGVKhachHang.Name = "dataGVKhachHang";
             this.dataGVKhachHang.RowHeadersWidth = 62;
-            this.dataGVKhachHang.Size = new System.Drawing.Size(1174, 277);
+            this.dataGVKhachHang.Size = new System.Drawing.Size(1174, 339);
             this.dataGVKhachHang.TabIndex = 0;
             this.dataGVKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVKhachHang_CellContentClick);
             // 
@@ -191,7 +185,7 @@
             // 
             // txtSDTKH
             // 
-            this.txtSDTKH.Location = new System.Drawing.Point(614, 82);
+            this.txtSDTKH.Location = new System.Drawing.Point(635, 82);
             this.txtSDTKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(342, 26);
@@ -234,43 +228,9 @@
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cboTimKiemKH);
-            this.groupBox2.Controls.Add(this.btnTimKH);
-            this.groupBox2.Controls.Add(this.txtTimKiemKH);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(588, 182);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(392, 282);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm kiếm";
-            // 
-            // cboTimKiemKH
-            // 
-            this.cboTimKiemKH.FormattingEnabled = true;
-            this.cboTimKiemKH.Items.AddRange(new object[] {
-            "Mã khách hàng",
-            "Họ tên",
-            "Ngày sinh",
-            "Giới tính",
-            "Địa chỉ",
-            "Email",
-            "SĐT"});
-            this.cboTimKiemKH.Location = new System.Drawing.Point(26, 63);
-            this.cboTimKiemKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboTimKiemKH.Name = "cboTimKiemKH";
-            this.cboTimKiemKH.Size = new System.Drawing.Size(348, 33);
-            this.cboTimKiemKH.TabIndex = 2;
-            // 
             // btnTimKH
             // 
-            this.btnTimKH.Location = new System.Drawing.Point(124, 237);
+            this.btnTimKH.Location = new System.Drawing.Point(717, 262);
             this.btnTimKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTimKH.Name = "btnTimKH";
             this.btnTimKH.Size = new System.Drawing.Size(112, 35);
@@ -279,19 +239,11 @@
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
             // 
-            // txtTimKiemKH
-            // 
-            this.txtTimKiemKH.Location = new System.Drawing.Point(26, 160);
-            this.txtTimKiemKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTimKiemKH.Name = "txtTimKiemKH";
-            this.txtTimKiemKH.Size = new System.Drawing.Size(348, 30);
-            this.txtTimKiemKH.TabIndex = 0;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 381);
+            this.label7.Location = new System.Drawing.Point(556, 163);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 25);
@@ -300,10 +252,10 @@
             // 
             // txtDiaChiKH
             // 
-            this.txtDiaChiKH.Location = new System.Drawing.Point(176, 379);
+            this.txtDiaChiKH.Location = new System.Drawing.Point(635, 164);
             this.txtDiaChiKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChiKH.Name = "txtDiaChiKH";
-            this.txtDiaChiKH.Size = new System.Drawing.Size(355, 26);
+            this.txtDiaChiKH.Size = new System.Drawing.Size(342, 26);
             this.txtDiaChiKH.TabIndex = 20;
             // 
             // label8
@@ -317,24 +269,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Chọn tiêu chí";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Nhập từ khóa";
-            // 
             // UC_KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -342,6 +276,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtDiaChiKH);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnTimKH);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSDTKH);
             this.Controls.Add(this.txtHoTenKH);
@@ -356,7 +291,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGVKhachHang);
-            this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_KhachHang";
             this.Size = new System.Drawing.Size(1174, 740);
@@ -364,8 +298,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKhachHang)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,14 +321,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnTimKH;
-        private System.Windows.Forms.TextBox txtTimKiemKH;
-        private System.Windows.Forms.ComboBox cboTimKiemKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiaChiKH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
     }
 }
