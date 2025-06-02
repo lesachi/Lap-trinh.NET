@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panelBaocao = new System.Windows.Forms.Panel();
+            this.btnBaocaoSach = new System.Windows.Forms.Button();
+            this.btnTonkho = new System.Windows.Forms.Button();
+            this.btnBCKhachhang = new System.Windows.Forms.Button();
+            this.btnDoanhthu = new System.Windows.Forms.Button();
             this.btnBaocao = new System.Windows.Forms.Button();
             this.btnNhaxuatban = new System.Windows.Forms.Button();
             this.btnNhacungcap = new System.Windows.Forms.Button();
@@ -43,17 +48,12 @@
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.picBoxbookshop = new System.Windows.Forms.PictureBox();
-            this.panelBaocao = new System.Windows.Forms.Panel();
-            this.btnDoanhthu = new System.Windows.Forms.Button();
-            this.btnBCKhachhang = new System.Windows.Forms.Button();
-            this.btnTonkho = new System.Windows.Forms.Button();
-            this.btnBaocaoSach = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
+            this.panelBaocao.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxbookshop)).BeginInit();
-            this.panelBaocao.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -77,6 +77,79 @@
             this.panelSideMenu.Size = new System.Drawing.Size(250, 567);
             this.panelSideMenu.TabIndex = 0;
             // 
+            // panelBaocao
+            // 
+            this.panelBaocao.Controls.Add(this.btnBaocaoSach);
+            this.panelBaocao.Controls.Add(this.btnTonkho);
+            this.panelBaocao.Controls.Add(this.btnBCKhachhang);
+            this.panelBaocao.Controls.Add(this.btnDoanhthu);
+            this.panelBaocao.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBaocao.Location = new System.Drawing.Point(0, 666);
+            this.panelBaocao.Name = "panelBaocao";
+            this.panelBaocao.Size = new System.Drawing.Size(229, 137);
+            this.panelBaocao.TabIndex = 6;
+            // 
+            // btnBaocaoSach
+            // 
+            this.btnBaocaoSach.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnBaocaoSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaocaoSach.FlatAppearance.BorderSize = 0;
+            this.btnBaocaoSach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBaocaoSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaocaoSach.Location = new System.Drawing.Point(0, 104);
+            this.btnBaocaoSach.Name = "btnBaocaoSach";
+            this.btnBaocaoSach.Size = new System.Drawing.Size(229, 35);
+            this.btnBaocaoSach.TabIndex = 3;
+            this.btnBaocaoSach.Text = "Sách";
+            this.btnBaocaoSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaocaoSach.UseVisualStyleBackColor = false;
+            this.btnBaocaoSach.Click += new System.EventHandler(this.btnBaocaoSach_Click);
+            // 
+            // btnTonkho
+            // 
+            this.btnTonkho.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnTonkho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTonkho.FlatAppearance.BorderSize = 0;
+            this.btnTonkho.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnTonkho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTonkho.Location = new System.Drawing.Point(0, 73);
+            this.btnTonkho.Name = "btnTonkho";
+            this.btnTonkho.Size = new System.Drawing.Size(229, 31);
+            this.btnTonkho.TabIndex = 2;
+            this.btnTonkho.Text = "Tồn kho";
+            this.btnTonkho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTonkho.UseVisualStyleBackColor = false;
+            // 
+            // btnBCKhachhang
+            // 
+            this.btnBCKhachhang.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnBCKhachhang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBCKhachhang.FlatAppearance.BorderSize = 0;
+            this.btnBCKhachhang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBCKhachhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBCKhachhang.Location = new System.Drawing.Point(0, 35);
+            this.btnBCKhachhang.Name = "btnBCKhachhang";
+            this.btnBCKhachhang.Size = new System.Drawing.Size(229, 38);
+            this.btnBCKhachhang.TabIndex = 1;
+            this.btnBCKhachhang.Text = "Khách hàng";
+            this.btnBCKhachhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBCKhachhang.UseVisualStyleBackColor = false;
+            // 
+            // btnDoanhthu
+            // 
+            this.btnDoanhthu.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnDoanhthu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoanhthu.FlatAppearance.BorderSize = 0;
+            this.btnDoanhthu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnDoanhthu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoanhthu.Location = new System.Drawing.Point(0, 0);
+            this.btnDoanhthu.Name = "btnDoanhthu";
+            this.btnDoanhthu.Size = new System.Drawing.Size(229, 35);
+            this.btnDoanhthu.TabIndex = 0;
+            this.btnDoanhthu.Text = "Doanh thu";
+            this.btnDoanhthu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoanhthu.UseVisualStyleBackColor = false;
+            // 
             // btnBaocao
             // 
             this.btnBaocao.BackColor = System.Drawing.Color.BurlyWood;
@@ -86,7 +159,7 @@
             this.btnBaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaocao.Location = new System.Drawing.Point(0, 608);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(224, 58);
+            this.btnBaocao.Size = new System.Drawing.Size(229, 58);
             this.btnBaocao.TabIndex = 1;
             this.btnBaocao.Text = "Báo cáo";
             this.btnBaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +175,7 @@
             this.btnNhaxuatban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhaxuatban.Location = new System.Drawing.Point(0, 558);
             this.btnNhaxuatban.Name = "btnNhaxuatban";
-            this.btnNhaxuatban.Size = new System.Drawing.Size(224, 50);
+            this.btnNhaxuatban.Size = new System.Drawing.Size(229, 50);
             this.btnNhaxuatban.TabIndex = 1;
             this.btnNhaxuatban.Text = "Nhà xuất bản";
             this.btnNhaxuatban.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,7 +191,7 @@
             this.btnNhacungcap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhacungcap.Location = new System.Drawing.Point(0, 508);
             this.btnNhacungcap.Name = "btnNhacungcap";
-            this.btnNhacungcap.Size = new System.Drawing.Size(224, 50);
+            this.btnNhacungcap.Size = new System.Drawing.Size(229, 50);
             this.btnNhacungcap.TabIndex = 1;
             this.btnNhacungcap.Text = "Nhà cung cấp";
             this.btnNhacungcap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +207,7 @@
             this.btnTaikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaikhoan.Location = new System.Drawing.Point(0, 458);
             this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(224, 50);
+            this.btnTaikhoan.Size = new System.Drawing.Size(229, 50);
             this.btnTaikhoan.TabIndex = 5;
             this.btnTaikhoan.Text = "Tài khoản";
             this.btnTaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +224,7 @@
             this.btnQLNV.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnQLNV.Location = new System.Drawing.Point(0, 414);
             this.btnQLNV.Name = "btnQLNV";
-            this.btnQLNV.Size = new System.Drawing.Size(224, 44);
+            this.btnQLNV.Size = new System.Drawing.Size(229, 44);
             this.btnQLNV.TabIndex = 4;
             this.btnQLNV.Text = "Quản lý nhân viên\r\n";
             this.btnQLNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,7 +240,7 @@
             this.btnQLKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLKH.Location = new System.Drawing.Point(0, 364);
             this.btnQLKH.Name = "btnQLKH";
-            this.btnQLKH.Size = new System.Drawing.Size(224, 50);
+            this.btnQLKH.Size = new System.Drawing.Size(229, 50);
             this.btnQLKH.TabIndex = 3;
             this.btnQLKH.Text = "Quản lý khách hàng";
             this.btnQLKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,7 +256,7 @@
             this.btnKhosach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhosach.Location = new System.Drawing.Point(0, 314);
             this.btnKhosach.Name = "btnKhosach";
-            this.btnKhosach.Size = new System.Drawing.Size(224, 50);
+            this.btnKhosach.Size = new System.Drawing.Size(229, 50);
             this.btnKhosach.TabIndex = 2;
             this.btnKhosach.Text = "Kho sách";
             this.btnKhosach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,7 +272,7 @@
             this.btnNhaphang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhaphang.Location = new System.Drawing.Point(0, 264);
             this.btnNhaphang.Name = "btnNhaphang";
-            this.btnNhaphang.Size = new System.Drawing.Size(224, 50);
+            this.btnNhaphang.Size = new System.Drawing.Size(229, 50);
             this.btnNhaphang.TabIndex = 1;
             this.btnNhaphang.Text = "Nhập hàng";
             this.btnNhaphang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,7 +289,7 @@
             this.btnBanhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanhang.Location = new System.Drawing.Point(0, 214);
             this.btnBanhang.Name = "btnBanhang";
-            this.btnBanhang.Size = new System.Drawing.Size(224, 50);
+            this.btnBanhang.Size = new System.Drawing.Size(229, 50);
             this.btnBanhang.TabIndex = 1;
             this.btnBanhang.Text = "Bán hàng";
             this.btnBanhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +302,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(224, 214);
+            this.panelLogo.Size = new System.Drawing.Size(229, 214);
             this.panelLogo.TabIndex = 0;
             // 
             // picBoxLogo
@@ -241,7 +314,7 @@
             this.picBoxLogo.Image = global::BookStore.Properties.Resources.logo;
             this.picBoxLogo.Location = new System.Drawing.Point(-5, -6);
             this.picBoxLogo.Name = "picBoxLogo";
-            this.picBoxLogo.Size = new System.Drawing.Size(245, 220);
+            this.picBoxLogo.Size = new System.Drawing.Size(250, 220);
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxLogo.TabIndex = 0;
             this.picBoxLogo.TabStop = false;
@@ -273,81 +346,9 @@
             this.picBoxbookshop.TabStop = false;
             this.picBoxbookshop.Click += new System.EventHandler(this.picBoxbookshop_Click);
             // 
-            // panelBaocao
-            // 
-            this.panelBaocao.Controls.Add(this.btnBaocaoSach);
-            this.panelBaocao.Controls.Add(this.btnTonkho);
-            this.panelBaocao.Controls.Add(this.btnBCKhachhang);
-            this.panelBaocao.Controls.Add(this.btnDoanhthu);
-            this.panelBaocao.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBaocao.Location = new System.Drawing.Point(0, 666);
-            this.panelBaocao.Name = "panelBaocao";
-            this.panelBaocao.Size = new System.Drawing.Size(224, 137);
-            this.panelBaocao.TabIndex = 6;
-            // 
-            // btnDoanhthu
-            // 
-            this.btnDoanhthu.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnDoanhthu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoanhthu.FlatAppearance.BorderSize = 0;
-            this.btnDoanhthu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnDoanhthu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoanhthu.Location = new System.Drawing.Point(0, 0);
-            this.btnDoanhthu.Name = "btnDoanhthu";
-            this.btnDoanhthu.Size = new System.Drawing.Size(224, 35);
-            this.btnDoanhthu.TabIndex = 0;
-            this.btnDoanhthu.Text = "Doanh thu";
-            this.btnDoanhthu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoanhthu.UseVisualStyleBackColor = false;
-            // 
-            // btnBCKhachhang
-            // 
-            this.btnBCKhachhang.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnBCKhachhang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBCKhachhang.FlatAppearance.BorderSize = 0;
-            this.btnBCKhachhang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnBCKhachhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBCKhachhang.Location = new System.Drawing.Point(0, 35);
-            this.btnBCKhachhang.Name = "btnBCKhachhang";
-            this.btnBCKhachhang.Size = new System.Drawing.Size(224, 38);
-            this.btnBCKhachhang.TabIndex = 1;
-            this.btnBCKhachhang.Text = "Khách hàng";
-            this.btnBCKhachhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBCKhachhang.UseVisualStyleBackColor = false;
-            // 
-            // btnTonkho
-            // 
-            this.btnTonkho.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnTonkho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTonkho.FlatAppearance.BorderSize = 0;
-            this.btnTonkho.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnTonkho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTonkho.Location = new System.Drawing.Point(0, 73);
-            this.btnTonkho.Name = "btnTonkho";
-            this.btnTonkho.Size = new System.Drawing.Size(224, 31);
-            this.btnTonkho.TabIndex = 2;
-            this.btnTonkho.Text = "Tồn kho";
-            this.btnTonkho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTonkho.UseVisualStyleBackColor = false;
-            // 
-            // btnBaocaoSach
-            // 
-            this.btnBaocaoSach.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnBaocaoSach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBaocaoSach.FlatAppearance.BorderSize = 0;
-            this.btnBaocaoSach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnBaocaoSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaocaoSach.Location = new System.Drawing.Point(0, 104);
-            this.btnBaocaoSach.Name = "btnBaocaoSach";
-            this.btnBaocaoSach.Size = new System.Drawing.Size(224, 35);
-            this.btnBaocaoSach.TabIndex = 3;
-            this.btnBaocaoSach.Text = "Sách";
-            this.btnBaocaoSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaocaoSach.UseVisualStyleBackColor = false;
-            // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1084, 567);
@@ -361,11 +362,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainFrm_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelBaocao.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxbookshop)).EndInit();
-            this.panelBaocao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

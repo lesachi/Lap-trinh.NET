@@ -133,6 +133,12 @@ namespace BookStore
             panelBaocao.Visible = !panelBaocao.Visible;
         }
 
-    
-     }
+        private void btnBaocaoSach_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
+            UC_BaoCaoSach uc = new UC_BaoCaoSach(); // Tạo mới UserControl báo cáo sách
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
+    }
 } 
