@@ -13,7 +13,7 @@ namespace BookStore
 {
     public class Database
     {
-        private static string conn = "Data Source=DESKTOP-GGAFB0R;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
+        private static string conn = "Data Source=LAPTOP-QR5K8KKV\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangSach;Integrated Security=True";
 
         public static SqlConnection GetConnection()
         {
@@ -27,6 +27,7 @@ namespace BookStore
                 throw new Exception("Lỗi khi kết nối đến cơ sở dữ liệu: " + ex.Message);
             }
             return connection;
+            //return new SqlConnection(conn);
         }
 
         public static bool CheckKey(string sql)
@@ -40,18 +41,20 @@ namespace BookStore
                 result = true;
             }
             return result;
+            
 
         }
 
         public static void FillDataToCombo(ComboBox cmb, string sql, string value, string display)
         {
-            
+
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             sqlDataAdapter.Fill(dt);
             cmb.DataSource = dt;
             cmb.ValueMember = value;
             cmb.DisplayMember = display;
+            
         }
         public static string TaoMaNXBTuDong()
         {
@@ -59,24 +62,27 @@ namespace BookStore
             {
                 if (conn.State != ConnectionState.Open)
                     conn.Open();
-                string sql = "SELECT TOP 1 MaNXB FROM NXB ORDER BY MaNXB DESC";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                object result = cmd.ExecuteScalar();
-
-                if (result != null)
+                string sql = "SELECT TOP 1 MaNXB FROM NXB ORDER BY CAST(SUBSTRING(MaNXB, 4, LEN(MaNXB) - 3) AS INT) DESC";
+                using (SqlCommand cmd = new SqlCommand(sql, conn)) // đảm bảo tự đóng
                 {
-                    string maCuoi = result.ToString(); // ví dụ "NXB015"
-                    int so = int.Parse(maCuoi.Substring(3)); // Lấy số
-                    return "NXB" + (so + 1).ToString("D3");
-                }
-                else
-                {
-                    return "NXB001";
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        string maCuoi = result.ToString(); // ví dụ "NXB015"
+                        int so = int.Parse(maCuoi.Substring(3)); // Lấy số
+                        return "NXB" + (so + 1).ToString("D3");
+                    }
+                    else
+                    {
+                        return "NXB001";
+                    }
                 }
             }
+
         }
-
-
     }
 
- }
+}
+    
+
+ 

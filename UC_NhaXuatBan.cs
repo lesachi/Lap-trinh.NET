@@ -29,7 +29,7 @@ namespace BookStore
         private void LoadNXB()
         {
             flowLayoutPanelNXB.Controls.Clear();
-            string query = "SELECT * FROM NXB";
+            string query = "SELECT * FROM NXB ORDER BY TRY_CAST(SUBSTRING(MaNXB, 4, LEN(MaNXB)) AS INT)";
             SqlCommand cmd = new SqlCommand(query, Database.GetConnection());
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -39,7 +39,16 @@ namespace BookStore
                 string ten = reader["TenNXB"].ToString();
                 string diachi = reader["DiaChi"].ToString();
                 string dienthoai = reader["DienThoai"].ToString();
-                Image logo = GetLogoResource(ma);
+                //Image logo = GetLogoResource(ma);
+                Image logo;
+                if (nxbList.ContainsKey(ma))
+                {
+                    logo = nxbList[ma].Logo; // nếu đã có trong danh sách => dùng ảnh đã chọn
+                }
+                else
+                {
+                    logo = GetLogoResource(ma); // nếu chưa có => fallback
+                }
 
                 nxbList[ma] = new NhaXuatBan
                 {
@@ -87,17 +96,34 @@ namespace BookStore
 
         private void ShowDetail(string key)
         {
-            if (nxbList.ContainsKey(key))
-            {
-                var nxb = nxbList[key];
+            // Đọc lại dữ liệu mới nhất từ DB
+            string query = $"SELECT * FROM NXB WHERE MaNXB = @ma";
+            SqlCommand cmd = new SqlCommand(query, Database.GetConnection());
+            cmd.Parameters.AddWithValue("@ma", key);
+            SqlDataReader reader = cmd.ExecuteReader();
 
-                var chiTietControl = new UC_ChitietNXB(
-                    nxb.Ma,
-                    nxb.Ten,
-                    nxb.Diachi,
-                    nxb.Dienthoai,
-                    nxb.Logo    
-                );
+            if (reader.Read())
+            {
+                string ma = reader["MaNXB"].ToString();
+                string ten = reader["TenNXB"].ToString();
+                string diachi = reader["DiaChi"].ToString();
+                string dienthoai = reader["DienThoai"].ToString();
+
+                reader.Close(); // Đóng Reader trước khi lấy ảnh
+
+                Image logo;
+                if (nxbList.ContainsKey(ma))
+                {
+                    logo = nxbList[ma].Logo; // nếu đã có trong danh sách => dùng ảnh đã chọn
+                }
+                else
+                {
+                    logo = GetLogoResource(ma); // nếu chưa có => fallback
+                }
+
+                reader.Close(); // Đừng quên đóng Reader
+
+                var chiTietControl = new UC_ChitietNXB(ma, ten, diachi, dienthoai, logo);
                 chiTietControl.XoaThanhCong += (s, e) =>
                 {
                     LoadNXB(); // Refresh lại danh sách
@@ -110,9 +136,12 @@ namespace BookStore
 
                 chiTietControl.Dock = DockStyle.Fill;
                 detailForm.Controls.Add(chiTietControl);
-                
-
                 detailForm.ShowDialog();
+            }
+            else
+            {
+                reader.Close();
+                MessageBox.Show("Không tìm thấy thông tin nhà xuất bản.");
             }
         }
 

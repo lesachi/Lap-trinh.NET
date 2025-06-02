@@ -36,7 +36,6 @@
             this.txtTenNXB = new System.Windows.Forms.TextBox();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtDienthoai = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
             this.txtAnh = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -110,16 +109,6 @@
             this.txtDienthoai.Size = new System.Drawing.Size(141, 22);
             this.txtDienthoai.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(315, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "THÊM NHÀ XUẤT BẢN";
-            // 
             // btnOpen
             // 
             this.btnOpen.Location = new System.Drawing.Point(495, 412);
@@ -185,7 +174,6 @@
             this.Controls.Add(this.txtAnh);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.pboLogo);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDienthoai);
             this.Controls.Add(this.txtDiachi);
             this.Controls.Add(this.txtTenNXB);
@@ -196,6 +184,7 @@
             this.Controls.Add(this.label2);
             this.Name = "ThemNXB";
             this.Size = new System.Drawing.Size(897, 597);
+            this.Load += new System.EventHandler(this.ThemNXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,7 +200,6 @@
         private System.Windows.Forms.TextBox txtTenNXB;
         private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.TextBox txtDienthoai;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pboLogo;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.TextBox txtAnh;
