@@ -86,5 +86,9 @@ namespace BookStore
             this.txtpass.UseSystemPasswordChar = !this.cbPass.Checked;
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
