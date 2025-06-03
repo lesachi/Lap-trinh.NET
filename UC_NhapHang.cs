@@ -45,11 +45,8 @@ namespace BookStore
             dtPNgayNhapHang.Value = DateTime.Now;
             CalculateTotal();
 
-            btnThem.Click += btnThem_Click;
-            btnSua.Click += btnSua_Click;
-            btnHuy.Click += btnHuy_Click;
-            btnInPhieuNhap.Click += btnInPhieuNhap_Click;
-            btnXoa.Click += btnXoa_Click;
+           
+          
             txtSoLuong.TextChanged += (s, e) => CalculateTotal();
             txtDonGia.TextChanged += (s, e) => CalculateTotal();
             txtKhuyenMai.TextChanged += (s, e) => CalculateTotal();
@@ -675,7 +672,7 @@ namespace BookStore
         private void ClearInputFields()
         {
             txtSoHDN.Text = "";
-            cmbMaNV.SelectedIndex = -1;
+            
             cmbTenNV.SelectedIndex = -1;
             cmbMaNCC.SelectedIndex = -1;
             cmbTenNCC.SelectedIndex = -1;

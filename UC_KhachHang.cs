@@ -207,16 +207,18 @@ namespace BookStore
             string makh = txtMaKH.Text;
             string hoten = txtHoTenKH.Text;
             string gioitinh = GetGioiTinh();
-            
             string diachi = txtDiaChiKH.Text;
-            
             string sdt = txtSDTKH.Text;
-            if (makh == "")
+
+            if (makh != dataGVKhachHang.CurrentRow.Cells[0].Value.ToString())
             {
-                MessageBox.Show("Bạn chưa nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMaKH.Focus();
+                MessageBox.Show("Không được phép sửa mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaKH.Text = dataGVKhachHang.CurrentRow.Cells[0].Value.ToString();
                 return;
             }
+
+
+
             if (hoten == "")
             {
                 MessageBox.Show("Bạn chưa nhập họ tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -228,14 +230,14 @@ namespace BookStore
                 MessageBox.Show("Bạn chưa chọn giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-          
+
             if (diachi == "")
             {
                 MessageBox.Show("Bạn chưa nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDiaChiKH.Focus();
                 return;
             }
-          
+
             if (sdt == "")
             {
                 MessageBox.Show("Bạn chưa nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -261,7 +263,7 @@ namespace BookStore
                 using (SqlConnection connection = Database.GetConnection())
                 {
                     SqlCommand cmd = new SqlCommand(sql, connection);
-                    
+
                     try
                     {
                         cmd.ExecuteNonQuery();

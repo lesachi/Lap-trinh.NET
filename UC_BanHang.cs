@@ -469,7 +469,25 @@ namespace BookStore
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.ParentForm.Close();
+            //xóa
+            ClearFields();
+            currentSoHDB = "";
+
+            LoadHoaDonBan(); // Reload the data to refresh the DataGridView
+            txtMaHD.Text = "";
+            dtPNgayNhapBanHang.Value = DateTime.Now; // Reset the date to now
+            cmbMaNV.SelectedValue = _maNV; // Reset to the current user's MaNV
+            cmbMaNV.Enabled = false; // Disable MaNV selection
+            txtTenNV.Text = ""; // Clear TenNV
+            txtTenKH.Text = ""; // Clear TenKH
+            txtTenSach.Text = ""; // Clear TenSach
+            txtSoLuong.Text = ""; // Clear SoLuong
+            txtGiamGia.Text = ""; // Clear GiamGia
+            txtTongTien.Text = ""; // Clear TongTien
+            txtDonGia.Text = ""; // Clear DonGia
+            cmbMaKH.SelectedIndex = -1; 
+
+
         }
 
         private void btnTaoHoaDon_Click(object sender, EventArgs e)

@@ -213,23 +213,24 @@ namespace BookStore
             using (var conn = Database.GetConnection())
             {
                 string query = @"
-            SELECT KH.MaKhach, KH.TenKhach, 
-                   COUNT(HD.SoHDB) AS SoLanMua,
-                   SUM(HD.TongTien) AS TongChi
-            FROM KhachHang KH
-            JOIN HoaDonBan HD ON KH.MaKhach = HD.MaKhach
-            WHERE HD.NgayBan BETWEEN @startDate AND @endDate
-            GROUP BY KH.MaKhach, KH.TenKhach
-            HAVING COUNT(HD.SoHDB) = (
-                SELECT MAX(SoLanMua)
-                FROM (
-                    SELECT COUNT(HD1.SoHDB) AS SoLanMua
-                    FROM KhachHang KH1
-                    JOIN HoaDonBan HD1 ON KH1.MaKhach = HD1.MaKhach
-                    WHERE HD1.NgayBan BETWEEN @startDate AND @endDate
-                    GROUP BY KH1.MaKhach
-                ) AS Sub
-            )";
+                SELECT KH.MaKhach, KH.TenKhach, 
+                       COUNT(HD.SoHDB) AS SoLanMua,
+                       SUM(HD.TongTien) AS TongChi
+                FROM KhachHang KH
+                JOIN HoaDonBan HD ON KH.MaKhach = HD.MaKhach
+                WHERE HD.NgayBan BETWEEN @startDate AND @endDate
+                GROUP BY KH.MaKhach, KH.TenKhach
+                HAVING COUNT(HD.SoHDB) = (
+                    SELECT MAX(SoLanMua)
+                    FROM (
+                        SELECT COUNT(HD1.SoHDB) AS SoLanMua
+                        FROM KhachHang KH1
+                        JOIN HoaDonBan HD1 ON KH1.MaKhach = HD1.MaKhach
+                        WHERE HD1.NgayBan BETWEEN @startDate AND @endDate
+                        GROUP BY KH1.MaKhach
+                    ) AS Sub
+                    )
+                    ORDER BY TongChi DESC";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@startDate", startDate);

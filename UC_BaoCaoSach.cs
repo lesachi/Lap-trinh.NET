@@ -160,47 +160,45 @@ namespace BookStore
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
-            using (SaveFileDialog sfd = new SaveFileDialog()
+            // Đường dẫn file tạm (ví dụ: Desktop)
+            string filePath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                "BaoCaoSach.xlsx"
+            );
+
+            using (ExcelPackage pck = new ExcelPackage())
             {
-                Filter = "Excel Workbook|*.xlsx",
-                FileName = "BaoCaoSach.xlsx"
-            })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Báo cáo");
+
+                // Ghi tiêu đề cột
+                for (int i = 0; i < dataGridViewBook.Columns.Count; i++)
                 {
-                    using (ExcelPackage pck = new ExcelPackage())
+                    ws.Cells[1, i + 1].Value = dataGridViewBook.Columns[i].HeaderText;
+                    ws.Cells[1, i + 1].Style.Font.Bold = true;
+                    ws.Cells[1, i + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[1, i + 1].Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+                }
+
+                // Ghi dữ liệu
+                for (int i = 0; i < dataGridViewBook.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridViewBook.Columns.Count; j++)
                     {
-                        ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Báo cáo");
-
-                        // Ghi tiêu đề cột
-                        for (int i = 0; i < dataGridViewBook.Columns.Count; i++)
-                        {
-                            ws.Cells[1, i + 1].Value = dataGridViewBook.Columns[i].HeaderText;
-                            ws.Cells[1, i + 1].Style.Font.Bold = true;
-                            ws.Cells[1, i + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                            ws.Cells[1, i + 1].Style.Fill.BackgroundColor.SetColor(Color.LightGray);
-                        }
-
-                        // Ghi dữ liệu
-                        for (int i = 0; i < dataGridViewBook.Rows.Count; i++)
-                        {
-                            for (int j = 0; j < dataGridViewBook.Columns.Count; j++)
-                            {
-                                ws.Cells[i + 2, j + 1].Value = dataGridViewBook.Rows[i].Cells[j].Value;
-                            }
-                        }
-
-                        // Tự động chỉnh độ rộng cột
-                        ws.Cells.AutoFitColumns();
-
-                        // Lưu file
-                        File.WriteAllBytes(sfd.FileName, pck.GetAsByteArray());
-                        MessageBox.Show("Xuất file Excel thành công!");
+                        ws.Cells[i + 2, j + 1].Value = dataGridViewBook.Rows[i].Cells[j].Value;
                     }
                 }
+
+                ws.Cells.AutoFitColumns();
+
+                // Lưu file
+                File.WriteAllBytes(filePath, pck.GetAsByteArray());
             }
+
+            // Mở file Excel ngay lập tức
+            System.Diagnostics.Process.Start(filePath);
         }
 
         private void btnDong_Click(object sender, EventArgs e)
