@@ -39,16 +39,20 @@ namespace BookStore
                 string ten = reader["TenNXB"].ToString();
                 string diachi = reader["DiaChi"].ToString();
                 string dienthoai = reader["DienThoai"].ToString();
-                //Image logo = GetLogoResource(ma);
-                Image logo;
-                if (nxbList.ContainsKey(ma))
+                Image logo = null;
+                if (!reader.IsDBNull(reader.GetOrdinal("Logo")))
                 {
-                    logo = nxbList[ma].Logo; // nếu đã có trong danh sách => dùng ảnh đã chọn
+                    byte[] imageData = (byte[])reader["Logo"];
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        logo = Image.FromStream(ms);
+                    }
                 }
                 else
                 {
-                    logo = GetLogoResource(ma); // nếu chưa có => fallback
+                    logo = GetLogoResource(ma); // fallback nếu không có logo
                 }
+
 
                 nxbList[ma] = new NhaXuatBan
                 {
@@ -111,15 +115,26 @@ namespace BookStore
 
                 reader.Close(); // Đóng Reader trước khi lấy ảnh
 
-                Image logo;
-                if (nxbList.ContainsKey(ma))
+                Image logo = null;
+                string logoQuery = "SELECT Logo FROM NXB WHERE MaNXB = @ma";
+                using (SqlCommand logoCmd = new SqlCommand(logoQuery, Database.GetConnection()))
                 {
-                    logo = nxbList[ma].Logo; // nếu đã có trong danh sách => dùng ảnh đã chọn
+                    logoCmd.Parameters.AddWithValue("@ma", ma);
+                    object logoObj = logoCmd.ExecuteScalar();
+                    if (logoObj != DBNull.Value && logoObj != null)
+                    {
+                        byte[] imageData = (byte[])logoObj;
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            logo = Image.FromStream(ms);
+                        }
+                    }
+                    else
+                    {
+                        logo = GetLogoResource(ma);
+                    }
                 }
-                else
-                {
-                    logo = GetLogoResource(ma); // nếu chưa có => fallback
-                }
+
 
                 reader.Close(); // Đừng quên đóng Reader
 

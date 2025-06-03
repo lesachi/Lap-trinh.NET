@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,12 @@ namespace BookStore
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
-
+            if (!System.Text.RegularExpressions.Regex.IsMatch(dienthoai, @"^\d{10}$"))
+            {
+                MessageBox.Show("Số điện thoại phải gồm đúng 10 chữ số!");
+                txtDienthoai.Focus();
+                return;
+            }
             bool daThem = false;
             int soThuTu = 0;
             string ma = "";
@@ -70,8 +76,9 @@ namespace BookStore
                 try
                 {
                     ma = Database.TaoMaNXBTuDong();
-                    string sql = $"INSERT INTO NXB (MaNXB, TenNXB, DiaChi, DienThoai) VALUES (N'{ma}', N'{ten}', N'{diachi}', N'{dienthoai}')";
-                    
+                    string sql = "INSERT INTO NXB (MaNXB, TenNXB, DiaChi, DienThoai, Logo) VALUES (@MaNXB, @TenNXB, @DiaChi, @DienThoai, @Logo)";
+
+
 
                     using (SqlConnection conn = Database.GetConnection())
                     {
@@ -79,6 +86,24 @@ namespace BookStore
                             conn.Open();
                         using (SqlCommand cmd = new SqlCommand(sql, conn))
                         {
+                            cmd.Parameters.AddWithValue("@MaNXB", ma);
+                            cmd.Parameters.AddWithValue("@TenNXB", ten);
+                            cmd.Parameters.AddWithValue("@DiaChi", diachi);
+                            cmd.Parameters.AddWithValue("@DienThoai", dienthoai);
+
+                            if (logo != null)
+                            {
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    logo.Save(ms, logo.RawFormat);
+                                    byte[] imageBytes = ms.ToArray();
+                                    cmd.Parameters.Add("@Logo", SqlDbType.VarBinary).Value = imageBytes;
+                                }
+                            }
+                            else
+                            {
+                                cmd.Parameters.Add("@Logo", SqlDbType.VarBinary).Value = DBNull.Value;
+                            }
                             cmd.ExecuteNonQuery();
                         }
                     }
