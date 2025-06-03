@@ -135,8 +135,8 @@ namespace BookStore
 
         private void btnBaocaoSach_Click(object sender, EventArgs e)
         {
-            panelChildForm.Controls.Clear(); // Xóa nội dung cũ
-            UC_BaoCaoSach uc = new UC_BaoCaoSach(); // Tạo mới UserControl báo cáo sách
+            panelChildForm.Controls.Clear(); 
+            UC_BaoCaoSach uc = new UC_BaoCaoSach(); 
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc);
         }
@@ -164,6 +164,13 @@ namespace BookStore
         {
             panelChildForm.Controls.Clear();
             Baocaodoanhthu uc = new Baocaodoanhthu();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
+        private void btnBCKhachhang_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear();
+            UC_BCKhachHang uc = new UC_BCKhachHang();
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc);
         }

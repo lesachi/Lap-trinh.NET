@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnDangxuat = new System.Windows.Forms.Button();
             this.panelBaocao = new System.Windows.Forms.Panel();
             this.btnBaocaoSach = new System.Windows.Forms.Button();
             this.btnBCKhachhang = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.picBoxbookshop = new System.Windows.Forms.PictureBox();
-            this.btnDangxuat = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelBaocao.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -60,6 +60,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.Sienna;
+            this.panelSideMenu.Controls.Add(this.btnDangxuat);
             this.panelSideMenu.Controls.Add(this.panelBaocao);
             this.panelSideMenu.Controls.Add(this.btnBaocao);
             this.panelSideMenu.Controls.Add(this.btnNhaxuatban);
@@ -71,20 +72,37 @@
             this.panelSideMenu.Controls.Add(this.btnNhaphang);
             this.panelSideMenu.Controls.Add(this.btnBanhang);
             this.panelSideMenu.Controls.Add(this.panelLogo);
+            
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(244, 565);
+            this.panelSideMenu.Size = new System.Drawing.Size(244, 666);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnDangxuat
+            // 
+            this.btnDangxuat.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnDangxuat.FlatAppearance.BorderSize = 0;
+            this.btnDangxuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangxuat.Location = new System.Drawing.Point(-1, 108);
+            this.btnDangxuat.Name = "btnDangxuat";
+            this.btnDangxuat.Size = new System.Drawing.Size(260, 44);
+            this.btnDangxuat.TabIndex = 4;
+            this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangxuat.UseVisualStyleBackColor = false;
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // panelBaocao
             // 
-            this.panelBaocao.Controls.Add(this.btnDangxuat);
+           
             this.panelBaocao.Controls.Add(this.btnBaocaoSach);
             this.panelBaocao.Controls.Add(this.btnBCKhachhang);
             this.panelBaocao.Controls.Add(this.btnDoanhthu);
             this.panelBaocao.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBaocao.Location = new System.Drawing.Point(0, 608);
+            this.panelBaocao.Location = new System.Drawing.Point(0, 611);
             this.panelBaocao.Name = "panelBaocao";
             this.panelBaocao.Size = new System.Drawing.Size(218, 137);
             this.panelBaocao.TabIndex = 6;
@@ -98,11 +116,12 @@
             this.btnBaocaoSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaocaoSach.Location = new System.Drawing.Point(0, 77);
             this.btnBaocaoSach.Name = "btnBaocaoSach";
-            this.btnBaocaoSach.Size = new System.Drawing.Size(218, 32);
+            this.btnBaocaoSach.Size = new System.Drawing.Size(218, 35);
             this.btnBaocaoSach.TabIndex = 3;
             this.btnBaocaoSach.Text = "Sách";
             this.btnBaocaoSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaocaoSach.UseVisualStyleBackColor = false;
+            this.btnBaocaoSach.Click += new System.EventHandler(this.btnBaocaoSach_Click);
             // 
             // btnBCKhachhang
             // 
@@ -145,7 +164,7 @@
             this.btnBaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaocao.Location = new System.Drawing.Point(0, 559);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(218, 49);
+            this.btnBaocao.Size = new System.Drawing.Size(218, 52);
             this.btnBaocao.TabIndex = 1;
             this.btnBaocao.Text = "Báo cáo";
             this.btnBaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,7 +333,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(244, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(822, 565);
+            this.panelChildForm.Size = new System.Drawing.Size(822, 666);
             this.panelChildForm.TabIndex = 1;
             // 
             // picBoxbookshop
@@ -324,28 +343,11 @@
             this.picBoxbookshop.Image = ((System.Drawing.Image)(resources.GetObject("picBoxbookshop.Image")));
             this.picBoxbookshop.Location = new System.Drawing.Point(0, 0);
             this.picBoxbookshop.Name = "picBoxbookshop";
-            this.picBoxbookshop.Size = new System.Drawing.Size(822, 565);
+            this.picBoxbookshop.Size = new System.Drawing.Size(822, 666);
             this.picBoxbookshop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxbookshop.TabIndex = 0;
             this.picBoxbookshop.TabStop = false;
             this.picBoxbookshop.Click += new System.EventHandler(this.picBoxbookshop_Click);
-            // 
-            // btnDangxuat
-            // 
-            this.btnDangxuat.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnDangxuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDangxuat.FlatAppearance.BorderSize = 0;
-            this.btnDangxuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangxuat.Location = new System.Drawing.Point(0, 109);
-            this.btnDangxuat.Name = "btnDangxuat";
-            this.btnDangxuat.Size = new System.Drawing.Size(218, 28);
-            this.btnDangxuat.TabIndex = 4;
-            this.btnDangxuat.Text = "Đăng xuất";
-            this.btnDangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangxuat.UseVisualStyleBackColor = false;
-            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // MainFrm
             // 
@@ -353,7 +355,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1066, 565);
+            this.ClientSize = new System.Drawing.Size(1066, 666);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
