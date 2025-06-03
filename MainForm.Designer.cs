@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnMatsach = new System.Windows.Forms.Button();
             this.panelBaocao = new System.Windows.Forms.Panel();
-            this.btnDangxuat = new System.Windows.Forms.Button();
             this.btnBaocaoSach = new System.Windows.Forms.Button();
             this.btnBCKhachhang = new System.Windows.Forms.Button();
             this.btnDoanhthu = new System.Windows.Forms.Button();
             this.btnBaocao = new System.Windows.Forms.Button();
+            this.btnDangxuat = new System.Windows.Forms.Button();
             this.btnNhaxuatban = new System.Windows.Forms.Button();
             this.btnNhacungcap = new System.Windows.Forms.Button();
             this.btnTaikhoan = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.picAnh = new System.Windows.Forms.PictureBox();
-            this.btnMatsach = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelBaocao.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -80,6 +80,21 @@
             this.panelSideMenu.Size = new System.Drawing.Size(292, 835);
             this.panelSideMenu.TabIndex = 0;
             // 
+            // btnMatsach
+            // 
+            this.btnMatsach.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnMatsach.FlatAppearance.BorderSize = 0;
+            this.btnMatsach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnMatsach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatsach.Location = new System.Drawing.Point(0, 749);
+            this.btnMatsach.Name = "btnMatsach";
+            this.btnMatsach.Size = new System.Drawing.Size(297, 44);
+            this.btnMatsach.TabIndex = 5;
+            this.btnMatsach.Text = "Mất sách";
+            this.btnMatsach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMatsach.UseVisualStyleBackColor = false;
+            this.btnMatsach.Click += new System.EventHandler(this.btnMatsach_Click);
+            // 
             // panelBaocao
             // 
             this.panelBaocao.Controls.Add(this.btnBaocaoSach);
@@ -89,22 +104,6 @@
             this.panelBaocao.Name = "panelBaocao";
             this.panelBaocao.Size = new System.Drawing.Size(292, 105);
             this.panelBaocao.TabIndex = 6;
-            // 
-            // btnDangxuat
-            // 
-            this.btnDangxuat.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnDangxuat.FlatAppearance.BorderSize = 0;
-            this.btnDangxuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangxuat.Location = new System.Drawing.Point(0, 790);
-            this.btnDangxuat.Name = "btnDangxuat";
-            this.btnDangxuat.Size = new System.Drawing.Size(292, 45);
-            this.btnDangxuat.TabIndex = 4;
-            this.btnDangxuat.Text = "Đăng xuất";
-            this.btnDangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangxuat.UseVisualStyleBackColor = false;
-            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // btnBaocaoSach
             // 
@@ -169,6 +168,22 @@
             this.btnBaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaocao.UseVisualStyleBackColor = false;
             this.btnBaocao.Click += new System.EventHandler(this.btnBaocao_Click);
+            // 
+            // btnDangxuat
+            // 
+            this.btnDangxuat.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnDangxuat.FlatAppearance.BorderSize = 0;
+            this.btnDangxuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangxuat.Location = new System.Drawing.Point(0, 790);
+            this.btnDangxuat.Name = "btnDangxuat";
+            this.btnDangxuat.Size = new System.Drawing.Size(292, 45);
+            this.btnDangxuat.TabIndex = 4;
+            this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangxuat.UseVisualStyleBackColor = false;
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // btnNhaxuatban
             // 
@@ -343,23 +358,9 @@
             this.picAnh.TabIndex = 0;
             this.picAnh.TabStop = false;
             // 
-            // btnMatsach
-            // 
-            this.btnMatsach.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnMatsach.FlatAppearance.BorderSize = 0;
-            this.btnMatsach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnMatsach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMatsach.Location = new System.Drawing.Point(0, 749);
-            this.btnMatsach.Name = "btnMatsach";
-            this.btnMatsach.Size = new System.Drawing.Size(297, 44);
-            this.btnMatsach.TabIndex = 5;
-            this.btnMatsach.Text = "Mất sách";
-            this.btnMatsach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMatsach.UseVisualStyleBackColor = false;
-            // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

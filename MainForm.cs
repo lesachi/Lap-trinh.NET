@@ -174,6 +174,14 @@ namespace BookStore
             uc.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(uc);
         }
+
+        private void btnMatsach_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Controls.Clear();
+            UC_MatSach uc = new UC_MatSach();
+            uc.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(uc);
+        }
     }
     
 } 

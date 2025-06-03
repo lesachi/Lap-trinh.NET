@@ -41,9 +41,9 @@ namespace BookStore
             DataGridView1.Columns[3].HeaderText = "Điện thoại";
 
             DataGridView1.Columns[0].Width = 80;
-            DataGridView1.Columns[1].Width = 180;
-            DataGridView1.Columns[2].Width = 120;
-            DataGridView1.Columns[3].Width = 100;
+            DataGridView1.Columns[1].Width = 200;
+            DataGridView1.Columns[2].Width = 140;
+            DataGridView1.Columns[3].Width = 120;
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
